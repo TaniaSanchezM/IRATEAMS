@@ -24,6 +24,7 @@ const routes: Routes = [
   {path: "about-us", component: AboutUsComponent},
   {path: "calendar", component: CalendarComponent},
   {path: "chats", component: ChatsComponent},
+  {path: "create-event", component: CreateEventsComponent},
   {path: "event-details", component: EventDetailsComponent},
   {path: "faqs", component: FaqsComponent},
   {path: "login", component: LoginComponent},
