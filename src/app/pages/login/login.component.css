@@ -34,3 +34,11 @@
     color:var(--mainColor);
     font-weight: bold;
 }
+a{
+    text-decoration: none;
+}
+a :visited{
+    text-decoration: none;
+    color:var(--mainColor);
+    font-weight: bold;
+}
