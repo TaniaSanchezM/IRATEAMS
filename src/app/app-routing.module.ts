@@ -37,7 +37,7 @@ const routes: Routes = [
   {path: "recover-password", component: RecoverPasswordComponent},
   {path: "register", component: RegisterComponent},
   {path: "tech-support", component: TechSupportComponent},
-  {path: "", component: HomeComponent},
+  {path: "", redirectTo: "/home", pathMatch: 'full'},
   {path: "404", component: NotFoundComponent},
   {path: "**", redirectTo: "/404"},
 
