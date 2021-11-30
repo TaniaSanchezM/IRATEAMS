@@ -1,5 +1,5 @@
 body{
-    background-color: #d9d9d9;
+    background-color:var(--bgColor);
     display: flex;
     flex-direction: column;
    margin-top: 18%;
@@ -30,12 +30,12 @@ body{
     border-radius: 50%;
     border: none;
 }
-/* .button-information{
-    margin: auto;
+.button-information{
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
-    width:250px;
+    width:350px;
     height:70px;
-    line-height:28px;
     padding:0 8px;
     border:none; 
     background-color: white;
@@ -43,15 +43,16 @@ body{
     display: flex;
     flex-direction: row;
 
-} */
-/* .choose-date1,.choose-date2,.choose-place1,.choose-place2{
+}
+.choose-date1,.choose-place1{
     margin: auto;
     text-align: center;
     border-color: transparent;
     display: flex;
     flex-direction: column;
-   width: 50%;
-}
+    width: 50%;
+    border-radius: 20%;
+} 
 
 .verticalLine{
     margin: auto;
@@ -59,50 +60,60 @@ body{
     margin-bottom: 5%;
     border-left: thick solid #d9d9d9; 
     width: 1%;
-} */
+    background-color: var(--bgColor)
+} 
+.verticalLine2{
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-left: thick solid #d9d9d9; 
+    width: 1%;
+    background-color: var(--bgColor)
+} 
 
-
-.card1, .card2, .card3{
+.cards{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 14px;
+    margin-top: 10px;
     width:300px;
     height:130px;
-    line-height:28px;
     padding:0 8px;
     border:none; 
     background-color: white;
-    border-radius: 55px;
+    border-radius: 15px;
+}
+.card1{
+    margin: auto;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:last baseline ;
 }
 .photo{
-    border-radius: 30% ;
+    border-radius: 5% ;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    height: 75%;
-    width: 100%;
-    margin-top: 16px;
+    height: 90%;
+    width: 90%;
+    margin-left: 3px;
     
 
 }
 .information{
-    display: flex;
-    flex-direction: column; 
+   margin-left: 20px;
 }
 
 .p{
    
-        line-height: 18px;
+    line-height: 18px;
 }
 .Title{
-    margin-top: 15%;
-    color: #94D212;
+    line-height: 18px;
+    color: #ff8800;
 }
 .information-card{
-    
-        line-height: 18px;
+    margin-top: 1px;
+    line-height: 18px;
  
 }
