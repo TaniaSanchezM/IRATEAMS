@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div class="registerContainer">
+    <div class="col-12" >
+        <form class="rounded-3 ">
+            <div class="marginForm">
+                <div class="form-floating mb-3">
+                    <p for="user" class="labelText">Usuario</p>
+                    <input type="text" class="form-control" id="user" placeholder="">
+                </div>
+                <div class="form-floating mb-3">
+                    <p for="email" class="labelText">Email</p>
+                    <input type="email" class="form-control" id="email" placeholder="">
+                </div>
+                <div class="form-floating mb-3">
+                    <p for="password" class="labelText">Contraseña</p>
+                    <input type="password" class="form-control" id="password" placeholder="">
+                </div>
+                <div class="form-floating mb-3">
+                    <p for="repeatPassword" class="labelText">Repetir contraseña</p>
+                    <input type="password" class="form-control" id="repeatPassword" placeholder="">
+                </div>
+            </div>
+
+          <div class="bottomLinks">
+                <div class="center">
+                    <button class="w-75 btn btn-lg btn-black">Regístrate</button>
+                </div>
+                <div class="center">
+                    <p class="text-muted">¿Ya tienes cuenta? <a routerLink="/login" class="link">Accede aquí</a></p>
+                </div>
+          </div>
+        </form>
+    </div>
+</div>
