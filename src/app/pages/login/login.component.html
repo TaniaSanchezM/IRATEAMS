@@ -1,26 +1,26 @@
 <div class="loginContainer">
-    <div class="divLogo">
-        <img src="../../../assets/img/logo.png" alt="Logo de la app" class="imgLogo">
-    </div>
-    <div class="col-12">
-        <form class="rounded-3 ">
-          <div class="form-floating mb-3">
-            <p for="floatingUser" class="labelText">Usuario o email</p>
-            <input type="email" class="form-control" id="floatingUser" placeholder="">
-          </div>
-          <div class="form-floating mb-3">
-            <p for="floatingPassword" class="labelText">Contraseña</p>
-            <input type="password" class="form-control" id="floatingPassword" placeholder="">
-          </div>
-          <div class="bottomLinks">
-                <div class="center">
-                    <button class="w-75 btn btn-lg btn-black">Iniciar sesión</button>
-                </div>
-                <div class="center">
-                    <p class="text-muted">¿No tienes cuenta? <a routerLink="/register" class="link">Crear cuenta</a></p>
-                    <small class="text-muted"> <p>¿Has olvidado tu contraseña? <a routerLink="/recover-password" class="link">Recuperar</a></p></small>
-                </div>
-          </div>
-        </form>
-    </div>
+  <div class="divLogo">
+      <img src="../../../assets/img/logo.png" alt="Logo de la app" class="imgLogo">
+  </div>
+  <div class="col-12 container">
+      <form class="rounded-3 ">
+        <div class="form-group mb-3">
+          <p for="floatingUser" class="labelText">Usuario o email</p>
+          <input type="text" class="form-control" id="floatingUser" placeholder="">
+        </div>
+        <div class="form-group mb-3">
+          <p for="floatingPassword" class="labelText">Contraseña</p>
+          <input type="password" class="form-control" id="floatingPassword" placeholder="">
+        </div>
+        <div class="bottomLinks">
+              <div class="center">
+                  <button class="w-75 btn btn-lg btn-black">Iniciar sesión</button>
+              </div>
+              <div class="center">
+                  <p class="text-muted">¿No tienes cuenta? <a routerLink="/register" class="link">Crear cuenta</a></p>
+                  <small class="text-muted"> <p>¿Has olvidado tu contraseña? <a routerLink="/recover-password" class="link">Recuperar</a></p></small>
+              </div>
+        </div>
+      </form>
+  </div>
 </div>
