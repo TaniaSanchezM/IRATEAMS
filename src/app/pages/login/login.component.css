@@ -26,9 +26,11 @@
     color:var(--fontColor2);
     width: 50vw;
     border-radius: 50px;
-}
-
-button{
     font-family: Ubuntu;
     font-weight: bolder;
+}
+
+.link{
+    color:var(--mainColor);
+    font-weight: bold;
 }

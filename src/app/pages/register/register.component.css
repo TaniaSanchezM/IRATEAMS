@@ -1,0 +1,30 @@
+.registerContainer{
+    height:100vh; 
+    background-image:url('../../../assets/img/fondo.png');
+    background-size: cover;
+}
+.center{
+    text-align: center;
+    margin-top: 40px;
+}
+.labelText{
+    color: var(--fontColor2);
+}
+.btn-black{
+    background-color:#27241E;
+    color:var(--fontColor2);
+    width: 50vw;
+    border-radius: 50px;
+    font-family: Ubuntu;
+    font-weight: bolder;
+}
+.bottomLinks{
+    margin-top: 110px;
+}
+.marginForm{
+    padding-top: 25px;
+}
+.link{
+    color:var(--mainColor);
+    font-weight: bold;
+}
