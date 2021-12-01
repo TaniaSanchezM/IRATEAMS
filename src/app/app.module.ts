@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID,NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +24,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EventDetailsComponent } from './pages/event-details/event-details.component';
 
-
+import localeEs from '@angular/common/locales/es'
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEs, 'es')
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,7 @@ import { EventDetailsComponent } from './pages/event-details/event-details.compo
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'es'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
