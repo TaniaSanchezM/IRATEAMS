@@ -15,9 +15,6 @@
     --primaryButton: #D9D9D9;
     --secundaryButton: #EFAC00;
 }
-body{
-    font-size: px;
-}
 h1,h2,h3,h4{
     font-family: Ubuntu;
 }
