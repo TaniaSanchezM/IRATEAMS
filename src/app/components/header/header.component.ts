@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class NgbdDropdownBasic {
+ 
 }
 
 @Component({
@@ -13,7 +14,7 @@ export class NgbdDropdownBasic {
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  public login:boolean = true;
   constructor() { }
 
   ngOnInit(): void {
