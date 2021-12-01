@@ -1,0 +1,23 @@
+.myForm{
+    background-color: var(--bgColor);
+    margin-bottom: -18%;
+    padding: 7%;
+    padding-bottom: 17%;
+    padding-top: 13vh; 
+}
+.form-control{
+    max-width: 90%;
+    margin-left: 5%;
+    padding-top: 3%;
+}
+.form-label{
+    max-width: 90%;
+    margin-left: 5%; 
+    padding-top: 5%;
+}
+h2, h3{
+    max-width: 90%;
+    margin-left: 5%;  
+    font-weight: 500;
+}
+
