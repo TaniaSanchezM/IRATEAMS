@@ -1,1 +1,70 @@
-<p>calendar works!</p>
+<!--START CALENDAR-->
+<section class="calendar">
+    <div class="wrapper-calendar">
+        <div class="header-calendar">
+            <div>
+                <button (click)="changeMonth(-1)" class="btn-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--fontColor)"
+                        class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg>
+                </button>
+            </div>
+            <h1>{{dateSelect.format("MMMM YYYY")}}</h1>
+            <div>
+                <button (click)="changeMonth(1)" class="btn-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--fontColor)"
+                        class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ol>
+            <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
+
+            <li [ngClass]="this.today.getDate() === day?.value && this.today.getMonth()+1 === this.month ? 'numberColor':''"
+                (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+                *ngFor="let day of monthSelect;let first = first">
+                <span>{{day?.value}}</span>
+            </li>
+        </ol>
+    </div>
+</section>
+<!--END CALENDAR-->
+
+<hr>
+
+<!-- START EVENTS LIST-->
+
+<section class="cardeventslist">
+    <div class="card" *ngFor="let event of myEvents" routerLink="/home">
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-calendar2-check-fill" viewBox="0 0 16 16">
+                <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zm-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+            </svg>
+            &nbsp; <b>Evento:</b> &nbsp; {{event.nombre}}
+        </div>
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            &nbsp; <b>Fecha:</b> &nbsp; {{event.fecha}}
+        </div>
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+            </svg>
+            &nbsp; <b>Ubicación:</b> &nbsp; {{event.ubicacion}}
+        </div>
+    </div>
+</section>
+
+<!-- END EVENTS LIST -->
