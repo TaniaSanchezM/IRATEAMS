@@ -1,0 +1,115 @@
+*{
+    outline: none !important
+  }
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    height: 42vh;
+}
+  
+.wrapper-calendar{
+    width: 100vh;
+    height: 40vh;
+    margin: 3vh;
+    padding: 1vh;
+    border: 1px solid #eaeaea;
+    border-radius: 2vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+}
+  
+div {
+    text-align: center;
+    width: 300px;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+}
+    
+ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0;
+    padding: 0;
+}
+    
+li {
+    padding: .25rem;
+    font-size: 1.5ch;
+    cursor: pointer;
+}
+    
+li:hover{
+    font-weight: 600;
+}
+
+h2 {
+    margin-bottom: 4px;
+    padding: 0;
+}
+    
+.first-day {
+    grid-column-start: var(--first-day-start, 0);
+}
+    
+.day-name {
+    background: #eee;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+    padding: 4px;
+    text-align: center;
+}
+    
+.header-calendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 7vh;
+}
+    
+.header-calendar h1 {
+    width: 100vh;
+    font-size: 13px;
+    margin-top: 2vh;
+}
+    
+.header-calendar button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1vh;
+}
+.numberColor {
+    font-weight: bolder;
+    border: 1px solid var(--mainColor);
+    border-radius: 5px;
+}
+
+.cardeventslist {
+    text-align: left;
+    padding: 1vh;
+    padding-bottom: 12vh;
+}
+
+.card {
+    text-align: left;
+    width: 52vh;
+    padding: 3vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    border-radius: 2vh;
+    margin: 1vh;
+}
+
+.orden {
+    display: flex;
+    flex-direction: row;
+}
