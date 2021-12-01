@@ -7,7 +7,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
 
-  constructor() { }
+  public event = {
+    title: "Partido de futbol con amigos",
+    sport: "futbol",
+    place: "MADRID",
+    date: new Date(2021,11,5),
+    people: 3,
+    cost: 2,
+    material: "none",
+    description: "Buscamos a 3 personas para completar nuestro equipo de futbol para el proximo partido. Somos un equipo de gente de entre 18 y 27 años, blaaaaaaaa aaaa aaaa aaaa"
+  }
+
+  public creator = {
+    id: 1,
+    name: "Pepe",
+    user: "pepe_98",
+    img: ""
+  }
+
+  public user = {
+    id: 2,
+    name: "Jose",
+    user: "jodejose",
+    img: ""
+  }
+
+  public apuntado = true;
+  public loggin = true;
+  public iduser = 1;
+  public ideventcreator = 1;
+
+  public today!: any
+  public today2!: any
+  public daysLeft!: Number
+
+  constructor() { 
+    this.today = new Date()
+    this.today2 = new Date(2021,12,1)
+    this.daysLeft =  this.today2.getDate() -this.today.getDate()
+  }
 
   ngOnInit(): void {
   }
