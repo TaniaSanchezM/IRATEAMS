@@ -1,0 +1,27 @@
+body{ 
+    text-align: center;
+    margin-top: 20%;
+}
+.choose-date1{
+    color: var(--fontColor2);
+    background-color: var(--secondaryColor);
+    border-radius: 15px;
+    border-color: transparent;
+}
+.card-body{
+    line-height: 1vh;
+} 
+
+.btn-btn-success{
+    margin-left: 19%;
+    margin-top: -1vh;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+

@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-save-events.component.css']
 })
 export class MySaveEventsComponent implements OnInit {
+  public siClick : boolean = false
+  constructor() {}
+    changeColor(){
+    this.siClick = true
+    
 
-  constructor() { }
+  }
+  toggle = true;
+  status = 'Enable'; 
+
+  enableDisableRule() {
+  this.toggle = !this.toggle;
+  this.status = this.toggle ? 'Enable' : 'Disable';
+  }
 
   ngOnInit(): void {
   }
