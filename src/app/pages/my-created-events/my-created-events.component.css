@@ -1,0 +1,100 @@
+body{
+   background-color:var(--bgColor);
+   display: flex;
+   flex-direction: column;
+   margin-top: 18%;
+   text-align: center;
+}
+
+.verticalLine{
+   margin: auto;
+   margin-top: 5%;
+   margin-bottom: 5%;
+   border-left: thick solid #d9d9d9; 
+   width: 1%;
+   background-color: var(--bgColor)
+} 
+
+.cards{
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+   width:300px;
+   height:130px;
+   padding:0 8px;
+   border:none; 
+   background-color: white;
+   border-radius: 15px;
+}
+
+.card1{
+   margin: auto;
+   margin-top: 10px;
+   display: flex;
+   flex-direction: row;
+   justify-content:last baseline ;
+}
+
+.photo{
+   border-radius: 5% ;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+
+   width: 130px;
+   height: 80px;
+   margin-left: 57px;
+}
+
+h1{
+   margin-top: 20px;
+}
+.information-col-6{
+ text-align: left;
+}
+.buttonEdit{
+   margin-left: 70%;
+   width: 10%;
+}
+.p{
+   line-height: 18px;
+}
+
+.Title{
+   line-height: 18px;
+   color: #000000;
+}
+
+.information-card{
+   margin-top: 1px;
+   line-height: 18px;
+}
+
+.buttonsEditDelete{
+   margin-left:  auto;
+   margin-right: auto;
+   margin-top: 3vh;
+   width:200px;
+   height:40px;
+   padding:0 8px;
+   border:none; 
+   background-color: white;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: row;
+}
+.edit{
+  text-align: center;
+  color: var(--fontColor);
+  background-color: transparent;
+  border-color: transparent;
+  margin-left: 1%;
+  
+}
+.delete{
+   text-align: center;
+   color: var(--fontColor);
+   background-color: transparent;
+   border-color: transparent;
+   margin-left: 40%;
+}

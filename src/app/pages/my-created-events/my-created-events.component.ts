@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-created-events.component.css']
 })
 export class MyCreatedEventsComponent implements OnInit {
+  public siClick : boolean = false
+  constructor() { 
+  }
+  editor(){
+    this.siClick = true
 
-  constructor() { }
+  
+  }
 
   ngOnInit(): void {
   }
