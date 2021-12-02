@@ -29,6 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import localeEs from '@angular/common/locales/es'
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeEs, 'es')
+import { FormsModule } from '@angular/forms';
+// import { } from '@angular/material'
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,8 @@ registerLocaleData(localeEs, 'es')
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es'}],
   bootstrap: [AppComponent]
