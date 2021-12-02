@@ -2,11 +2,14 @@ body{
     background-color:var(--bgColor);
     display: flex;
     flex-direction: column;
-   margin-top: 18%;
+    margin-top: 18%;
+    text-align: center;
+    margin-top: 20%;
+    padding-bottom: 13vh;
 }
 
 .searcher{
-    margin-top: 10px;
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -20,7 +23,13 @@ body{
     padding:0 8px;
     border:none; 
     background-color: white;
-    border-radius: 55px;
+    border-radius: 5px;
+}
+.input-1::placeholder{
+    background-image: url('../../../assets/img/lupa.png');
+    background-position:1vw;
+    background-size: 4vh;
+    background-repeat:no-repeat;
 }
 
 .buttom-1{
@@ -33,13 +42,12 @@ body{
 .button-information{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
     width:350px;
     height:70px;
     padding:0 8px;
     border:none; 
     background-color: white;
-    border-radius: 55px;
+    border-radius: 5px;
     display: flex;
     flex-direction: row;
 
@@ -47,6 +55,7 @@ body{
 .choose-date1,.choose-place1{
     margin: auto;
     text-align: center;
+    color: --secondaryColorv;
     border-color: transparent;
     display: flex;
     flex-direction: column;
@@ -71,49 +80,36 @@ body{
     background-color: var(--bgColor)
 } 
 
-.cards{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width:300px;
-    height:130px;
-    padding:0 8px;
-    border:none; 
-    background-color: white;
+
+.choose-date1{
+    color: var(--secondaryColor);
     border-radius: 15px;
-}
-.card1{
-    margin: auto;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content:last baseline ;
-}
-.photo{
-    border-radius: 5% ;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    height: 90%;
-    width: 90%;
-    margin-left: 3px;
-    
-
-}
-.information{
-   margin-left: 20px;
+    border-color: transparent;
 }
 
-.p{
-   
-    line-height: 18px;
+.card-body{
+    line-height: 1vh;
+    text-align: left;
+    margin-left: 5vh;
+} 
+
+.btn-btn-success{
+    margin-left: 19%;
+    margin-top: -1vh;
 }
-.Title{
-    line-height: 18px;
-    color: #ff8800;
-}
-.information-card{
-    margin-top: 1px;
-    line-height: 18px;
+
+#miBoton{
  
+    background-color: transparent;
+    color: black;
+}
+
+
+#miBoton:focus{
+    background-color: transparent;
+    color: var(--secundaryButton);
+}
+
+.card-title{
+    line-height:2vh;
 }
