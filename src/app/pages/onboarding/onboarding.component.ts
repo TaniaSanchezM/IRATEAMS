@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./onboarding.component.css']
 })
 export class OnboardingComponent implements OnInit {
-
+  public page:number = 0
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  nextPage(){
+    this.page += 1
+  }
+  prevPage(){
+    this.page -= 1
+  }
 }

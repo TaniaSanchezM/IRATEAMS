@@ -18,6 +18,12 @@ import { RecoverPasswordComponent } from './pages/recover-password/recover-passw
 import { RegisterComponent } from './pages/register/register.component';
 import { TechSupportComponent } from './pages/tech-support/tech-support.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { Onboarding1Component } from './pages/onboarding/onboarding1/onboarding1.component';
+import { Onboarding2Component } from './pages/onboarding/onboarding2/onboarding2.component';
+import { Onboarding3Component } from './pages/onboarding/onboarding3/onboarding3.component';
+import { Onboarding4Component } from './pages/onboarding/onboarding4/onboarding4.component';
+import { Onboarding5Component } from './pages/onboarding/onboarding5/onboarding5.component';
+import { Onboarding6Component } from './pages/onboarding/onboarding6/onboarding6.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -32,6 +38,12 @@ const routes: Routes = [
   {path: "my-save-events", component: MySaveEventsComponent},
   {path: "my-created-events", component: MyCreatedEventsComponent},
   {path: "onboarding", component: OnboardingComponent},
+  {path: "onboarding1", component: Onboarding1Component},
+  {path: "onboarding2", component: Onboarding2Component},
+  {path: "onboarding3", component: Onboarding3Component},
+  {path: "onboarding4", component: Onboarding4Component},
+  {path: "onboarding5", component: Onboarding5Component},
+  {path: "onboarding6", component: Onboarding6Component},
   {path: "past-events", component: PastEventsComponent},
   {path: "profile", component: ProfileComponent},
   {path: "recover-password", component: RecoverPasswordComponent},
