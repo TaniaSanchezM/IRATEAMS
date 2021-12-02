@@ -1,0 +1,40 @@
+
+.general {
+    border: 1px solid black;
+    padding: 20px;
+    padding-top: 15vh;
+    padding-bottom: 18vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cajafoto {
+    width: 70px;
+    height: 70px;
+    border: 1px solid  black;
+    border-radius: 0.25rem;
+    
+}
+
+.persona {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    margin-bottom: 2vh;
+    border-radius: 0.25rem;
+}
+
+.descripcion {
+    padding-left: 2vh;
+}
+
+.nombre {
+    font-weight: bold;
+}
