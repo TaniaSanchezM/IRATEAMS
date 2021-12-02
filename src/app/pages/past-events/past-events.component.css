@@ -11,7 +11,7 @@
     width: 52vh;
     padding: 3vh;
     box-shadow: 0 0 2vh var(--primaryButton);
-    border-radius: 2vh;
+    border-radius: 0.25rem;
     margin: 1vh;
 }
 
