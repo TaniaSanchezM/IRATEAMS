@@ -50,17 +50,17 @@
             &nbsp; <b>Evento:</b> &nbsp; {{event.nombre}}
         </div>
         <div class="orden">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"
-                viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-            </svg>
-            &nbsp; <b>Fecha:</b> &nbsp; {{event.fecha}}
-        </div>
-        <div class="orden">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill"
                 viewBox="0 0 16 16">
                 <path
                     d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+            </svg>
+            &nbsp; <b>Fecha:</b> &nbsp; {{event.fecha.getDate()}}/{{event.fecha.getMonth()+1}}/{{event.fecha.getFullYear()}}
+        </div>
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
             </svg>
             &nbsp; <b>Ubicación:</b> &nbsp; {{event.ubicacion}}
         </div>

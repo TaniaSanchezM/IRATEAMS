@@ -15,7 +15,7 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <div *ngIf="login === false; else esFalso" >
+            <div *ngIf="login === true; else esFalso" >
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" routerLink="profile" style="font-size: 16px; margin-top: 4%;">Mi perfil</a>
               </li>
