@@ -1,44 +1,146 @@
 <app-header></app-header>
 
 
-<body>
-    <section class="img-user">
-        <img src="" alt=""> 
+<main>
+    <section class="img-user ">
+        <div class="img-content">
+            <img src="../../../assets/Rayo-Vallecano-fenemino.jpg" alt="" id="img2" >
+
+            <footer class="img-user-footer">
+                <div>
+                    <h3 style="line-height: 0px;"> {{user.name}}&nbsp;{{user.name}}&nbsp;</h3>
+                </div>
+                
+      
+                
+               
+            </footer>
+
+            <div class="img-user-sub-footer">
+                 <div id="sub-title">
+                    {{user.user}}
+                </div>
+                <div id="sub-title">
+                    {{user.age}}
+                </div>
+                <div id="sub-title">
+                    {{user.email}}
+                </div>
+                <div id="sub-title">
+                    {{user.number}}
+                </div>
+                
+            </div>
+        </div>
+        <header class="img-user-header">
+             
+        </header>
+        
     </section>
     
     <section class="content">
         <article class="content-text">
             <header class="content-text-header">
-                <div id="title">
-                    <h3 >Mis datos</h3>
-                </div>
-                <div id="link">
-                   <a href="" id=""><h3>Editar datos</h3></a> 
-                </div>
+                <div class="preferences">
+
+                    <h3 style="font-weight: bold;">Preferencias</h3>
+
+                    <div class="preferences-icons">
+                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('futbol') === true">
+                            <div>
+                                <img src="https://img.icons8.com/officel/60/000000/football.png"/>
+                            </div>
+                        </div>
+                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('baloncesto') === true">
+                            <div>
+                                <img src="https://img.icons8.com/officel/60/000000/basketball-2.png"/>
+                            </div>
+                        </div>
+                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('tenis') === true">
+                            <div>
+                                <img src="https://img.icons8.com/officel/60/000000/tennis-2.png"/>
+                            </div>
+                        </div>
+                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('padel') === true">
+                            <div>
+                                <img src="https://img.icons8.com/officel/50/000000/table-tennis.png"/>
+                            </div>
+                        </div>
+                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('basket') === true">
+                            
+                        </div>
+                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('bici') === true">
+                            <div>
+                                <img src="https://img.icons8.com/officel/50/000000/cycling-mountain-bike.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
                 
+                <div class="edit-data">
+                    <a  class="btn btn-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Editar datos
+                    </a>
+                </div>
                 
             </header>
-            <div>
-                <p>Nombre: </p>
-                <p>Apellido: </p>
-                <p>Usuario: </p>
-                <p>Preferencias: </p>
-            </div>
-
-        </article>
-        <article class="content-buttons">
-            <button  type="button">Eventos creados</button>
-            <button  type="button">Historial eventos</button>
-            <button type="button">Eventos guardados</button>
-            <button type="button">Historial eventos</button>
             
-
         </article>
+
+        <article>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <form>
+                    <!-- <p>Nombre: </p> -->
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Apellido: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre Usuario: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Contraseña: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Repetir contraseña: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Edad: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Número teléfono: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+                    <div _ngcontent-hse-c20="" class="mb-3">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Preferencias: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control">
+                    </div>
+
+                    <button id="submit" type="button" class="btn">Submit</button>
+                    
+                    
+                </form>
+    
+                </div>
+              </div>
+        </article>
+        
 
     </section>
 
+    <div>
 
-</body>
+    </div>
+</main>
 
 <!-- <p>profile works!</p> -->
 
