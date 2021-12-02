@@ -36,14 +36,14 @@ export class CalendarComponent implements OnInit {
   
   constructor() {
     moment.locale("es")
-    this.today = new Date();
-    this.month = this.today.getMonth() + 1
-    this.event1 = {nombre:"partido de fútbol",fecha:"05/12/2021",ubicacion:"calle falsa"}
-    this.event2 = {nombre:"ruta en bici",fecha:"12/12/2021",ubicacion:"calle falsa"}
-    this.event3 = {nombre:"partido de pádel",fecha:"22/12/2021",ubicacion:"calle falsa"}
-    this.event4 = {nombre:"partido de baloncesto",fecha:"30/12/2021",ubicacion:"calle falsa"}
-    this.event5 = {nombre:"ruta senderismo",fecha:"28/12/2021",ubicacion:"calle falsa"}
-    this.myEvents = [this.event1, this.event2, this.event1, this.event4, this.event5]
+    this.today      = new Date();
+    this.month      = this.today.getMonth() + 1
+    this.event1     = {nombre:"partido de fútbol",      fecha: new Date(2021,11,30),  ubicacion:"calle falsa"}
+    this.event2     = {nombre:"ruta en bici",           fecha: new Date(2021,11,25),  ubicacion:"calle falsa"}
+    this.event3     = {nombre:"partido de pádel",       fecha: new Date(2021,11,21),  ubicacion:"calle falsa"}
+    this.event4     = {nombre:"partido de baloncesto",  fecha: new Date(2021,11,18),  ubicacion:"calle falsa"}
+    this.event5     = {nombre:"ruta senderismo",        fecha: new Date(2021,11,10),  ubicacion:"calle falsa"}
+    this.myEvents   = [this.event1, this.event2, this.event1, this.event4, this.event5]
   }
 
   ngOnInit(): void {
@@ -51,9 +51,8 @@ export class CalendarComponent implements OnInit {
   }
 
   getDaysFromDate(month: any, year: any) {
-    const today = Date.now(); // obtenemos la fecha actual 
+    const today = Date.now(); 
     const startDate = moment.utc(`${year}/${month}/01`)
-    // const startDate = moment(today)
     startDate.locale("es")
     const endDate = startDate.clone().endOf('month')
     this.dateSelect = startDate;
