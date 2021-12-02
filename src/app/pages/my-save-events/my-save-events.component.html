@@ -1,147 +1,190 @@
 
 <body>
     <h1 style="padding-top: 3vh;">Eventos guardados</h1>
-     <hr>
+     <div><hr></div>
     <div class="button-information" style="padding-top: 2vh;">
-        <input type="date" class="choose-date1" placeholder="Fecha">
+        <input type="date" class="choose-date1" placeholder="Fecha" style="align-items: center;">
     </div>
+
     <div class="container" style=" padding-top: 4vh;">
-        <div class="card" style="border: solid, 1px, black;  max-height: 60%;">
-            <div class="row g-">
-              <div class="col-4">
-                <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 100%;">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                    <button type="button" class="btn-btn-success" style="width: 5.5vh; border-radius: 50%; margin-left: 90%; margin-top: ovh; background-color: transparent; border-color: transparent;" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                          </svg>
-                    </button>
-                   <p class="card-text"><small class="text-muted">9.12.2021 a las 12:00</small></p>
-                   <h5 class="card-title">Buscamos Compañera de Equipo</h5>
-                   <p class="card-text">Portera</p>
-                   <p class="card-text">Canchas de Vallecas</p>
-                </div>
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
               </div>
             </div>
           </div>
+        </div>
     </div>
     
+
     <div class="container" style=" padding-top: 4vh;">
-        <div class="card" style="border: solid, 1px, black;  max-height: 60%;">
-            <div class="row g-">
-              <div class="col-4">
-                <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 100%;">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                    <button type="button" class="btn-btn-success" style="width: 5.5vh; border-radius: 50%; margin-left: 90%; margin-top: ovh; background-color: transparent; border-color: transparent;" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                          </svg>
-                    </button>
-                   <p class="card-text"><small class="text-muted">9.12.2021 a las 12:00</small></p>
-                   <h5 class="card-title">Buscamos Compañera de Equipo</h5>
-                   <p class="card-text">Portera</p>
-                   <p class="card-text">Canchas de Vallecas</p>
-                </div>
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
               </div>
             </div>
           </div>
+        </div>
     </div>
-    
+
+
     <div class="container" style=" padding-top: 4vh;">
-        <div class="card" style="border: solid, 1px, black;  max-height: 60%;">
-            <div class="row g-">
-              <div class="col-4">
-                <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 100%;">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                    <button type="button" class="btn-btn-success" style="width: 5.5vh; border-radius: 50%; margin-left: 90%; margin-top: ovh; background-color: transparent; border-color: transparent;" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                          </svg>
-                    </button>
-                   <p class="card-text"><small class="text-muted">9.12.2021 a las 12:00</small></p>
-                   <h5 class="card-title">Buscamos Compañera de Equipo</h5>
-                   <p class="card-text">Portera</p>
-                   <p class="card-text">Canchas de Vallecas</p>
-                </div>
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
               </div>
             </div>
           </div>
+        </div>
     </div>
-    
+
+
     <div class="container" style=" padding-top: 4vh;">
-        <div class="card" style="border: solid, 1px, black;  max-height: 60%;">
-            <div class="row g-">
-              <div class="col-4">
-                <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 100%;">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                    <button type="button" class="btn-btn-success" style="width: 5.5vh; border-radius: 50%; margin-left: 90%; margin-top: ovh; background-color: transparent; border-color: transparent;" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                          </svg>
-                    </button>
-                   <p class="card-text"><small class="text-muted">9.12.2021 a las 12:00</small></p>
-                   <h5 class="card-title">Buscamos Compañera de Equipo</h5>
-                   <p class="card-text">Portera</p>
-                   <p class="card-text">Canchas de Vallecas</p>
-                </div>
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
               </div>
             </div>
           </div>
+        </div>
     </div>
-    
+
+
     <div class="container" style=" padding-top: 4vh;">
-        <div class="card" style="border: solid, 1px, black;  max-height: 60%;">
-            <div class="row g-">
-              <div class="col-4">
-                <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 100%;">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                    <button type="button" class="btn-btn-success" style="width: 5.5vh; border-radius: 50%; margin-left: 90%; margin-top: ovh; background-color: transparent; border-color: transparent;" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                          </svg>
-                    </button>
-                   <p class="card-text"><small class="text-muted">9.12.2021 a las 12:00</small></p>
-                   <h5 class="card-title">Buscamos Compañera de Equipo</h5>
-                   <p class="card-text">Portera</p>
-                   <p class="card-text">Canchas de Vallecas</p>
-                </div>
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
               </div>
             </div>
           </div>
+        </div>
     </div>
-    
+
+
     <div class="container" style=" padding-top: 4vh;">
-        <div class="card" style="border: solid, 1px, black;  max-height: 60%;">
-            <div class="row g-">
-              <div class="col-4">
-                <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 100%;">
-              </div>
-              <div class="col-8">
-                <div class="card-body">
-                    <button type="button" class="btn-btn-success" style="width: 5.5vh; border-radius: 50%; margin-left: 90%; margin-top: ovh; background-color: transparent; border-color: transparent;" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                          </svg>
-                    </button>
-                   <p class="card-text"><small class="text-muted">9.12.2021 a las 12:00</small></p>
-                   <h5 class="card-title">Buscamos Compañera de Equipo</h5>
-                   <p class="card-text">Portera</p>
-                   <p class="card-text">Canchas de Vallecas</p>
-                </div>
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
               </div>
             </div>
           </div>
+        </div>
     </div>
-    
-  
+
+
+
+    <div class="container" style=" padding-top: 4vh;">
+      <div class="card" style="border: solid, 1px, black;  max-height: 100%; text-align: left;">
+          <div class="row g-">
+            <div class="col-4">
+              <img src="../../../assets/img/fotoVK.jpg" class="img-fluid-rounded-start" alt="..." style=" width: 140%; height: 70%; margin-left: 2vh; margin-top: 3.5vh">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="TitleCard" style="display: flex; flex-direction: row; margin-left: 20%;"><h3 class="card-title" routerLink="/event-details" >Buscamos Portera</h3>
+                  <button type="button" class="btn-btn-success" style=" margin-top: -4vh; background-color: transparent; border-color: transparent; color: var(--secundaryButton);"  id="miBoton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" onclick="changeColor()">
+                          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                        </svg>
+                  </button>
+                  </div>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small class="text-muted" style="color: black;">  9.12.2021 a las 12:00</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg><small class="text-muted">Canchas de Vallecas</small></p>
+                  <p class="card-text" style=" margin-left: 20%; line-height: 1vh;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small class="text-muted">1 Persona</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 </body>

@@ -1,27 +1,28 @@
 body{ 
+    background-color:var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    margin-top: 18%;
     text-align: center;
     margin-top: 20%;
+    margin-bottom: 120vh;
 }
 .choose-date1{
     color: var(--fontColor2);
     background-color: var(--secondaryColor);
-    border-radius: 15px;
+    border-radius: 5px;
     border-color: transparent;
 }
-.card-body{
-    line-height: 1vh;
-} 
 
 .btn-btn-success{
     margin-left: 19%;
     margin-top: -1vh;
 }
 
-.green {
-    background-color: green;
+#miBoton:focus{
+    background-color: transparent;
+    color: var(--fontColor);
 }
-
-.red {
-    background-color: red;
+.card-title{
+    line-height:2vh;
 }
-
