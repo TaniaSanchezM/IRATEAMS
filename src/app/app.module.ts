@@ -28,6 +28,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import localeEs from '@angular/common/locales/es'
 import { registerLocaleData } from '@angular/common';
+import { Onboarding1Component } from './pages/onboarding/onboarding1/onboarding1.component';
+import { Onboarding2Component } from './pages/onboarding/onboarding2/onboarding2.component';
+import { Onboarding3Component } from './pages/onboarding/onboarding3/onboarding3.component';
+import { Onboarding4Component } from './pages/onboarding/onboarding4/onboarding4.component';
+import { Onboarding5Component } from './pages/onboarding/onboarding5/onboarding5.component';
+import { Onboarding6Component } from './pages/onboarding/onboarding6/onboarding6.component';
+
 registerLocaleData(localeEs, 'es')
 @NgModule({
   declarations: [
@@ -51,7 +58,14 @@ registerLocaleData(localeEs, 'es')
     RegisterComponent,
     TechSupportComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    Onboarding1Component,
+    Onboarding2Component,
+    Onboarding3Component,
+    Onboarding4Component,
+    Onboarding5Component,
+    Onboarding6Component,
+    
   ],
   imports: [
     BrowserModule,
