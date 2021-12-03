@@ -44,11 +44,12 @@
 }
 .fa {
     /* margin: 55vh auto, auto, 25vh; */
+    background-color: transparent;
     margin-top: 50vh;
     font-size: 5vh;
     color: var(--secundaryButton);
     position: absolute;
-    margin-left: 39vh;
+    margin-left: 37vh;
     animation-name:arrow;
     animation-duration:1s;
     animation-timing-function:linear;
