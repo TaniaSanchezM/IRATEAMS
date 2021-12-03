@@ -26,16 +26,16 @@ export class PastEventsComponent implements OnInit {
 
   constructor() {
 
-    this.event1     = {nombre:"partido de fútbol",      fecha: new Date(2021,11,30),  ubicacion:"calle falsa 123"}
-    this.event2     = {nombre:"ruta en bici",           fecha: new Date(2021,11,25),  ubicacion:"calle falsa 123"}
-    this.event3     = {nombre:"partido de pádel",       fecha: new Date(2021,11,21),  ubicacion:"calle falsa 123"}
-    this.event4     = {nombre:"partido de baloncesto",  fecha: new Date(2021,11,18),  ubicacion:"calle falsa 123"}
-    this.event5     = {nombre:"ruta senderismo",        fecha: new Date(2021,11,10),  ubicacion:"calle falsa 123"}
-    this.event6     = {nombre:"partido de volleyball",  fecha: new Date(2021,11,1),   ubicacion:"calle falsa 123"}
-    this.event7     = {nombre:"partida de canicas",     fecha: new Date(2021,10,30),  ubicacion:"calle falsa 123"}
-    this.event8     = {nombre:"partido de tenis",       fecha: new Date(2021,10,22),  ubicacion:"calle falsa 123"}
-    this.event9     = {nombre:"partida de petanca",     fecha: new Date(2021,9,12),  ubicacion:"calle falsa 123"}
-    this.event10    = {nombre:"ruta senderismo",        fecha: new Date(2021,9,1),   ubicacion:"calle falsa 123"}
+    this.event1     = {nombre:"partido de fútbol",      fecha: new Date(2021,11,30),  hora:"20:00", ubicacion:"calle falsa 123"}
+    this.event2     = {nombre:"ruta en bici",           fecha: new Date(2021,11,25),  hora:"12:00", ubicacion:"calle falsa 123"}
+    this.event3     = {nombre:"partido de pádel",       fecha: new Date(2021,11,21),  hora:"18:30", ubicacion:"calle falsa 123"}
+    this.event4     = {nombre:"partido de baloncesto",  fecha: new Date(2021,11,18),  hora:"21:00", ubicacion:"calle falsa 123"}
+    this.event5     = {nombre:"ruta senderismo",        fecha: new Date(2021,11,10),  hora:"15:30", ubicacion:"calle falsa 123"}
+    this.event6     = {nombre:"partido de volleyball",  fecha: new Date(2021,11,1),   hora:"19:00", ubicacion:"calle falsa 123"}
+    this.event7     = {nombre:"partida de canicas",     fecha: new Date(2021,10,30),  hora:"18:00", ubicacion:"calle falsa 123"}
+    this.event8     = {nombre:"partido de tenis",       fecha: new Date(2021,10,22),  hora:"22:00", ubicacion:"calle falsa 123"}
+    this.event9     = {nombre:"partida de petanca",     fecha: new Date(2021,9,12),   hora:"16:00", ubicacion:"calle falsa 123"}
+    this.event10    = {nombre:"ruta senderismo",        fecha: new Date(2021,9,1),    hora:"11:00", ubicacion:"calle falsa 123"}
     this.myEvents   = [this.event1, this.event2, this.event3, this.event4, this.event5, this.event6, this.event7, this.event8, this.event9, this.event10]
     this.pastEvents = []
     let i = 0;
