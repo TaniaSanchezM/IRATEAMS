@@ -38,11 +38,11 @@ export class CalendarComponent implements OnInit {
     moment.locale("es")
     this.today      = new Date();
     this.month      = this.today.getMonth() + 1
-    this.event1     = {nombre:"partido de fútbol",      fecha: new Date(2021,11,30),  ubicacion:"calle falsa"}
-    this.event2     = {nombre:"ruta en bici",           fecha: new Date(2021,11,25),  ubicacion:"calle falsa"}
-    this.event3     = {nombre:"partido de pádel",       fecha: new Date(2021,11,21),  ubicacion:"calle falsa"}
-    this.event4     = {nombre:"partido de baloncesto",  fecha: new Date(2021,11,18),  ubicacion:"calle falsa"}
-    this.event5     = {nombre:"ruta senderismo",        fecha: new Date(2021,11,10),  ubicacion:"calle falsa"}
+    this.event1     = {nombre:"partido de fútbol",      fecha: new Date(2021,11,30),  hora:"20:00", ubicacion:"calle falsa"}
+    this.event2     = {nombre:"ruta en bici",           fecha: new Date(2021,11,25),  hora:"18:30", ubicacion:"calle falsa"}
+    this.event3     = {nombre:"partido de pádel",       fecha: new Date(2021,11,21),  hora:"21:00", ubicacion:"calle falsa"}
+    this.event4     = {nombre:"partido de baloncesto",  fecha: new Date(2021,11,18),  hora:"12:00", ubicacion:"calle falsa"}
+    this.event5     = {nombre:"ruta senderismo",        fecha: new Date(2021,11,10),  hora:"19:00", ubicacion:"calle falsa"}
     this.myEvents   = [this.event1, this.event2, this.event1, this.event4, this.event5]
   }
 
