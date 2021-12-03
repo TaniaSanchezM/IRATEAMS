@@ -13,3 +13,11 @@ h2{
     margin-left: 3vh;
     margin-top: 3vh;
 }
+.Title{
+    text-align: center;
+    margin-top: 15vh;
+}
+.hr{
+    width: 90%;
+    margin-left: 5%;
+}
