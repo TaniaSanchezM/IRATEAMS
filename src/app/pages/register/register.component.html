@@ -1,33 +1,56 @@
 <div class="registerContainer container">
     <div class="col-12" >
-        <form class="rounded-3 ">
+        <form #registerForm="ngForm" (ngSubmit)="registerForm" class="rounded-3" >
             <div class="marginForm">
                 <div class="form-group mb-3">
                     <p for="user" class="labelText">Usuario</p>
-                    <input type="text" class="form-control" id="user" placeholder="User">
+                    <input type="text" class="form-control" name="user" id="user" placeholder="User" [(ngModel)]="user.userName" #userName="ngModel" 
+                    [ngClass]="{'is-invalid': userName.invalid && (userName.dirty || userName.touched)}" required>
+
+                    <div class="invalid-feedback" *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+                        <div *ngIf="userName.errors?.['required']"><p>El user es campo obligatorio</p></div>
+                    </div>
                 </div>
                 <div class="form-group mb-3">
                     <p for="email" class="labelText">Email</p>
-                    <input type="email" class="form-control" id="email" placeholder="example@email.com">
+                    <input type="text" name="email" class="form-control" id="email" placeholder="example@email.com" [(ngModel)]="user.email" #email="ngModel"
+                    [ngClass]="{'is-invalid': email.invalid && (email.dirty || email.touched)}" required email >
+                    <div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div *ngIf="email.errors?.['required']"><p>El email es campo obligatorio</p></div>
+                        <p *ngIf="email.errors?.['email']">El email tiene ser de formato email</p>
+                    </div>
                 </div>
                 <div class="form-group mb-3">
                     <p for="password" class="labelText">Contraseña</p>
-                    <input type="password" class="form-control" id="password" placeholder="********">
+                    <input type="text" name="pass" class="form-control" id="pass" placeholder="********" [(ngModel)]="user.password" #password="ngModel" 
+                    [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched)}" minlength="8" required>
+                    <div class="invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
+                        <div *ngIf="password.errors?.['minlength']"><p>La contraseña debe tener 8 caracteres</p></div>
+                        <div *ngIf="password.errors?.['required']"><p>El password es campo obligatorio</p></div>
+                    </div>
                 </div>
                 <div class="form-group mb-3">
-                    <p for="repeatPassword" class="labelText">Repetir contraseña</p>
-                    <input type="password" class="form-control" id="repeatPassword" placeholder="********">
+                    <p for="repeatPassword" class="labelText">Repetir contraseña</p><input type="text" name="reppass" class="form-control" id="reppass" placeholder="********" [(ngModel)]="user.repeatPassword" #repeatpassword="ngModel" 
+                    [ngClass]="{'is-invalid': repeatpassword.invalid && (repeatpassword.dirty || repeatpassword.touched)}" minlength="8" required (ngModelChange)="samePassword(repeatpassword.value,password.value)">
+                    <div class="invalid-feedback" >
+                        <div *ngIf="repeatpassword.errors?.['required']"><p>El password es campo obligatorio</p></div>
+                        <div *ngIf="repeatpassword.errors?.['minlength']"><p>La contraseña debe tener 8 caracteres</p></div>
+                        <div *ngIf="repeatpassword.value != password.value"> <p>Las contraseñas no son identicas</p></div>
+                    </div>
                 </div>
-            </div>
+                
 
           <div class="bottomLinks">
                 <div class="center">
-                    <button class="w-75 btn btn-lg btn-black">Regístrate</button>
+                    <div class="invalid-feedback" >
+                        <p>Las contraseñas no son identicas</p>
+                    </div>
+                    <button class="w-75 btn btn-lg btn-black" (click)="samePassword(repeatpassword.value,password.value)">Regístrate</button>
                 </div>
                 <div class="center">
                     <p class="text-muted">¿Ya tienes cuenta? <a routerLink="/login" class="link">Accede aquí</a></p>
                 </div>
           </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
