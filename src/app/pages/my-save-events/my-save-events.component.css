@@ -1,27 +1,81 @@
-body{ 
+.firstPart{
+    background-color:var(--fontColor2);
+    display: flex;
+    flex-direction: column;
+    margin-top: 18%;
     text-align: center;
     margin-top: 20%;
+    margin-bottom: -7%;
+
+   
 }
-.choose-date1{
-    color: var(--fontColor2);
-    background-color: var(--secondaryColor);
-    border-radius: 15px;
+.hr{
+    width:90%;
+    height: 40%;
+    margin-left: 5%;
+    margin-top: -1%;
+}
+.input-1{
+    box-shadow: 0 0 2vh var(--primaryButton);
+    text-align: center;
+    width: 80%;
+    height:6%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height:28px;
+    padding:0 8px;
+    border:none; 
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 8vh;
+}
+.input-1::placeholder{
+    background-image: url('../../../assets/img/lupa.png');
+    background-position:1vw;
+    background-size: 4vh;
+    background-repeat:no-repeat;
+}
+.card{
+    margin-top: 2vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+img{
+    width: 140%;
+    height: 80%; 
+    margin-top: 15%; 
+    margin-left: 15%; 
+    border-radius: 0.25rem;
+}
+#save{
+    width:3vh; 
+    height:3vh;
+    fill:currentColor;
+}
+.all-card-text{
+    margin-top: -1.5vh; 
+    margin-left: 6vh;
+}
+.container{
+    margin-top: 2vh;  
+}
+.col-4{
+    width: 30%;
+}
+.buttonSave{
+    margin-left: 22vh;
+    width: 3vh;
+    height: 3vh;
+    background-color: transparent;
     border-color: transparent;
 }
-.card-body{
-    line-height: 1vh;
-} 
 
-.btn-btn-success{
-    margin-left: 19%;
-    margin-top: -1vh;
+.right{
+    line-height: 0.2vh;
+    margin-left: 10vh;
+    margin-top: 3.5vh;
 }
-
-.green {
-    background-color: green;
-}
-
-.red {
-    background-color: red;
-}
-
