@@ -1,3 +1,11 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .firstPart{
     background-color:var(--fontColor2);
     display: flex;
@@ -11,24 +19,24 @@
 }
 .hr{
     width:90%;
-    height: 40%;
     margin-left: 5%;
     margin-top: -1%;
 }
-.input-1{
+.input-1 {
     box-shadow: 0 0 2vh var(--primaryButton);
     text-align: center;
     width: 80%;
-    height:6%;
+    height: 6%;
     margin-left: auto;
     margin-right: auto;
-    line-height:28px;
-    padding:0 8px;
-    border:none; 
+    line-height: 4vh;
+    border: none;
     background-color: white;
     border-radius: 5px;
-    margin-bottom: 8vh;
+    margin-bottom: 6vh;
+    margin-top: 3vh;
 }
+
 .input-1::placeholder{
     background-image: url('../../../assets/img/lupa.png');
     background-position:1vw;
@@ -38,12 +46,14 @@
 .card{
     margin-top: 2vh;
     box-shadow: 0 0 2vh var(--primaryButton);
-    max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 80%;
+    margin-left:3% ;
+    margin-right:3%;
     display: flex;
     flex-direction: row;
 }
+
+
 img{
     width: 140%;
     height: 80%; 
@@ -67,7 +77,9 @@ img{
     width: 30%;
 }
 .buttonSave{
-    margin-left: 22vh;
+    position: absolute; 
+    left: 90%;
+    top: 13%;
     width: 3vh;
     height: 3vh;
     background-color: transparent;
@@ -76,6 +88,8 @@ img{
 
 .right{
     line-height: 0.2vh;
-    margin-left: 10vh;
-    margin-top: 3.5vh;
+    margin-left: 20%;
+    margin-top: 4.5vh;
 }
+
+
