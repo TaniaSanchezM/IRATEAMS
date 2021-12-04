@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-tech-support',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechSupportComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private toastr: ToastrService) { }
+  showSuccess() {
+    this.toastr.success('', 'Mensaje enviado correctamente',{timeOut:4000, positionClass:"toast-top-full-width"});
+  }
   ngOnInit(): void {
   }
 

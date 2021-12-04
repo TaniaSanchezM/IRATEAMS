@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-profile',
@@ -18,8 +20,14 @@ export class ProfileComponent implements OnInit {
     age: 23
   }
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
+  showSuccess() {
+    this.toastr.success('', 'Perfil actualizado',{timeOut:4000, positionClass:"toast-top-full-width"});
+  }
+  showError(){
+    this.toastr.error('', 'Error al actualizar el perfil',{timeOut:4000, positionClass:"toast-top-full-width"});
+  }
   ngOnInit(): void {
   }
 

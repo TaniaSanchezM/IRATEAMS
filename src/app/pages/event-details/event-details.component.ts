@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-event-details',
@@ -41,12 +44,20 @@ export class EventDetailsComponent implements OnInit {
   public today2!: any
   public daysLeft!: Number
 
-  constructor() { 
+  constructor(private toastr: ToastrService,public routeLocation: Location) { 
     this.today = new Date()
     this.today2 = new Date(2021,12,1)
     this.daysLeft =  this.today2.getDate() -this.today.getDate()
   }
-
+  public showLeave():void{
+    this.toastr.error('', 'Has abandonado el evento',{timeOut:4000, positionClass:"toast-top-full-width"});
+  }
+  public showJoin():void {
+    this.toastr.success('', 'Te has unido al evento',{timeOut:4000, positionClass:"toast-top-full-width"});
+  }
+  public goBack():void{
+    this.routeLocation.back()
+  }
   ngOnInit(): void {
   }
 
