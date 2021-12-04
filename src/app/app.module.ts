@@ -37,6 +37,7 @@ import { Onboarding6Component } from './pages/onboarding/onboarding6/onboarding6
 
 registerLocaleData(localeEs, 'es')
 import { FormsModule } from '@angular/forms';
+import { ChatsConversationComponent } from './pages/chats-conversation/chats-conversation.component';
 // import { } from '@angular/material'
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { FormsModule } from '@angular/forms';
     TechSupportComponent,
     FooterComponent,
     HeaderComponent,
+<<<<<<< HEAD
     Onboarding1Component,
     Onboarding2Component,
     Onboarding3Component,
@@ -68,6 +70,9 @@ import { FormsModule } from '@angular/forms';
     Onboarding5Component,
     Onboarding6Component,
     
+=======
+    ChatsConversationComponent
+>>>>>>> chat-page
   ],
   imports: [
     BrowserModule,
