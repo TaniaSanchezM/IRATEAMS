@@ -18,6 +18,7 @@ import { RecoverPasswordComponent } from './pages/recover-password/recover-passw
 import { RegisterComponent } from './pages/register/register.component';
 import { TechSupportComponent } from './pages/tech-support/tech-support.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ChatsConversationComponent } from './pages/chats-conversation/chats-conversation.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   {path: "recover-password", component: RecoverPasswordComponent},
   {path: "register", component: RegisterComponent},
   {path: "tech-support", component: TechSupportComponent},
+  {path: "chat-id", component: ChatsConversationComponent},
   {path: "", redirectTo: "/home", pathMatch: 'full'},
   {path: "404", component: NotFoundComponent},
   {path: "**", redirectTo: "/404"},

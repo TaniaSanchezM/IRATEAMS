@@ -30,6 +30,7 @@ import localeEs from '@angular/common/locales/es'
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeEs, 'es')
 import { FormsModule } from '@angular/forms';
+import { ChatsConversationComponent } from './pages/chats-conversation/chats-conversation.component';
 // import { } from '@angular/material'
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     TechSupportComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChatsConversationComponent
   ],
   imports: [
     BrowserModule,
