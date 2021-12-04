@@ -105,7 +105,7 @@ h2 {
 
 .card {
     text-align: left;
-    width: 52vh;
+    width: 95vw;
     padding: 3vh;
     box-shadow: 0 0 2vh var(--primaryButton);
     border-radius: 0.25rem;
