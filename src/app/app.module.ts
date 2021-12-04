@@ -62,17 +62,14 @@ import { ChatsConversationComponent } from './pages/chats-conversation/chats-con
     TechSupportComponent,
     FooterComponent,
     HeaderComponent,
-<<<<<<< HEAD
     Onboarding1Component,
     Onboarding2Component,
     Onboarding3Component,
     Onboarding4Component,
     Onboarding5Component,
     Onboarding6Component,
-    
-=======
+
     ChatsConversationComponent
->>>>>>> chat-page
   ],
   imports: [
     BrowserModule,
