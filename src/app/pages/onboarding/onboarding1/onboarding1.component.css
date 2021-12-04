@@ -1,0 +1,168 @@
+/* FLECHA DENTRO DEL CÍRCULO */
+.body{
+    height: 100vh;
+}
+* {
+    box-sizing: border-box;
+    background-color: var(--bgColor);
+  }
+.container {
+    position: absolute;
+    /* padding: 15vh; */
+}
+.texto{
+    margin-top: -20vh;
+    color: var(--mainColor);
+    font-weight: 500;
+}
+.circle {
+    background-color:transparent;
+    margin-bottom: 14vh;
+    margin-left: -20vh;
+    height: 120px;
+    width: 120px;
+    display: block;
+    border: 0px solid var(--mainColor);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    animation-name:circle;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+    animation-play-state:running;
+    -webkit-animation-name:circle;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+    -webkit-animation-play-state:running;
+}
+.fa {
+    /* margin: 55vh auto, auto, 25vh; */
+    background-color: transparent;
+    margin-top: 50vh;
+    font-size: 5vh;
+    color: var(--secundaryButton);
+    position: absolute;
+    margin-left: -6vh;
+    animation-name:arrow;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+    animation-play-state:running;
+    -webkit-animation-name:arrow;
+    -webkit-animation-duration:1.5s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+    -webkit-animation-play-state:running;           
+}
+@keyframes arrow
+{
+    0%   {bottom:0;}
+    75% {bottom:6vh;}
+    100% {bottom:0;}
+}
+@-webkit-keyframes arrow
+{
+    0%   {bottom:0;}
+    75% {bottom:6vh;}
+    100% {bottom:0;}
+}
+
+
+    
+:root {
+    background-color: var(--bg-color);
+    --highlight-color: var(--mainColor);
+}
+
+body {
+    /* width: 100vw;
+    height: 100vh; */
+    background: var(--bg-color);
+}
+
+.container {
+    padding-top:10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#flecha1{
+    height: 5vh;
+    width: 5vh;
+    margin-top: 35vh;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 3vmin;
+    height: 3vmin;
+    background: transparent;
+    border-top: 1vmin solid rgb(15, 14, 14);
+    border-right: 1vmin solid rgb(3, 3, 3);
+    box-shadow: 0 0 0 rgb(27, 21, 21);
+    transition: all 200ms ease;
+  }
+
+.arrow.left {
+    left: 10vw;
+    transform: translate3d(0, -50%, 0) rotate(-135deg);
+    margin-top:-7vh
+  }
+  .arrow.right {
+    right: 10vw;
+    transform: translate3d(0, -50%, 0) rotate(45deg);
+    margin-top:-7vh
+  }
+  .arrow:hover {
+    border-color: orange;
+    box-shadow: 0.5vmin -0.5vmin 0 white;
+}
+  .arrow:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -60%) rotate(45deg);
+    width: 200%;
+    height: 200%;
+}
+.focus {
+    overflow:hidden;
+    width: 60px;
+    height: 60px;
+    border: 8px solid #eee;
+    border-top: 8px solid var(--secundaryButton);
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+    position: absolute;
+    bottom: 0.5vh;
+    left: 2vh;
+    z-index: 1;
+    background-color: transparent;
+} 
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

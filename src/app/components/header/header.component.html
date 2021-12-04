@@ -15,66 +15,62 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <div *ngIf="login === false; else esFalso" >
+            <div *ngIf="login === true; else esFalso" >
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="profile" style="font-size: 16px; margin-top: 4%;">Mi perfil</a>
+                <a class="nav-link active" aria-current="page" routerLink="/profile" data-bs-dismiss="offcanvas" style="font-size: 16px; margin-top: 4%;">Mi perfil</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="calendar"style="font-size: 16px">Mi calendario</a>
+                <a class="nav-link active" aria-current="page" routerLink="/my-created-events" data-bs-dismiss="offcanvas" style="font-size: 16px">Mis eventos creados</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="my-created-events" style="font-size: 16px">Mis eventos creados</a>
+                <a class="nav-link active" aria-current="page" routerLink="/my-save-events" data-bs-dismiss="offcanvas" style="font-size: 16px">Mis eventos guardados</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="my-save-events" style="font-size: 16px">Mis eventos guardados</a>
+                <a class="nav-link active" aria-current="page" routerLink="/past-events" data-bs-dismiss="offcanvas" style="font-size: 16px">Mi historial</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="past-events" style="font-size: 16px">Mi historial</a>
+                <a class="nav-link active" aria-current="page" routerLink="/onboarding" data-bs-dismiss="offcanvas" style="font-size: 16px">Tutorial</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="onboarding" style="font-size: 16px">Tutorial</a>
+                  <a class="nav-link active" aria-current="page" routerLink="faqs" data-bs-dismiss="offcanvas" style="font-size: 16px">FAQs</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" routerLink="faqs" style="font-size: 16px">FAQs</a>
+                  <a class="nav-link active" aria-current="page" routerLink="/tech-support" data-bs-dismiss="offcanvas" style="font-size: 16px">Soporte</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" routerLink="tech-support" style="font-size: 16px">Soporte</a>
+                  <a class="nav-link active" aria-current="page" routerLink="/about-us" data-bs-dismiss="offcanvas" style="font-size: 16px">Conócenos</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" routerLink="about-us" style="font-size: 16px">Conócenos</a>
-              </li>
-              <hr style="margin-top: 0%;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="" style="font-size: 16px; position:fixed; bottom: 5%;">Cerrar sesión</a>
+                <a class="nav-link active" aria-current="page" routerLink="/home" data-bs-dismiss="offcanvas" (click)="cerrarSesion()" style="font-size: 16px; position:fixed; bottom: 5%;">Cerrar sesión</a>
             </li>
             </div>
             <ng-template #esFalso>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="login" style="font-size: 16px; margin-top: 4%;">Iniciar sesión</a>
+                <a class="nav-link active" aria-current="page" routerLink="login" data-bs-dismiss="offcanvas" (click)="iniciarSesion()" style="font-size: 16px; margin-top: 4%;">Iniciar sesión</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="onboarding" style="font-size: 16px">Tutorial</a>
+                <a class="nav-link active" aria-current="page" routerLink="onboarding" data-bs-dismiss="offcanvas" style="font-size: 16px">Tutorial</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" routerLink="faqs" style="font-size: 16px">FAQs</a>
+                  <a class="nav-link active" aria-current="page" routerLink="faqs" data-bs-dismiss="offcanvas" style="font-size: 16px">FAQs</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" routerLink="tech-support" style="font-size: 16px">Soporte</a>
+                  <a class="nav-link active" aria-current="page" routerLink="tech-support" data-bs-dismiss="offcanvas" style="font-size: 16px">Soporte</a>
               </li>
               <hr style="margin-top: 0%;">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" routerLink="/about-us" style="font-size: 16px">Conócenos</a>
+                  <a class="nav-link active" aria-current="page" routerLink="/about-us" data-bs-dismiss="offcanvas" style="font-size: 16px">Conócenos</a>
             </ng-template>
           </ul>
         </div>

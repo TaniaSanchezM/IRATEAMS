@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 
-h2{
+/* {
     margin-bottom: 8%;
     font-weight: 800;
     margin-left: 5%;
+} */
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+hr{
+    margin-top: 2vh;
+    margin-bottom: 6vh;
 }
 .mb-3{
     /* margin-left: 5%; */
@@ -37,9 +46,11 @@ h2{
 }
 .checkInline{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     padding: 0%;
+    align-items: flex-start;
+    margin-left: -2.5vh;
 
 }
 /* input{
@@ -49,18 +60,32 @@ h2{
     background-color: var(--bgColor);
     margin-bottom: 10%;
     padding: 7%;
-    padding-bottom: 17%;
+    padding-bottom: 14vh;
     margin-top: 18%;
 }
 .header{
     background-color: var(--bgColor);
 }
-.btn{
-    display: flex;
-    align-items: center;
-    margin-left: 55%;
-    margin-top: -4%;
-    max-height: 30px;
-    width: 120px;
-    /* margin-bottom: %; */
+
+.form-check-label{
+    margin-top: 0.7vh;
+    margin-left: 1vh;
+}
+/* .form-check-input{
+    margin-bottom: -30vh;
+} */
+button{
+    height: auto;
+    width: 77.5vw;
+    height: 40px;
+    border-radius: 0.25rem;
+    border: none;
+    /* background-color: ; */
+    background: linear-gradient(180deg, #313131 0%, #000000 100%);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--fontColor2);
+
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2.6vh;
 }

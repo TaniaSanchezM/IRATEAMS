@@ -5,17 +5,18 @@
 .calendar {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 11vh;
+    width: 100%;
     height: 42vh;
 }
   
 .wrapper-calendar{
-    width: 100vh;
+    width: 52vh;
     height: 40vh;
-    margin: 3vh;
+    margin: 2vh;
     padding: 1vh;
     border: 1px solid #eaeaea;
-    border-radius: 2vh;
+    border-radius: 0.25rem;
     box-shadow: 0 0 2vh var(--primaryButton);
 }
   
@@ -96,8 +97,10 @@ h2 {
 
 .cardeventslist {
     text-align: left;
+    width: 100%;
     padding: 1vh;
-    padding-bottom: 12vh;
+    padding-bottom: 16vh;
+    margin-top: -3vh;
 }
 
 .card {
@@ -105,7 +108,7 @@ h2 {
     width: 52vh;
     padding: 3vh;
     box-shadow: 0 0 2vh var(--primaryButton);
-    border-radius: 2vh;
+    border-radius: 0.25rem;
     margin: 1vh;
 }
 

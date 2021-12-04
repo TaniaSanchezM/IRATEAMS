@@ -5,6 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class NgbdDropdownBasic {
+  public login:boolean = true;
+  cerrarSesion(){
+    this.login = false
+  }
+  iniciarSesion(){
+    this.login = true
+  }
  
 }
 
@@ -20,4 +27,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cerrarSesion(){
+    this.login = false
+  }
+  iniciarSesion(){
+    this.login = true
+  }
 }

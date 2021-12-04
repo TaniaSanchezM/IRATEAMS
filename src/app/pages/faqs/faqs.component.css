@@ -1,0 +1,23 @@
+body{
+    background-color: var( --bgColor);
+    margin-top: 12vh;
+    margin-bottom: 28vh;
+    width:100% ;
+}
+h2{
+    margin-top: 10vh;
+    color: var(--fontColor);
+    text-align: center;
+}
+.content{
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+.Title{
+    text-align: center;
+    margin-top: 15vh;
+}
+.hr{
+    width: 90%;
+    margin-left: 5%;
+}

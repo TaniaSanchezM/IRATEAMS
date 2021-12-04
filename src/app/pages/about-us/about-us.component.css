@@ -1,0 +1,63 @@
+
+.general {
+    border: 1px solid black;
+    width: 100%;
+    padding: 2vh;
+    padding-top: 13vh;
+    padding-bottom: 18vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1vh;
+}
+
+.cajafoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    /* border: 1px solid  black;
+    border-radius: 0.25rem; */
+    margin: 3vh;
+    padding: 0.5vh;
+}
+
+.foto {
+    width: 13vh;
+    height: 13vh;
+    /* border-radius: 0.25rem; */
+    border-radius: 50%;
+}
+
+.persona {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    margin-bottom: 2vh;
+    border-radius: 0.25rem;
+}
+
+.descripcion {
+    padding-top: 2vh;
+    padding-left: 2vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    height: 15vh;
+}
+
+.nombre {
+    font-weight: bold;
+}
+
+.logo {
+    /* padding-left: 0.25vh; */
+    height: 10vh;
+    width: 22vw;
+}
+

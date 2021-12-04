@@ -4,8 +4,8 @@
     background-size: cover;
 }
 .center{
+    margin-top: 7vh;
     text-align: center;
-    margin-top: 40px;
 }
 .labelText{
     color: var(--fontColor2);
@@ -19,7 +19,13 @@
     font-weight: bolder;
 }
 .bottomLinks{
-    margin-top: 110px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding-right: 10vw;
 }
 .marginForm{
     padding-top: 25px;

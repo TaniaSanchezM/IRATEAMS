@@ -1,0 +1,28 @@
+
+.cardeventslist {
+    text-align: left;
+    padding: 1vh;
+    padding-top: 13vh;
+    padding-bottom: 16vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -4vh;
+}
+
+.card {
+    text-align: left;
+    width: 52vh;
+    padding: 3vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    border-radius: 0.25rem;
+    margin: 1vh;
+    margin-left: 1vh;
+}
+
+.orden {
+    display: flex;
+    flex-direction: row;
+}

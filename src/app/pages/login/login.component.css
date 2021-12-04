@@ -12,14 +12,21 @@
     justify-content: center;
 }
 .imgLogo{
-    width: 90%;
+    margin-top: 2vh;
+    width: 75vw;
 }
 .center{
     text-align: center;
-    margin-top: 40px;
+    margin-top: 6vh;
 }
 .bottomLinks{
-    margin-top: 75px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding-right: 10vw;
 }
 .btn-black{
     background-color:#27241E;

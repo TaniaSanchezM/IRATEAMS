@@ -1,1 +1,38 @@
-<p>past-events works!</p>
+<!-- <p>past-events works!</p> -->
+<!-- [ngClass]="event.fecha <== 'Date.now()' ? 'pastEvent' : ''" -->
+<!-- START EVENTS LIST-->
+
+<section class="cardeventslist">
+    <div class="title">
+        <h1>Mis historial</h1>
+    </div>
+    <hr>
+    <div class="card" *ngFor="let event of pastEvents" routerLink="/home">
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+            </svg>
+            &nbsp; <b>Evento:</b> &nbsp; {{event.nombre}}
+        </div>
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor"
+                class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+            </svg>
+            &nbsp; <b>Fecha:</b> &nbsp;
+            {{event.fecha.getDate()}}/{{event.fecha.getMonth()+1}}/{{event.fecha.getFullYear()}}
+        </div>
+        <div class="orden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            &nbsp; <b>Ubicación:</b> &nbsp; {{event.ubicacion}}
+        </div>
+    </div>
+</section>
+
+<!-- END EVENTS LIST -->
