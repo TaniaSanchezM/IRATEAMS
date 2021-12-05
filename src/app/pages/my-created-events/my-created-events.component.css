@@ -1,9 +1,14 @@
+
+.searcher{
+   margin-top: 13vh;
+}
 body{
    background-color:var(--bgColor2);
    display: flex;
    flex-direction: column;
-   margin-top: 18%;
-   margin-bottom: 13vh;
+   margin-left: auto;
+   margin-right: auto;
+   scroll-behavior:initial ;
 }
 .hr{
    
@@ -14,53 +19,70 @@ body{
 h1{
    text-align: center;
 }
-.card{
-   box-shadow: 0 0 2vh var(--primaryButton);
-   margin-top: 2vh;
-
-}
-.card-body{
-  
-   text-align: left;
-   margin-left: 6vh;
-}
-.buttonEdit{
-   margin-top: 2vh;
-   margin-left: 6vh;
-   
-}
-
-.card-title{
- margin-top: -0.5vh;
-}
 #miBoton{
-   margin-top: -3vh;
-   margin-left: 10vh;
+   margin-top: -5vh;
+   margin-left: 87%;
 }
-
 .btn-group{
-   margin-left:  auto;
-   margin-right: auto;
+   /* margin-left:  auto;
+   margin-right: auto; */
    margin-top: 3vh; 
-   width:200px;
+   width:50%;
    height:40px;
    padding:0 8px;
    border:none; 
    border-radius: 0.25rem;
-
-}
-.edit{
+   margin-left: 25%;
+   margin-right: 25%;
+} 
+ .edit{
   text-align: center;
   color: var(--fontColor);
   background-color: var( --fontColor);
   border-color: transparent;
- 
   
-}
+} 
 .delete{
    text-align: center;
    color: var(--fontColor);
    background-color: var(--mainColor);
-   border-color: transparent;
-   
+   border-color: transparent; 
+}
+.textEvent{
+   margin-left: 20%;
+   margin-top: -18%;
+}
+.card{
+   box-shadow: 0 0 2vh var(--primaryButton);
+}
+.container{
+   margin-top: 2vh;
+}
+.final{
+   margin-bottom: 15vh;
+}
+
+
+.btn-cancelar{
+   background-color: var(--fontColor);
+   color: var(--fontColor2)
+}
+.btn-guardar{
+   background-color: var(--secundaryButton);
+   color: var(--fontColor2);
+}
+.modal {
+   position: fixed;
+   top: 25vh;
+   left: 0;
+   z-index: 1055;
+   display: none;
+   width:fit-content ;
+   height:fit-content ;
+   overflow-x: hidden;
+   overflow-y: auto;
+   outline: 0;
+}
+#staticBackdrop{
+   width: fit-content;
 }
