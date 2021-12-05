@@ -13,6 +13,11 @@ export class HomeComponent implements OnInit {
      this.siClick = true
 
    }
+   editor(){
+    this.siClick = true
+
+  
+  }
 
   ngOnInit(): void {
   }
