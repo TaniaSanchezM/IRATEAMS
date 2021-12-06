@@ -33,6 +33,10 @@ main {
     flex-direction: column;
 }
 
+#back-button{
+    margin: 0vh 0vh 0vh 2vh;
+}
+
 header{
     /* border: 2px solid purple; */
 
