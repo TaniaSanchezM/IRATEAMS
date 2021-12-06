@@ -1,7 +1,7 @@
-*{
+/* *{
     background-color: var(--bgColor);
     
-}
+} */
 
 main{
     /* display: flex;
@@ -30,6 +30,13 @@ main{
     flex-direction: column;
 }
 
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
 .img-user{
     display: flex;
     flex-direction: column;
@@ -37,17 +44,21 @@ main{
     align-items: center;
 
     /* border: 5px solid black; */
-    width: 360px;
+    width: 100%;
+    padding: 2vh 1vh 0vh 1vh;
     /* height: 300px; */
     /* position: relative; */
 }
 
+/* hr{
+    color: var(--fontColor);
+} */
 .img-content{
     /* position: relative;
     bottom: 40px; */
-    z-index: 1;
-    padding-top: 10px;
-    background-color: transparent;
+    /* z-index: 1; */
+    /* padding-top: 10px; */
+    /* background-color: transparent; */
 }
 
 .img-user-header{
@@ -127,10 +138,55 @@ main{
 .content{
     justify-content: center;
     /* border: 5px solid blue */
-    padding-bottom: 12vh;
+    padding: 2vh 2vh 15vh 2vh;
+    
+    display: flex;
+    flex-direction: column;
+}
 
-    padding-left: 10px;
-    padding-right: 10px;
+.data{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-content{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-content-icon{
+    width: 30%;
+    padding: 0vh 1vh 0vh 1vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-content-content2{
+    width: 70%;
+    padding: 0vh 1vh 0vh 1vh;
+    
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: stretch;
+}
+
+.slash{
+    border-top: 1px solid var(--primaryButton);
+    border-bottom: 1px solid var(--primaryButton);
 }
 
 .content-text-header{
@@ -167,6 +223,26 @@ main{
 
 .form-data{
     margin: 10px;
+}
+
+.btn{
+    background-color: var(--fontColor);
+    color: var(--fontColor2);
+    font-weight: bold;
+
+    height: auto;
+    /* width: 77.5vw; */
+    /* height: 40px; */
+    border-radius: 0.25rem;
+    border: none;
+    /* background-color: ; */
+    background: linear-gradient(180deg, #313131 0%, #000000 100%);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--fontColor2);
+
+    /* margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2.6vh; */
 }
 
 button{
