@@ -9,12 +9,12 @@ export class EventDetailsComponent implements OnInit {
 
   public event = {
     title: "Partido de futbol con amigos",
-    sport: "futbol",
+    sport: "FUTBOL",
     place: "MADRID",
     date: new Date(2021,11,5),
     people: 3,
-    cost: 2,
-    material: "none",
+    cost: true,
+    material: true,
     description: "Buscamos a 3 personas para completar nuestro equipo de futbol para el proximo partido. Somos un equipo de gente de entre 18 y 27 años, blaaaaaaaa aaaa aaaa aaaa"
   }
 
@@ -26,9 +26,9 @@ export class EventDetailsComponent implements OnInit {
   }
 
   public user = {
-    id: 2,
+    id: 1,
     name: "Jose",
-    user: "jodejose",
+    user: "josejose",
     img: ""
   }
 
