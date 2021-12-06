@@ -14,7 +14,7 @@
 
 .card {
     text-align: left;
-    width: 52vh;
+    width: 95vw;
     padding: 3vh;
     box-shadow: 0 0 2vh var(--primaryButton);
     border-radius: 0.25rem;
@@ -25,4 +25,8 @@
 .orden {
     display: flex;
     flex-direction: row;
+}
+
+#linea {
+    margin-top: 3vh;
 }

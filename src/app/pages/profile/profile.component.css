@@ -192,3 +192,25 @@ a{
     text-decoration: none;
 
 }
+
+/* //Modal */
+.btn-cancelar{
+    background-color: var(--fontColor);
+    color: var(--fontColor2)
+}
+.btn-guardar{
+    background-color: var(--secundaryButton);
+    color: var(--fontColor2);
+}
+.modal {
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}

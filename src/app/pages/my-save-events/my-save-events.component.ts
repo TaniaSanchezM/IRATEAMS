@@ -9,16 +9,7 @@ export class MySaveEventsComponent implements OnInit {
   public siClick : boolean = false
   constructor() {}
     changeColor(){
-    this.siClick = true
     
-
-  }
-  toggle = true;
-  status = 'Enable'; 
-
-  enableDisableRule() {
-  this.toggle = !this.toggle;
-  this.status = this.toggle ? 'Enable' : 'Disable';
   }
 
   ngOnInit(): void {

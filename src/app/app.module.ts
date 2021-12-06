@@ -69,6 +69,7 @@ import { ChatsConversationComponent } from './pages/chats-conversation/chats-con
     Onboarding5Component,
     Onboarding6Component,
     
+
     ChatsConversationComponent
   ],
   imports: [
