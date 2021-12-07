@@ -166,3 +166,13 @@ body {
       transform: rotate(360deg);
     }
   }
+
+  @media (min-width: 480px){
+    .fa {
+      margin-left:-19vw;
+    }
+    .focus{
+      bottom: 2.5vh;
+      left: 8vw;
+    }
+  }
