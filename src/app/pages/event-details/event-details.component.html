@@ -217,13 +217,31 @@
                         <textarea class="form-control" id="descripcion" rows="4" [value]="event.description"></textarea>
                     </div>
 
-                    <button id="submit" type="button" class="btn2">Submit</button>   
+                    <button id="submit" type="button" class="btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>   
               </form>
   
               </div>
             </div>
       </article>
-      
+
+       <!-- MODAL -->
+      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"><h3>Se va a modificar tu evento. <br> ¿Estás seguro?</h3>
+           
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-guardar" >Guardar cambios</button>
+            </div>
+        </div>
+        </div>
+      </div>
 
         <hr>
         <section class="buttons">

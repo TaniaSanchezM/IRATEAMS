@@ -491,7 +491,21 @@ button{
 
 
 
-
+.modal {
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100vw ;
+    height:fit-content ;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+ }
+ #staticBackdrop{
+    width: 100vw;
+ }
 
 
 /* 
