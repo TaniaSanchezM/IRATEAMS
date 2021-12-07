@@ -360,10 +360,10 @@
     </section>
     <section class="buttons">
         
-        <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button>
+        <button type="button" *ngIf="loggin === false; else esFalso2" routerLink="/login">Loggin/Sign-in</button>
         <ng-template #esFalso2> 
-            <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button>
-            <ng-template #esFalso><button type="button">Borrarme</button></ng-template>
+            <button type="button" *ngIf="apuntado === false; else esFalso" (click)="showJoin()">Apuntarme</button>
+            <ng-template #esFalso><button type="button" (click)="showLeave()">Borrarme</button></ng-template>
             
             <button *ngIf="apuntado === false" type="button">Apuntarme</button>
             <button  type="button" routerLink="chats">Chat</button>

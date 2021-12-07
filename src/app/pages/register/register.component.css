@@ -17,6 +17,7 @@
     border-radius: 50px;
     font-family: Ubuntu;
     font-weight: bolder;
+    border: 1px solid white;
 }
 .bottomLinks{
     position: fixed;
