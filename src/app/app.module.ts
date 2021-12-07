@@ -26,6 +26,9 @@ import { EventDetailsComponent } from './pages/event-details/event-details.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 import localeEs from '@angular/common/locales/es'
 import { registerLocaleData } from '@angular/common';
@@ -80,6 +83,7 @@ import { ChatsConversationComponent } from './pages/chats-conversation/chats-con
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es'}],
   bootstrap: [AppComponent]
