@@ -24,6 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { EventDetailsComponent } from './pages/event-details/event-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import localeEs from '@angular/common/locales/es'
@@ -75,7 +77,8 @@ import { ChatsConversationComponent } from './pages/chats-conversation/chats-con
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'es'}],
   bootstrap: [AppComponent]
