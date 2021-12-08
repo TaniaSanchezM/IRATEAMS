@@ -77,23 +77,23 @@
         <article class="icons-box2">
             <div class="sport">
                 <div class="sport-content" *ngIf="event.sport === 'FUTBOL'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png"/>
+                    <img src="https://img.icons8.com/material/26/000000/football2--v1.png"/>
                      <div>{{ event.sport }}</div>
                 </div>
                 <div class="sport-content" *ngIf="event.sport === 'BALONCESTO'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png"/>
+                    <img src="https://img.icons8.com/material/26/000000/football2--v1.png"/>
                      <div>{{ event.sport }}</div>
                 </div>
                 <div class="sport-content" *ngIf="event.sport === 'TENIS'">
-                    <img src="https://img.icons8.com/material/30/000000/badminton-racquet.png"/>
+                    <img src="https://img.icons8.com/material/26/000000/badminton-racquet.png"/>
                      <div>{{ event.sport }}</div>
                 </div>
                 <div class="sport-content" *ngIf="event.sport === 'PADEL'">
-                    <img src="https://img.icons8.com/material/30/000000/tennis.png"/>
+                    <img src="https://img.icons8.com/material/26/000000/tennis.png"/>
                      <div>{{ event.sport }}</div>
                 </div>
                 <div class="sport-content" *ngIf="event.sport === 'BICI'">
-                    <img src="https://img.icons8.com/material/30/000000/tennis.png"/>
+                    <img src="https://img.icons8.com/material/26/000000/tennis.png"/>
                      <div>{{ event.sport }}</div>
                 </div>
 
@@ -179,7 +179,7 @@
                     <div class=" row mb-3">
                         <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" #fecha id="fecha" [value]="event.date">
+                            <input type="date" class="form-control" #fecha id="fecha" [value]="event.date | date:'shortDate'">
                         </div>            
                     </div>
                     <div class="row mb-3">
@@ -200,11 +200,11 @@
                     </div>
                     <div class="checkInline">
                         <div class="form-switch" >
-                            <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" value="option1" >
+                            <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked="event.material" >
                             <label class="form-check-label" for="inlineCheckbox1" >Material necesario</label>
                         </div>
                         <div class="form-switch">
-                            <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" value="option2" >
+                            <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked="event.cost" >
                             <label class="form-check-label" for="inlineCheckbox2" >Pago necesario</label>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
                         <textarea class="form-control" id="descripcion" rows="4" [value]="event.description"></textarea>
                     </div>
 
-                    <button id="submit" type="button" class="btn2">Submit</button>   
+                    <button id="submit" type="button" class="btn2">Guardar cambios</button>   
               </form>
   
               </div>

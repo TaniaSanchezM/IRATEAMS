@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
     email: "jojojojose@gmail.com",
     img: "",
     preferences: ["futbol", "tenis", "baloncesto"],
-    number: "123123123123",
+    number: "123123123",
     age: 23
   }
 

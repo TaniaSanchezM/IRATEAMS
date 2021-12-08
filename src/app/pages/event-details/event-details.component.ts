@@ -14,7 +14,7 @@ export class EventDetailsComponent implements OnInit {
     date: new Date(2021,11,5),
     people: 3,
     cost: true,
-    material: true,
+    material: false,
     description: "Buscamos a 3 personas para completar nuestro equipo de futbol para el proximo partido. Somos un equipo de gente de entre 18 y 27 años, blaaaaaaaa aaaa aaaa aaaa"
   }
 
