@@ -1,12 +1,13 @@
 export class User {
-    public userId:          Number;
-    public userName:        String;
-    public email:           String;
+    public id_usuario:      Number;
+    public username:        String;
+    public mail:            String;
     public password:        String;
     public repeatPassword:  String;
     public nombreCompleto:  String;
     public fechaNacimiento: Date;
-    public numTelefono:     String;
-    public photoURL:        String;
-    constructor(){}
+    public telefono:        String;
+    public urlFoto:         String;
+    constructor(){
+    }
 }
