@@ -27,7 +27,7 @@ import { EventDetailsComponent } from './pages/event-details/event-details.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
+
 
 
 
