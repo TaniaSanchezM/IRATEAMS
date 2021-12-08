@@ -2,6 +2,7 @@
 
 
 <main>
+    <div class="carga" ng-init></div>
     <header class="title">
         <h1>Mi perfil</h1>
         <hr>
@@ -29,13 +30,13 @@
                 </div>
                 <div class="data-content-content2">
                     <div>
-                        {{user.name}} {{user.name}}  
+                        {{this.user.nombreCompleto}}
                     </div>
                     <div>
-                        {{user.age}} años
+                        {{this.user.fechaNacimiento}}
                     </div>
                     <div>
-                        @{{user.user}}
+                        @{{this.user.username}}
                     </div>
                 </div>
 
@@ -48,7 +49,7 @@
                 </div>
                 <div class="data-content-content2">
                     <div>
-                        {{user.email}}
+                        {{this.user.mail}}
                     </div>
                     
                 </div>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="data-content-content2">
                     <div>
-                        {{user.number}}
+                        {{user.telefono}}
                     </div>
                 </div>
             </article>
@@ -75,7 +76,7 @@
 
                     <h3 style="font-weight: bold;">Preferencias</h3>
 
-                    <div class="preferences-icons">
+                    <!-- <div class="preferences-icons">
                         <div class="preferences-icons-sports" *ngIf="user.preferences.includes('futbol') === true">
                             <div>
                                 <img src="https://img.icons8.com/officel/60/000000/football.png"/>
@@ -104,7 +105,7 @@
                                 <img src="https://img.icons8.com/officel/50/000000/cycling-mountain-bike.png"/>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div> 
                 
                 <div class="edit-data">
@@ -123,47 +124,47 @@
                   <form>
                     <!-- <p>Nombre: </p> -->
                     <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.name">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Url foto de perfil: </label>
+                        <input _ngcontent-hse-c20="" type="text" id="urlFoto" #urlFoto class="form-control" [value]="user.urlFoto">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Apellido: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.age">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre completo: </label>
+                        <!-- <input _ngcontent-hse-c20="" type="text" id="nombreCompleto" #nombreCompleto class="form-control" [value]="user.nombreCompleto"> -->
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre Usuario: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.user">
+                        <input _ngcontent-hse-c20="" type="text" id="userName" #username class="form-control" [value]="user.username">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Edad: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.age">
+                        <input _ngcontent-hse-c20="" type="text" id="fechaNacimiento" #fechaN class="form-control" [value]="user.fechaNacimiento">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Número teléfono: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.number">
+                        <input _ngcontent-hse-c20="" type="text" id="telefono" #telefono class="form-control" [value]="user.telefono">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Email: </label>
-                        <input _ngcontent-hse-c20="" type="mail" id="titulo" class="form-control" [value]="user.email">
+                        <input _ngcontent-hse-c20="" type="mail" id="mail" #mail class="form-control" [value]="user.mail">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="titulo" class="form-control" >
+                        <input _ngcontent-hse-c20="" type="password" id="pass" #pass class="form-control" >
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nueva contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="titulo" class="form-control">
+                        <input _ngcontent-hse-c20="" type="password" id="newpass" #newpass class="form-control">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Repetir contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="titulo" class="form-control">
+                        <input _ngcontent-hse-c20="" type="password" id="repeatnewpass" #repeatnewpass class="form-control">
                     </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
+                    <!-- <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Preferencias: </label>
                         <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.preferences">
-                    </div>
+                    </div> -->
 
-                    <button id="submit" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
+                    <button id="submit" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Guardar cambios</button>
                     <!-- Modal -->
                     <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -177,7 +178,7 @@
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-guardar" (click)="showSuccess()">Guardar cambios</button>
+                            <!-- <button type="button" class="btn btn-guardar" (click)="changeProfile(nombrecompleto.value, username.value, fechaN.value,telefono.value,mail.value,pass.value, newpass.value, repeatnewpass.value))" >Guardar cambios</button> -->
                             </div>
                         </div>
                         </div>

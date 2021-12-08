@@ -13,7 +13,7 @@ export class UsersService {
 
   getUser(id:number)
   {
-    return this.http.get(this.url + "/" + id)
+    return this.http.get(this.url + "?id=" + id)
   }
   postUser(user:User)
   {
