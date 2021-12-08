@@ -248,7 +248,7 @@
             <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button>
             <ng-template #esFalso2> 
                 <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button>
-                <ng-template #esFalso><button type="button">Borrarme</button></ng-template>
+                <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
                 
                 <button *ngIf="apuntado === false" type="button">Apuntarme</button>
                 <button  type="button" routerLink="chats">Chat</button>
@@ -256,7 +256,23 @@
 
         </section>
     </section>
-    
+    <div class="modal fade " id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title" id="staticBackdropLabel">¡Atecion!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"><h3> ¿Estás seguro que quieres desapuntarte del evento?</h3>
+           
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-guardar">Aceptar</button>
+            </div>
+        </div>
+        </div>
+      </div>
 </main>
 
 

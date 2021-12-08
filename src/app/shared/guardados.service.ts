@@ -7,7 +7,7 @@ import {Events} from '../models/events';
 })
 export class GuardadosService {
 
-  private url = 'http://localhost:3000/events'
+  private url = 'http://localhost:3000/guardados'
   constructor( private http: HttpClient) { }
 
   getGuardados(id:number){
