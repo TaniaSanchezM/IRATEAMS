@@ -11,7 +11,7 @@ import { User } from '../../models/user';
 export class RecoverPasswordComponent implements OnInit {
   public user:User;
   constructor(private toastr: ToastrService) {
-    this.user = new User();
+    // this.user = new User();
    }
    showSuccess() {
     this.toastr.success('', 'Se ha enviado una nueva contraseña a tu correo',{timeOut:4000, positionClass:"toast-top-full-width"});
