@@ -23,9 +23,16 @@ export class ProfileComponent implements OnInit {
   //   age: 23
   // }
 
-  public user: User = new User
+  public user: User 
+  public day: number
+  public month: number
+  public year: number
+  public dateStart: Date
+  public date: string
 
-    constructor(private toastr: ToastrService, private apiService: UsersService, private loginService: LoginService) { }
+    constructor(private toastr: ToastrService, private apiService: UsersService, private loginService: LoginService) {
+      this.user=new User(0,"","","","",new Date(),"","")
+     }
 
   showSuccess() {
     this.toastr.success('', 'Perfil actualizado',{timeOut:4000, positionClass:"toast-top-full-width"});
@@ -39,17 +46,30 @@ export class ProfileComponent implements OnInit {
     this.apiService.getUser(id).subscribe((data: any) =>
     {
       this.user = data.resultado[0]
-      this.user.fechaNacimiento.toLocaleDateString()
+      this.dateStart = new Date(this.user.fechaNacimiento)
+      this.day= this.dateStart.getDate()
+      this.month=this.dateStart.getMonth()+1
+      this.year=this.dateStart.getFullYear()
+
+      this.date=  this.year.toString() +  "-" + this.month.toString()  + "-"  +  this.day.toString()
+
+      console.log(this.user)    
     })
   }
 
-  // changeProfile(nombrecompleto:string, username:string,  fechaNacimiento:string, telefono: string, mail: string, password: string, repeatPassword:string) {
-  //   this.apiService.putUser(new User(nombrecompleto, username,  fechaNacimiento, telefono, mail, password,  repeatPassword).subscribe((data: any) =>
-  //   {
-  //     this.user = data.resultado[0]
-  //     this.showSuccess()
-  //   })
-  // }
+  changeProfile(urlFoto: string, nombreCompleto:string, username:string,  fechaNacimiento:string, telefono: string, mail: string, password: string, newPassword:string) {
+    let id_usuario = 5;
+    let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
+    console.log(usuario)
+    this.apiService.putUser(usuario).subscribe((data: any) =>
+    {
+      console.log(data)
+      this.showUser(5)     
+    })
+    this.showSuccess()
+    
+    
+  }
 
   ngOnInit(): void {
     this.showUser(5)

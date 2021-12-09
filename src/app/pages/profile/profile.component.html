@@ -10,7 +10,7 @@
     
     <section class="img-user ">
         <div class="img-content">
-            <img src="../../../assets/img/user1.jpg" alt="" id="img2" >
+            <img src="{{user.urlFoto}}" id="img2" >
 
             
         </div>
@@ -33,7 +33,7 @@
                         {{this.user.nombreCompleto}}
                     </div>
                     <div>
-                        {{this.user.fechaNacimiento}}
+                        {{this.user.fechaNacimiento | date:'shortDate'}}
                     </div>
                     <div>
                         @{{this.user.username}}
@@ -129,15 +129,15 @@
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre completo: </label>
-                        <!-- <input _ngcontent-hse-c20="" type="text" id="nombreCompleto" #nombreCompleto class="form-control" [value]="user.nombreCompleto"> -->
+                        <input _ngcontent-hse-c20="" type="text" id="nombreCompleto" #nombreCompleto class="form-control" [value]="user.nombreCompleto">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre Usuario: </label>
                         <input _ngcontent-hse-c20="" type="text" id="userName" #username class="form-control" [value]="user.username">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Edad: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="fechaNacimiento" #fechaN class="form-control" [value]="user.fechaNacimiento">
+                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Fecha de nacimiento: </label>
+                        <input _ngcontent-hse-c20="" type="date" id="fechaNacimiento" #fechaNacimiento class="form-control" value="{{date}}">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Número teléfono: </label>
@@ -145,15 +145,15 @@
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Email: </label>
-                        <input _ngcontent-hse-c20="" type="mail" id="mail" #mail class="form-control" [value]="user.mail">
+                        <input _ngcontent-hse-c20="" type="text" id="mail" #mail class="form-control" [value]="user.mail">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="pass" #pass class="form-control" >
+                        <input _ngcontent-hse-c20="" type="password" id="pass" #password class="form-control" >
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nueva contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="newpass" #newpass class="form-control">
+                        <input _ngcontent-hse-c20="" type="password" id="newpass" #newPassword class="form-control">
                     </div>
                     <div _ngcontent-hse-c20="" class="mb-3">
                         <label _ngcontent-hse-c20="" for="titulo" class="form-label">Repetir contraseña: </label>
@@ -178,8 +178,8 @@
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-                            <!-- <button type="button" class="btn btn-guardar" (click)="changeProfile(nombrecompleto.value, username.value, fechaN.value,telefono.value,mail.value,pass.value, newpass.value, repeatnewpass.value))" >Guardar cambios</button> -->
-                            </div>
+                            <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" (click)="changeProfile(urlFoto.value,nombreCompleto.value, username.value, fechaNacimiento.value ,telefono.value,mail.value, password.value, newPassword.value)" >Guardar cambios</button>
+                            </div> 
                         </div>
                         </div>
                     </div>
