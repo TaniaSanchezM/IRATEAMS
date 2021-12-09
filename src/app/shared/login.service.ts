@@ -7,8 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
   public login:Login;
-  // private url:string = 'https://irateams.herokuapp.com/login';
-  private url:string = 'http://localhost:4120/login';
+  private url:string = 'https://api-irateams.herokuapp.com/login';
   constructor(private http:HttpClient) {
     this.login = new Login()
    }
