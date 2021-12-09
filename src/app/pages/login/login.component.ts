@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { User } from '../../models/user';
 import { LoginService } from '../../shared/login.service';
-import { Login } from '../../models/login';
+import { ToastrService } from 'ngx-toastr';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-login',
@@ -12,19 +13,21 @@ import { Login } from '../../models/login';
 export class LoginComponent implements OnInit {
 
   
-  constructor(public loginService: LoginService) {
+  constructor(private toastr: ToastrService,public loginService: LoginService,private location: Location) {
   }
 
   onSubmit(form:NgForm){
-    this.loginService.logIn(this.loginService.login.userCredentials,this.loginService.login.password).subscribe((data:any)=>{
+    this.loginService.logIn().subscribe((data:any)=>{
       let apiResponse = data;
       if (apiResponse.error) {
-        alert(apiResponse.msg)
+        this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
       } else {
         if (apiResponse.resultado.length = 0) {
-          alert(apiResponse.msg)
+          this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
         } else {
-          this.loginService.login.userId = apiResponse.resultado[0].id_usuario;
+          this.loginService.login.userId = apiResponse.resultado[0];
+          this.toastr.success("",'Inicio de sesion completado',{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.location.back();
         }
       }
     });

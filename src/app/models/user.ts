@@ -1,12 +1,12 @@
 export class User {
-    public userId:          Number;
-    public userName:        String;
-    public email:           String;
-    public password:        String;
-    public repeatPassword:  String;
-    public nombreCompleto:  String;
+    public userId:          number;
+    public userName:        string;
+    public email:           string;
+    public password:        string;
+    public repeatPassword:  string;
+    public nombreCompleto:  string;
     public fechaNacimiento: Date;
-    public numTelefono:     String;
-    public photoURL:        String;
+    public numTelefono:     string;
+    public photoURL:        string;
     constructor(){}
 }
