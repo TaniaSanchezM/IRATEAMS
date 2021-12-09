@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+<<<<<<< HEAD
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:4200",
+=======
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "Launch localhost",
+            "url": "http://localhost:4200/index.html",
+>>>>>>> IratiMiercoles
             "webRoot": "${workspaceFolder}"
         }
     ]
