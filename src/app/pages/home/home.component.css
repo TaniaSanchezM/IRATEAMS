@@ -60,6 +60,7 @@
     flex-direction: column;
     width: 50%;
     border-radius: 20%;
+    outline:none !important;
 } 
 
 .verticalLine {
@@ -107,4 +108,8 @@ img{
     margin-top: 4.5vh;
 }
 
+/* 
+.choose-date1{
+    100%;width: 
 
+} */
