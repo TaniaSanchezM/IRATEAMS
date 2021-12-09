@@ -1,8 +1,10 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { User } from '../../models/user';
 import { ToastrService } from 'ngx-toastr';
+import { RegisterService } from '../../shared/register.service';
+import { Register } from '../../models/register';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -10,11 +12,11 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  public user:User;
+  public userData:Register;
   public error:boolean
-  constructor(private toastr: ToastrService) {
-    this.user = new User();
-    this.error = true;
+  constructor(private toastr: ToastrService,public registerService:RegisterService,private location: Location) {
+    this.userData = new Register();
+    this.error = false;
    }
    public samePassword(repeatedPassword:string,password:string):void{
     if(repeatedPassword !== password){
@@ -25,16 +27,25 @@ export class RegisterComponent implements OnInit {
     }
     console.log(this.error)
    }
-   showSuccess() {
-    this.toastr.success('', 'Tu cuenta se ha creado correctamente',{timeOut:4000, positionClass:"toast-top-full-width"});
-  }
-  showError(){
-    this.toastr.error('', 'No se ha podido crear tu cuenta',{timeOut:4000, positionClass:"toast-top-full-width"});
-  }
-   onSubmit(form:NgForm){
-    console.log(form.value);
-    console.log(this.user);
-    
+  onSubmit(form:NgForm){
+    if(this.userData.repeatPassword == this.userData.password){
+      this.registerService.registro = this.userData;
+      this.registerService.register().subscribe((data:any)=>{
+        let apiResponse = data;
+        if (apiResponse.error) {
+          this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+        } else {
+          if (apiResponse.resultado.length = 0) {
+            this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          } else {
+          this.toastr.success("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.location.back();
+          }
+        }
+      });
+    } else {
+      this.toastr.error("",'Las contraseñas deben ser identicas',{timeOut:4000, positionClass:"toast-top-full-width"});
+    }
   }
   ngOnInit(): void {
   }

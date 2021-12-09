@@ -7,11 +7,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
   public login:Login;
-  private url:string = 'https://irateams.herokuapp.com/login';
-  constructor(private http:HttpClient) { }
+  // private url:string = 'https://irateams.herokuapp.com/login';
+  private url:string = 'http://localhost:4120/login';
+  constructor(private http:HttpClient) {
+    this.login = new Login()
+   }
 
-  logIn(userCredentials:string, pswd:string){
-    let loginData = {user:userCredentials, password:pswd}
+  logIn(){
+    let loginData = {user:this.login.userCredentials, password:this.login.password}
     return this.http.post(this.url,loginData);
   }
 }
