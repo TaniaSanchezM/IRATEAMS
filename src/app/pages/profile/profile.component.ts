@@ -32,6 +32,7 @@ export class ProfileComponent implements OnInit {
 
     constructor(private toastr: ToastrService, private apiService: UsersService, private loginService: LoginService) {
       this.user=new User(0,"","","","",new Date(),"","")
+      console.log(loginService.login.userId)
      }
 
   showSuccess() {
@@ -58,21 +59,23 @@ export class ProfileComponent implements OnInit {
   }
 
   changeProfile(urlFoto: string, nombreCompleto:string, username:string,  fechaNacimiento:string, telefono: string, mail: string, password: string, newPassword:string) {
-    let id_usuario = 5;
+    this.loginService.login.userId 
+    
+    let id_usuario = this.loginService.login.userId;
     let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
     console.log(usuario)
     this.apiService.putUser(usuario).subscribe((data: any) =>
     {
       console.log(data)
-      this.showUser(5)     
+      this.showUser(id_usuario)     
     })
     this.showSuccess()
-    
-    
   }
 
   ngOnInit(): void {
-    this.showUser(5)
+    let id_usuario = this.loginService.login.userId;
+    console.log(id_usuario)
+    this.showUser(id_usuario)
 
   }
 
