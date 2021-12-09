@@ -22,10 +22,10 @@ export class LoginComponent implements OnInit {
       if (apiResponse.error) {
         this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
       } else {
-        if (apiResponse.resultado.length = 0) {
+        if (apiResponse.resultado.length === 0) {
           this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
         } else {
-          this.loginService.login.userId = apiResponse.resultado[0];
+          this.loginService.login.userId = apiResponse.resultado[0].id_usuario;
           this.toastr.success("",'Inicio de sesion completado',{timeOut:4000, positionClass:"toast-top-full-width"});
           this.location.back();
         }
