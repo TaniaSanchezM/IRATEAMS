@@ -25,18 +25,18 @@
             <img src="../../../assets/img/Rayo-Vallecano-fenemino.jpg" alt="">
         </article>
         <div class="card-img-header">
-            <h3 class="label">{{event.title}} </h3>
+            <h3 class="label">{{eventSelected.titulo}} </h3>
             <!-- <div *ngIf="user.id === creator.id">
                 <a href="" routerLink="create-event">Modificar Datos</a>
             </div> -->
         </div>
         <footer class="card-img-footer">
             <article class="creator">
-                <p id="creator-icon"><img src="../../../assets/img/user1.jpg" alt="" id="img-creator">{{creator.name}} &nbsp;{{creator.name}}</p>
+                <p id="creator-icon"><img src="{{eventSelected.urlFoto}}" alt="" id="img-creator">{{eventSelected.nombreCompleto}}</p>
                 
             </article>
             <article class="daysLeft">
-                Quedan {{daysLeft}} dias
+                Quedan {{(eventSelected.fecha - today) | date:'shortDate' }} dias
             </article>
         </footer>
 
@@ -50,7 +50,7 @@
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                 </svg>
                 <div style="margin-top: 4px; margin-left: -5px;">
-                  &nbsp; {{event.place}}  
+                  &nbsp; {{eventSelected.localidad}}  
                 </div>
                 
             </div>
@@ -60,7 +60,7 @@
                     <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
                 </svg>
                 <div style="margin-top: 4px; margin-left: -5px;">
-                    &nbsp; {{event.date | date:'shortDate'}}   
+                    &nbsp; {{eventSelected.fecha | date:'shortDate'}}   
                 </div>
                 
             </div>
@@ -69,33 +69,41 @@
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                 </svg>
                 <div style="margin-top: 4px; margin-left: -10px;">
-                  &nbsp;{{event.date | date:'shortTime'}}  
+                  &nbsp;{{eventSelected.fecha | date:'shortTime'}}  
                 </div>
             </div>
 
         </article>
         <article class="icons-box2">
             <div class="sport">
-                <div class="sport-content" *ngIf="event.sport === 'FUTBOL'">
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'Futbol'">
                     <img src="https://img.icons8.com/material/30/000000/football2--v1.png"/>
-                     <div>{{ event.sport }}</div>
+                     <div>{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="event.sport === 'BALONCESTO'">
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'BALONCESTO'">
                     <img src="https://img.icons8.com/material/30/000000/football2--v1.png"/>
-                     <div>{{ event.sport }}</div>
+                     <div>{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="event.sport === 'TENIS'">
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'Tenis'; else otroDeporte">
                     <img src="https://img.icons8.com/material/30/000000/badminton-racquet.png"/>
-                     <div>{{ event.sport }}</div>
+                     <div>{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="event.sport === 'PADEL'">
+                <div class="sport-content" *ngIf="eventSelected.deporte ==='PADEL'">
                     <img src="https://img.icons8.com/material/30/000000/tennis.png"/>
-                     <div>{{ event.sport }}</div>
+                     <div>{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="event.sport === 'BICI'">
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'BICI'">
                     <img src="https://img.icons8.com/material/30/000000/tennis.png"/>
-                     <div>{{ event.sport }}</div>
+                     <div>{{ eventSelected.deporte }}</div>
                 </div>
+                <ng-template #otroDeporte>
+                    <div>
+                        {{eventSelected.deporte}}
+                    </div>
+                </ng-template>
+                
+    
+                
 
             </div>
             
@@ -106,7 +114,7 @@
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                     </svg> -->
                     <div>
-                        {{event.people}}
+                        {{eventSelected.nPersSolicitadas}}
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi bi-people-fill" viewBox="0 0 16 16">
                         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -117,7 +125,7 @@
 
                 </div>
                 <div class="boolean2">
-                    <div class="cost2" *ngIf="event.cost === true">
+                    <div class="cost2" *ngIf="eventSelected.pago === 'true'">
                     
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
                         <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
@@ -128,7 +136,7 @@
                     </div> -->
         
                 </div>
-                <div class="material2" *ngIf="event.material === true">  
+                <div class="material2" *ngIf="eventSelected.material === 'true'">  
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
                         <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
                     </svg> -->
@@ -147,7 +155,7 @@
         
         
         <article class="description">
-            {{event.description}}
+            {{eventSelected.descripcion}}
         </article>
 
         <article *ngIf="user.id === creator.id" class="edit-data">
@@ -170,32 +178,36 @@
                     </div>
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Título del evento: </label>
-                        <input type="text" class="form-control" #titulo id="titulo" [value]="event.title">
+                        <input type="text" class="form-control" #titulo id="titulo" [value]="eventSelected.titulo">
                     </div>
                     <div class="mb-3">
                         <label for="deporte" class="form-label">Deporte: </label>
-                        <input type="text" class="form-control" #deporte id="deporte" [value]="event.sport">
+                        <input type="text" class="form-control" #deporte id="deporte" [value]="eventSelected.deporte">
                     </div>
                     <div class=" row mb-3">
                         <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" #fecha id="fecha" [value]="event.date">
+                            <input type="date" class="form-control" #fecha id="fecha" [value]="eventSelected.fecha | date:'shortDate'">
                         </div>            
                     </div>
                     <div class="row mb-3">
                         <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" #hora id="hora" [value]="event.date | date:'shortTime'">
+                            <input type="text" class="form-control" #hora id="hora" [value]="eventSelected.fecha | date:'shortTime'">
                         </div>            
                     </div>
                     <div class="mb-3">
-                        <label for="ubicacion" class="form-label">Ubicación: </label>
-                        <input type="text" class="form-control" #ubicacion id="ubicacion" [value]="event.place">
+                        <label for="ubicacion" class="form-label">Localidad: </label>
+                        <input type="text" class="form-control" #localidad id="loaclidad" [value]="eventSelected.localidad">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ubicacion" class="form-label">direccion </label>
+                        <input type="text" class="form-control" #direccion id="direccion" [value]="eventSelected.direccion">
                     </div>
                     <div class="row mb-3">
                         <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" #personas id="nPersonas" [value]="event.people">
+                            <input type="number" class="form-control" #personas id="nPersSolicitadas" [value]="eventSelected.nPersSolicitadas">
                         </div>
                     </div>
                     <div class="checkInline">
@@ -214,7 +226,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="descripcion" class="form-label">Descripción:</label>
-                        <textarea class="form-control" id="descripcion" rows="4" [value]="event.description"></textarea>
+                        <textarea class="form-control" id="descripcion" rows="4" [value]="eventSelected.descripcion"></textarea>
                     </div>
 
                     <button id="submit" type="button" class="btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>   
@@ -245,14 +257,17 @@
 
         <hr>
         <section class="buttons">
-            <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button>
-            <ng-template #esFalso2> 
-                <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button>
+            <button type="button">Loggin/Sign-in</button>
+            <!-- <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button> -->
+            <!-- <ng-template #esFalso2>  -->
+                <button type="button"  >Apuntarme</button>
+                <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
                 <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
                 
-                <button *ngIf="apuntado === false" type="button">Apuntarme</button>
+                <button  type="button">Apuntarme</button>
+                <!-- <button *ngIf="apuntado === false" type="button">Apuntarme</button> -->
                 <button  type="button" routerLink="chats">Chat</button>
-            </ng-template>
+            <!-- </ng-template> -->
 
         </section>
     </section>

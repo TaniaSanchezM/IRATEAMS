@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   
   public events : Event[]
   public siClick : boolean = false
+  
 
   fechasFiltradas(){
     this.siClick = true
@@ -19,13 +20,35 @@ export class HomeComponent implements OnInit {
    mostrarFiltro(){
      this.siClick = true
    }
-    constructor(private homeService: EventosService) {}
+    constructor(private homeService: EventosService, ) {}
     mostrarEventos(){
      this.homeService.getEventos().subscribe((data: any)=>
      {
        this.events = data.resultado
      })
+
+    
    }
+   getIdEvento(id: number)
+   {
+     console.log(id)
+      // let x = id
+     this.homeService.eventoId = id;
+     console.log(this.homeService.eventoId)
+     
+
+    // this.card_evento = id;
+
+    // console.log(this.card_evento)
+    //  this.homeService.getEvento(card).subscribe((data: any)=>
+    //  {
+    //    console.log(data.resultado)
+       
+    //  })
+   }
+
+
+
    editor(){
     this.siClick = true
     

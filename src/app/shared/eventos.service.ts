@@ -7,11 +7,15 @@ import {Event} from '../models/events';
 })
 export class EventosService {
 
-  private url = 'http://localhost:3000/eventos'
+
+  private url = 'https://api-irateams.herokuapp.com/eventos'
+
+  public eventoId: number;
+
   constructor( private http: HttpClient) { }
 
-  getEvento(id:number){
-    return this.http.get(this.url + "/" + id)
+  getEvento(){
+    return this.http.get(this.url + "?id=" + this.eventoId)
   }
   getEventos(){
     return this.http.get(this.url)

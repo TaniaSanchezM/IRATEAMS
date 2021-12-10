@@ -302,11 +302,11 @@ img{
 }
 
 .sport{
-    width: 30%;
+    width: fit-content;
     
     border: 1px solid var(--fontColor);
     border-radius: 1vh;
-    padding: 1vh 0vh 1vh 0vh;
+    padding: 1vh 1vh 1vh 1vh;
 
     display: flex;
     flex-direction: row;
