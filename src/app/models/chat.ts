@@ -1,14 +1,10 @@
 export class Chat {
-    public msgId:       Number;
-    public chatId:      Number;
-    public idEmisor:    Number;
-    public msg:         String;
-    public fecha:       Date;
-    constructor( msgId:Number,chatId:Number,idEmisor:Number,msg:String,fecha:Date){
-        this.msgId       = msgId;
-        this.chatId      = chatId;
-        this.idEmisor    = idEmisor;
-        this.msg         = msg;
-        this.fecha       = fecha;
+    public chatId:  Number;
+    public user1Id: Number;
+    public user2Id: Number;
+    constructor(chatId: Number, user1Id: Number, user2Id: Number) {
+        this.chatId     = chatId;
+        this.user1Id    = user1Id;
+        this.user2Id    = user2Id;
     }
 }
