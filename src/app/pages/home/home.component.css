@@ -70,8 +70,14 @@
    
 }
 
+.container{
+    padding-bottom: 18vh;
+}
+
 .card{
     margin-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 1vh;
     box-shadow: 0 0 2vh var(--primaryButton);
     max-height: 80%;
     margin-left:3% ;
