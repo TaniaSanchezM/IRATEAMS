@@ -10,168 +10,198 @@
         <hr>
     
     </header>
+    <!-- <li *ngFor="let ciudad of servicioService.ciudades; let i = index" >
+        <div>
+            {{i+1}}. Nombre: {{ciudad.ciudad}}.&nbsp; Código: {{ciudad.codigo}}.&nbsp; País: {{ciudad.pais}}
+        </div>
+    </li> -->
     <section class="content">
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/Rayo-Vallecano-fenemino.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
+        <div *ngFor=" let chat of chats;">
+            <article class="card2" (click)="showMSG(chat.id_chat)">
+                <article class="chat-img-container">
+                    <img src="{{chat.urlFoto}}" alt="" class="chat-img">
+                </article>
+                <article class="chat-data">
+                    <div class="chat-data-name">
+                        <div style="align-items: center;">
+                            {{chat.username}} 
+                        </div>
+                        
                     </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
+                    <!-- <div class="chat-data-time">
+                        <div style="align-items: center;">
+                            14:45
+                        </div>
+                        
+                    </div> -->
+    
+                </article>
             </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
-        <article class="card2" routerLink="/chat-id">
-            <article class="chat-img-container">
-                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
-            </article>
-            <article class="chat-data">
-                <div class="chat-data-name">
-                    <div style="align-items: center;">
-                        javier6473 
-                    </div>
-                    
-                </div>
-                <div class="chat-data-time">
-                    <div style="align-items: center;">
-                        14:45
-                    </div>
-                    
-                </div>
-
-            </article>
-        </article>
+    </div>
     </section>
+    
+    <!-- <section class="content">
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="{{chats[2].urlFoto}}" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        {{chats[2].username}} 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+        <article class="card2" routerLink="/chat-id">
+            <article class="chat-img-container">
+                <img src="../../../assets/img/user1.jpg" alt="" class="chat-img">
+            </article>
+            <article class="chat-data">
+                <div class="chat-data-name">
+                    <div style="align-items: center;">
+                        javier6473 
+                    </div>
+                    
+                </div>
+                <div class="chat-data-time">
+                    <div style="align-items: center;">
+                        14:45
+                    </div>
+                    
+                </div>
+
+            </article>
+        </article>
+    </section> -->
     
    
 

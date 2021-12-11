@@ -1,7 +1,7 @@
-*{
-    /* background-color: ; */
+/* {
+    /* background-color: ; 
     
-}
+} */
 
 main{
     display: flex;
@@ -109,9 +109,11 @@ header{
 
 }
 
-/* .chat-img{
+.chat-img{
     border-radius: 100%;
-} */
+    width: 7vh;
+    height: 7vh;
+}
 
 .chat-data{
     width: 85%;
