@@ -3,6 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/shared/users.service';
 import { LoginService } from '../../shared/login.service';
+// import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -12,17 +13,6 @@ import { LoginService } from '../../shared/login.service';
 })
 export class ProfileComponent implements OnInit {
 
-  // public user = {
-  //   id: 2,
-  //   name: "Jose",
-  //   user: "josejose",
-  //   email: "jojojojose@gmail.com",
-  //   img: "",
-  //   preferences: ["futbol", "tenis", "baloncesto"],
-  //   number: "123123123123",
-  //   age: 23
-  // }
-
   public user: User 
   public day: number
   public month: number
@@ -30,9 +20,10 @@ export class ProfileComponent implements OnInit {
   public dateStart: Date
   public date: string
 
-    constructor(private toastr: ToastrService, private apiService: UsersService, private loginService: LoginService) {
+    constructor(private toastr: ToastrService, private apiService: UsersService, public loginService: LoginService) {
       this.user=new User(0,"","","","",new Date(),"","")
       console.log(loginService.login.userId)
+      // this.loginService = loginService
      }
 
   showSuccess() {
@@ -58,19 +49,43 @@ export class ProfileComponent implements OnInit {
     })
   }
 
-  changeProfile(urlFoto: string, nombreCompleto:string, username:string,  fechaNacimiento:string, telefono: string, mail: string, password: string, newPassword:string) {
-    this.loginService.login.userId 
-    
-    let id_usuario = this.loginService.login.userId;
-    let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
-    console.log(usuario)
-    this.apiService.putUser(usuario).subscribe((data: any) =>
+  changeProfile(urlFoto: string, nombreCompleto:string, username:string,  fechaNacimiento:string, telefono: string, mail: string, password: string, newPassword:string, repeatnewpass:string) {
+    if (this.loginService.login.password === password && newPassword != "" && newPassword === repeatnewpass)
     {
-      console.log(data)
-      this.showUser(id_usuario)     
-    })
-    this.showSuccess()
+      let id_usuario = this.loginService.login.userId;
+      let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
+      console.log(usuario)
+      this.apiService.putUser(usuario).subscribe((data: any) =>
+      {
+        console.log(data)
+        this.showUser(id_usuario)     
+      })
+      this.showSuccess()
+    if (this.loginService.login.password === password && newPassword === "" && newPassword === repeatnewpass)
+    {    
+      password = newPassword 
+      let id_usuario = this.loginService.login.userId;
+      let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
+      console.log(usuario)
+      this.apiService.putUser(usuario).subscribe((data: any) =>
+      {
+        console.log(data)
+        this.showUser(id_usuario)     
+      })
+      this.showSuccess()
+    // } else {
+    //   this.toastr.error('', 'Las nuevas contraseñas no coinciden',{timeOut:4000, positionClass:"toast-top-full-width"})
+    }
+    } else {
+      this.showError()
+    }
+    
+    
   }
+
+  // onSubmit(form:NgForm){
+  //   if(form.)
+  // }
 
   ngOnInit(): void {
     let id_usuario = this.loginService.login.userId;
