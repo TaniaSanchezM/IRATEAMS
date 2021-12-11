@@ -7,11 +7,15 @@ import {Event} from '../models/events';
 })
 export class EventosService {
 
+<<<<<<< HEAD
 
   private url = 'https://api-irateams.herokuapp.com/eventos'
 
   public eventoId: number;
 
+=======
+  private url = 'https://api-irateams.herokuapp.com/eventos'
+>>>>>>> editarperfil
   constructor( private http: HttpClient) { }
 
   getEvento(){

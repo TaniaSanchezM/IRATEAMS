@@ -72,42 +72,7 @@
         </article>
         <article class="content-text">
             <header class="content-text-header">
-                <div class="preferences">
-
-                    <h3 style="font-weight: bold;">Preferencias</h3>
-
-                    <!-- <div class="preferences-icons">
-                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('futbol') === true">
-                            <div>
-                                <img src="https://img.icons8.com/officel/60/000000/football.png"/>
-                            </div>
-                        </div>
-                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('baloncesto') === true">
-                            <div>
-                                <img src="https://img.icons8.com/officel/60/000000/basketball-2.png"/>
-                            </div>
-                        </div>
-                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('tenis') === true">
-                            <div>
-                                <img src="https://img.icons8.com/officel/60/000000/tennis-2.png"/>
-                            </div>
-                        </div>
-                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('padel') === true">
-                            <div>
-                                <img src="https://img.icons8.com/officel/50/000000/table-tennis.png"/>
-                            </div>
-                        </div>
-                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('basket') === true">
-                            
-                        </div>
-                        <div class="preferences-icons-sports" *ngIf="user.preferences.includes('bici') === true">
-                            <div>
-                                <img src="https://img.icons8.com/officel/50/000000/cycling-mountain-bike.png"/>
-                            </div>
-                        </div>
-                    </div> -->
-                </div> 
-                
+              
                 <div class="edit-data">
                     <a  class="btn btn-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Editar datos
@@ -119,73 +84,78 @@
         </article>
 
         <article>
-              <div class="collapse" id="collapseExample">
+            <div class="collapse" id="collapseExample">
                 <div class="card card-body">
-                  <form>
-                    <!-- <p>Nombre: </p> -->
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Url foto de perfil: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="urlFoto" #urlFoto class="form-control" [value]="user.urlFoto">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre completo: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="nombreCompleto" #nombreCompleto class="form-control" [value]="user.nombreCompleto">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nombre Usuario: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="userName" #username class="form-control" [value]="user.username">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Fecha de nacimiento: </label>
-                        <input _ngcontent-hse-c20="" type="date" id="fechaNacimiento" #fechaNacimiento class="form-control" value="{{date}}">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Número teléfono: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="telefono" #telefono class="form-control" [value]="user.telefono">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Email: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="mail" #mail class="form-control" [value]="user.mail">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="pass" #password class="form-control" >
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Nueva contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="newpass" #newPassword class="form-control">
-                    </div>
-                    <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Repetir contraseña: </label>
-                        <input _ngcontent-hse-c20="" type="password" id="repeatnewpass" #repeatnewpass class="form-control">
-                    </div>
-                    <!-- <div _ngcontent-hse-c20="" class="mb-3">
-                        <label _ngcontent-hse-c20="" for="titulo" class="form-label">Preferencias: </label>
-                        <input _ngcontent-hse-c20="" type="text" id="titulo" class="form-control" [value]="user.preferences">
-                    </div> -->
+                    <form #editarPerfilForm = "ngForm" (ngSubmit)="editarPerfilForm">
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Url foto de perfil: </label>
+                            <input type="text" id="urlFoto" #urlFoto class="form-control" [value]="user.urlFoto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Nombre completo: </label>
+                            <input type="text" id="nombreCompleto" #nombreCompleto class="form-control" [value]="user.nombreCompleto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Nombre Usuario: </label>
+                            <input type="text" id="userName" #username class="form-control" [value]="user.username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Fecha de nacimiento: </label>
+                            <input type="date" id="fechaNacimiento" #fechaNacimiento class="form-control" value="{{date}}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Número teléfono: </label>
+                            <input type="text" id="telefono" #telefono class="form-control" [value]="user.telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Email: </label>
+                            <input type="text" id="mail" #mail class="form-control" [value]="user.mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Contraseña: </label>
+                            <input type="password" id="pass" #password class="form-control"> 
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Nueva contraseña: </label>
+                            <input type="password" id="newpass" #newPassword class="form-control">
+                             <!-- name="password" [(ngModel)]="this.user.password" [ngClass]="{'is-invalid': newPassword.invalid}" minlength="8" required>
+                            <div class="invalid-feedback" *ngIf="newPassword.invalid">
+                                <div *ngIf="newPassword.errors?.['minlength']"><p>La contraseña debe tener 8 caracteres</p></div>
+                            </div> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Repetir contraseña: </label>
+                            <input type="password" id="repeatnewpass" class="form-control" #repeatnewpass >
+                            <!-- name="repeatnewpass" [(ngModel)]="this.userData.repeatPassword" #repeatnewpass="ngModel" 
+                            [ngClass]="{'is-invalid': repeatnewpass.invalid}" minlength="8" required (ngModelChange)="samePassword(repeatnewpass.value,newPassword.value)">
+                            <div class="invalid-feedback" >
+                                <div *ngIf="repeatnewpass.errors?.['minlength']"><p>La contraseña debe tener 8 caracteres</p></div>>
+                            </div>   -->
+                        </div>
 
-                    <button id="submit" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Guardar cambios</button>
-                    <!-- Modal -->
-                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button id="submit" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Guardar cambios</button>
+                        <!-- Modal -->
+                        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body"><h3>Se van a realizar cambios en los datos de tu perfil. <br> ¿Estás seguro?</h3>
+                            
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" (click)="changeProfile(urlFoto.value,nombreCompleto.value, username.value, fechaNacimiento.value ,telefono.value,mail.value, password.value, newPassword.value, repeatnewpass.value)" >Guardar cambios</button>
+                                <!-- <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" (click)="onSubmit(editarPerfilForm)" >Guardar cambios</button> -->
+                                </div> 
                             </div>
-                            <div class="modal-body"><h3>Se van a realizar cambios en los datos de tu perfil. <br> ¿Estás seguro?</h3>
-                           
                             </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" (click)="changeProfile(urlFoto.value,nombreCompleto.value, username.value, fechaNacimiento.value ,telefono.value,mail.value, password.value, newPassword.value)" >Guardar cambios</button>
-                            </div> 
                         </div>
-                        </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
-              </div>
+            </div>
         </article>
         
 
