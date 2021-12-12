@@ -1,15 +1,12 @@
 /* FLECHA DENTRO DEL CÍRCULO */
 .body{
     height: 100vh;
+    overflow: hidden;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
     background-color: var(--bgColor);
   }
-.container {
-    position: absolute;
-    /* padding: 15vh; */
-}
 .texto{
     margin-top: -20vh;
     color: var(--mainColor);
@@ -92,12 +89,14 @@ body {
 }
 
 .container {
+    position: absolute;
     padding-top:10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 #flecha1{

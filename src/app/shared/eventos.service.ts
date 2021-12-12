@@ -6,8 +6,7 @@ import {Event} from '../models/events';
   providedIn: 'root'
 })
 export class EventosService {
-
-  private url = 'http://localhost:3000/eventos'
+  private url = 'https://api-irateams.herokuapp.com/eventos'
   constructor( private http: HttpClient) { }
 
   getEvento(id:number){
@@ -30,4 +29,6 @@ export class EventosService {
     const httpOptions = {headers: null, body:id}
     return this.http.delete(this.url, httpOptions)
   }
+
 }
+

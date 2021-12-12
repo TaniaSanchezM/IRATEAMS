@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Event } from 'src/app/models/events';
 import { id } from 'date-fns/locale';
 import { EventosService } from 'src/app/shared/eventos.service';
+import { FiltroHomeService } from 'src/app/shared/filtro-home.service';
+import {HttpParams} from "@angular/common/http";
  
 @Component({
   selector: 'app-home',
@@ -12,47 +14,45 @@ export class HomeComponent implements OnInit {
   
   public events : Event[]
   public siClick : boolean = false
+  public filtro : Event[]
+  public beginSliding : boolean = false
 
-  fechasFiltradas(){
-    this.siClick = true
-  }
+  constructor(private homeService: EventosService, private filtroHome: FiltroHomeService) {}
+  mostrarEventos(){
+   this.homeService.getEventos().subscribe((data: any)=>
+   {
+     this.events = data.resultado
+   })
+ }
    mostrarFiltro(){
      this.siClick = true
    }
-    constructor(private homeService: EventosService) {}
-    mostrarEventos(){
-     this.homeService.getEventos().subscribe((data: any)=>
+
+   filtroIncluye(filtro1:string, filtro2:any, filtro3:string){
+     this.filtroHome.getfiltroHome(filtro1,filtro2,filtro3).subscribe((data:any)=>
      {
+       this.filtro = data.resultado
+       console.log(data.resultado);
        this.events = data.resultado
      })
-   }
-   editor(){
-    this.siClick = true
+    }
+  
+    guardarEvento(){
+      this.homeService.getEventos().subscribe((data:any)=>{
+        this.events.push = data.resultado
+      })
+      
+    }
     
-  }
-  // onSearch(){
-  //   this.fechasFiltradas = date1.value
-  //     .filter((date: Date)=>pickerDate.getTime() < date.getTime() < pickerDate2.getTime())
-  // }
-
-  // filtrarFecha(date: Date){
-  //   this.homeService.getEventos().subscribe((data: any)=>
-  //    {
-  //      this.events = data.resultado; 
-  //      for ( let i =0; i < this.events.length; i++){
-  //       this.events[i].fecha.filter(this.filtrar)
-  //     }
-       
-  //    })
-  // }
-  // filtrar(date: Date){
-  //    return 
-  // }
-
+    
+  
+  //   changeColor(){
+    
+  //  }
+    
+   
+  
   ngOnInit(): void {
     this.mostrarEventos()
   }
-
-
-
 }
