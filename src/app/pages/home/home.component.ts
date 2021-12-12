@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   public siClick : boolean = false
   public filtro : Event[]
   public beginSliding : boolean = false
+  public toggle = true;
+  public status = 'Enable'; 
 
   constructor(private homeService: EventosService, private filtroHome: FiltroHomeService) {}
   mostrarEventos(){
@@ -34,9 +36,14 @@ export class HomeComponent implements OnInit {
        console.log(data.resultado);
        this.events = data.resultado
      })
-
-    
    }
+
+   enableDisableRule() {
+     
+    this.toggle = !this.toggle;
+    this.status = this.toggle ? 'Enable' : 'Disable';
+}
+
    getIdEvento(id: number)
    {
      console.log(id)
@@ -55,27 +62,13 @@ export class HomeComponent implements OnInit {
     //  })
    }
 
-
-
    editor(){
     this.siClick = true
     }
   
-    guardarEvento(){
-      this.homeService.getEventos().subscribe((data:any)=>{
-        this.events.push = data.resultado
-      })
-      
-    }
+    changeColor(){
     
-    
-  
-  //   changeColor(){
-    
-  //  }
-    
-   
-  
+   }
   ngOnInit(): void {
     this.mostrarEventos()
   }
