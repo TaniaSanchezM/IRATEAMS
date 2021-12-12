@@ -9,7 +9,6 @@ import { EventosService } from 'src/app/shared/eventos.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
   public events : Event[]
   public siClick : boolean = false
   
