@@ -90,6 +90,12 @@
 }
 
 .card{
+<<<<<<< HEAD
+=======
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 1vh;
+>>>>>>> funciHome
     margin-top: 4%;
     box-shadow: 0 0 2vh var(--primaryButton);
     max-height: 80%;
@@ -162,7 +168,15 @@ img{
  .bi-bookmark{
     
     box-sizing: border-box;
-    float: right;
+
     margin-top: -3%;
-    
+    z-index:auto ;
  }
+
+ .green {
+   color: transparent;
+}
+
+.red {
+   color: var(--secundaryButton)
+}
