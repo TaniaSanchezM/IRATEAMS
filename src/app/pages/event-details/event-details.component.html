@@ -158,7 +158,7 @@
             {{eventSelected.descripcion}}
         </article>
 
-        <article *ngIf="user.id === creator.id" class="edit-data">
+        <!-- <article *ngIf="id_usuario === eventSelected.id_creador; else noCreador" class="edit-data">
             
             <div class="edit-data">
                 <a  class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -234,7 +234,7 @@
   
               </div>
             </div>
-      </article>
+      </article> -->
 
        <!-- MODAL -->
       <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
@@ -257,17 +257,117 @@
 
         <hr>
         <section class="buttons">
-            <button type="button">Loggin/Sign-in</button>
-            <!-- <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button> -->
-            <!-- <ng-template #esFalso2>  -->
-                <button type="button"  >Apuntarme</button>
-                <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
-                <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
+            <article *ngIf="id_usuario === eventSelected.id_creador; else noCreador" class="edit-data">
+            
+                <div class="edit-data">
+                    <a  class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Modificar datos
+                    </a>
+                </div>
+                
+            </article>
+            <article>
+                <div class="collapse" id="collapseExample">
+
+
+                  <div class="card card-body">
+                    <form>
+                      
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar al evento: </label>
+                            <input type="text" class="form-control" #img id="imagen" [value]="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="titulo" class="form-label">Título del evento: </label>
+                            <input type="text" class="form-control" #titulo id="titulo" [value]="eventSelected.titulo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="deporte" class="form-label">Deporte: </label>
+                            <input type="text" class="form-control" #deporte id="deporte" [value]="eventSelected.deporte">
+                        </div>
+                        <div class=" row mb-3">
+                            <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" #fecha id="fecha" [value]="eventSelected.fecha | date:'shortDate'">
+                            </div>            
+                        </div>
+                        <div class="row mb-3">
+                            <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" #hora id="hora" [value]="eventSelected.fecha">
+                            </div>            
+                        </div>
+                        <div class="mb-3">
+                            <label for="ubicacion" class="form-label">Localidad: </label>
+                            <input type="text" class="form-control" #localidad id="loaclidad" [value]="eventSelected.localidad">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ubicacion" class="form-label">direccion </label>
+                            <input type="text" class="form-control" #direccion id="direccion" [value]="eventSelected.direccion">
+                        </div>
+                        <div class="row mb-3">
+                            <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" #personas id="nPersSolicitadas" [value]="eventSelected.nPersSolicitadas">
+                            </div>
+                        </div>
+                        <div class="checkInline">
+                            <div class="form-switch" >
+                                <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" value="option1" >
+                                <label class="form-check-label" for="inlineCheckbox1" >Material necesario</label>
+                            </div>
+                            <div class="form-switch">
+                                <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" value="option2" >
+                                <label class="form-check-label" for="inlineCheckbox2" >Pago necesario</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rangoEdad" class="form-label">Rango de edad: </label>
+                            <input type="text" class="form-control" #edad id="rangoEdad">
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción:</label>
+                            <textarea class="form-control" id="descripcion" rows="4" [value]="eventSelected.descripcion"></textarea>
+                        </div>
+    
+                        <button id="submit" type="button" class="btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>   
+                  </form>
+      
+                  </div>
+                </div>
+          </article>
+    
+
+            <ng-template #noCreador>
+
+                <!-- <button type="button">Loggin/Sign-in</button>
+                    <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button>
+                    <ng-template #esFalso2> 
+                    <button type="button"  >Apuntarme</button>
+                    <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button>
+                    <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
                 
                 <button  type="button">Apuntarme</button>
-                <!-- <button *ngIf="apuntado === false" type="button">Apuntarme</button> -->
+                <button *ngIf="apuntado === false" type="button">Apuntarme</button>
                 <button  type="button" routerLink="chats">Chat</button>
-            <!-- </ng-template> -->
+                </ng-template> -->
+
+                <hr>
+        
+                <button type="button" *ngIf="id_usuario === undefined; else esFalso5">Sign-in</button>
+                <ng-template #esFalso5> 
+                    <button type="button">Apuntarme</button>
+                    <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
+                    <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
+                
+                    <button  type="button">Apuntarme</button>
+                        <!-- <button *ngIf="apuntado === false" type="button">Apuntarme</button> -->
+                    <button  type="button" routerLink="chats">Chat</button>
+                </ng-template>
+
+            </ng-template>
+            
+            
 
         </section>
     </section>
