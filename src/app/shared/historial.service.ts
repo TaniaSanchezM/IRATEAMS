@@ -7,12 +7,12 @@ import { EventosReducido } from '../models/eventos-reducido';
 })
 export class HistorialService {
 
-  private url = "http://localhost:3000/historial"
+  private url = "https://api-irateams.herokuapp.com/historial"
 
   constructor(private http: HttpClient) { }
   getHistorial(id:number)
   {
-    return this.http.get(this.url + "/" + id)
+    return this.http.get(this.url + "?id=" + id)
   }
   postHistorial(event:EventosReducido)
   {

@@ -1,14 +1,14 @@
 export class EventosReducido {
-    public eventId:     Number;
+    public id_evento:    number;
     public titulo:      String;
-    public fechaEvento: Date;
+    public fecha:       Date;
     public direccion:   String;
     public localidad:   String;
 
-    constructor(eventId:Number,titulo:String,fechaEvento:Date,direccion:String,localidad:String){
-        this.eventId     = eventId    ;
+    constructor(id_evento:number,titulo:String,fecha:Date,direccion:String,localidad:String){
+        this.id_evento   = id_evento    ;
         this.titulo      = titulo     ;
-        this.fechaEvento = fechaEvento;
+        this.fecha       = fecha;
         this.direccion   = direccion  ;
         this.localidad   = localidad  ;
     }

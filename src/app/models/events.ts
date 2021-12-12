@@ -2,8 +2,8 @@ export class Event {
     
     public deporte:     String;
     public titulo:      String;
-    public idCreador:   Number;
-    public nPersSolicitadas: Number;
+    public idCreador:   number;
+    public nPersSolicitadas: number;
     public fecha: Date;
     public direccion:   String;
     public localidad:   String;
@@ -13,7 +13,7 @@ export class Event {
     public urlFotoEvento:     String; 
     public id_evento : number;
 
-    constructor(deporte:String,titulo:String,idCreador:Number, nPersSolicitadas : Number, fecha:Date,
+    constructor(deporte:String,titulo:String,idCreador:number, nPersSolicitadas : number, fecha:Date,
         direccion:String, localidad:String, descripcion:String, material:Boolean, pago:Boolean, urlFotoEvento:String, id_evento: number){
             this.deporte        =   deporte;
             this.titulo         =   titulo;
