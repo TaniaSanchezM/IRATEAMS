@@ -4,6 +4,10 @@ import { Location } from '@angular/common';
 import { EventosService } from '../../shared/eventos.service';
 import { add } from 'date-fns';
 
+import { User } from 'src/app/models/user';
+import { UsersService } from 'src/app/shared/users.service';
+import { LoginService } from '../../shared/login.service';
+
 
 @Component({
   selector: 'app-event-details',
@@ -30,7 +34,7 @@ export class EventDetailsComponent implements OnInit {
     img: ""
   }
 
-  public user = {
+  public user2 = {
     id: 1,
     name: "Jose",
     user: "josejose",
@@ -47,7 +51,10 @@ export class EventDetailsComponent implements OnInit {
   public daysLeft!: number
   public eventSelected: any;
 
-  constructor(private toastr: ToastrService,public routeLocation: Location, private EventosService: EventosService) { 
+  public user: User 
+  public id_usuario: number
+
+  constructor(private toastr: ToastrService,public routeLocation: Location, private EventosService: EventosService, private loginService: LoginService) { 
     this.today = Date.now()
     this.today2 = new Date(2021,12,1)
     // this.daysLeft =  this.today2.getDate() -this.today.getDate()
@@ -63,6 +70,10 @@ export class EventDetailsComponent implements OnInit {
 
     })
 
+    this.user=new User(0,"","","","",new Date(),"","")
+    console.log(loginService.login.userId)
+    this.id_usuario = this.loginService.login.userId;
+    console.log(this.id_usuario)
 
   }
   public showLeave():void{
@@ -74,6 +85,23 @@ export class EventDetailsComponent implements OnInit {
   public goBack():void{
     this.routeLocation.back()
   }
+
+  // showUser(id: number)
+  // {
+  //   this.apiService.getUser(id).subscribe((data: any) =>
+  //   {
+  //     this.user = data.resultado[0]
+  //     this.dateStart = new Date(this.user.fechaNacimiento)
+  //     this.day= this.dateStart.getDate()
+  //     this.month=this.dateStart.getMonth()+1
+  //     this.year=this.dateStart.getFullYear()
+
+  //     this.date=  this.year.toString() +  "-" + this.month.toString()  + "-"  +  this.day.toString()
+
+  //     console.log(this.user)    
+  //   })
+  // }
+
   // public getEvento()
   // {
   //   this.EventosService.getEvento().subscribe((data: any)=>
@@ -99,6 +127,9 @@ export class EventDetailsComponent implements OnInit {
   //   })
   // }
   ngOnInit(): void {
+    let id_usuario = this.loginService.login.userId;
+    console.log(id_usuario)
+    // this.showUser(id_usuario)
   }
 
 }
