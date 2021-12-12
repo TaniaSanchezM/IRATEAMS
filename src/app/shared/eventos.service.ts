@@ -34,4 +34,6 @@ export class EventosService {
     const httpOptions = {headers: null, body:id}
     return this.http.delete(this.url, httpOptions)
   }
+
 }
+
