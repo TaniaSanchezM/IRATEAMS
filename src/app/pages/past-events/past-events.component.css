@@ -13,6 +13,9 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
     text-align: left;
     width: 95vw;
     padding: 3vh;
@@ -23,6 +26,11 @@
 }
 
 .orden {
+    display: flex;
+    flex-direction: column;
+}
+
+.etiquetas{
     display: flex;
     flex-direction: row;
 }
