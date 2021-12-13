@@ -22,7 +22,7 @@
             </a>
         </div> -->
         <article class="card-img-container">
-            <img src="../../../assets/img/Rayo-Vallecano-fenemino.jpg" alt="">
+            <img src="{{eventSelected.urlFotoEvento}}" alt="">
         </article>
         <div class="card-img-header">
             <h3 class="label">{{eventSelected.titulo}} </h3>
@@ -354,7 +354,7 @@
 
                 <hr>
         
-                <button type="button" *ngIf="id_usuario === undefined; else esFalso5">Sign-in</button>
+                <button type="button" *ngIf="id_usuario === undefined; else esFalso5" routerLink="/login">Sign-in</button>
                 <ng-template #esFalso5> 
                     <button type="button">Apuntarme</button>
                     <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
@@ -362,7 +362,7 @@
                 
                     <button  type="button">Apuntarme</button>
                         <!-- <button *ngIf="apuntado === false" type="button">Apuntarme</button> -->
-                    <button  type="button" routerLink="chats">Chat</button>
+                    <button  type="button" routerLink="/chats">Chat</button>
                 </ng-template>
 
             </ng-template>
