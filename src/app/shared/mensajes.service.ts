@@ -10,12 +10,12 @@ export class MensajesService {
 
   public chat: Chat; 
   public mensaje: Mensaje; 
-  private url: string = 'https://api-irateams.herokuapp.com/chats';
+  private url: string = 'https://api-irateams.herokuapp.com/mensajes';
 
   constructor(private http: HttpClient) { }
 
   getMensajes(chatId: number) { 
-    return this.http.get(this.url + "/" + chatId) 
+    return this.http.get(this.url + "?id=" + chatId) 
   } 
   
   postMensajes(newMensaje: Mensaje) { 

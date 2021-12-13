@@ -10,6 +10,8 @@ export class ChatService {
   public chat: Chat; 
   public mensaje: Mensaje; 
   private url: string = 'https://api-irateams.herokuapp.com/chats'; 
+  public numchat:number;
+  public seeChatId:number;
   
   constructor(private http: HttpClient) { } 
   

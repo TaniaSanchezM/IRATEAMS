@@ -11,7 +11,7 @@ main{
 
     /* padding-top: 12vh; */
     padding-top: 12vh;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
     /* border: 3px solid blue; */
     /* padding-bottom: 15vh; */
     height: 100vh;
@@ -145,7 +145,7 @@ p, span{
 .content{
 
     /* border: 2px solid orange; */
-
+    overflow: scroll;
     height: 100%;
     width: 100%;
     padding: 5px;
@@ -164,9 +164,9 @@ p, span{
     /* padding-top: 20vh; */
     /* padding-bottom: 17vh; */
 
-    margin-bottom: 10vh;
+    /* margin-bottom: 10vh; */
     margin-top: 15vh;
-    padding-bottom: 12vh;
+    /* padding-bottom: 12vh; */
     
 
     /* border: 5px solid black; */

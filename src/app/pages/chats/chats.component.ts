@@ -14,7 +14,6 @@ import { Router } from '@angular/router';
 export class ChatsComponent implements OnInit {
 
   public chats: any;
-  public numchat:number
   constructor(private chatService: ChatService, private loginService: LoginService, private router: Router) 
   {
     this.chats = []
@@ -24,7 +23,8 @@ export class ChatsComponent implements OnInit {
     })
   }
   public showMSG(id:number){
-    this.numchat =  id
+    this.chatService.numchat =  id
+    this.chatService.seeChatId = this.chats[id].id_chat
     this.router.navigate(["/chat-id"])
   }
   ngOnInit(): void {
