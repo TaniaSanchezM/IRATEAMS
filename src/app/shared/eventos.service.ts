@@ -8,7 +8,7 @@ import {Event} from '../models/events';
 export class EventosService {
 
 
-  private url = 'https://api-irateams.herokuapp.com/eventos'
+  private url ="https://api-irateams.herokuapp.com/eventos"
 
   public eventoId: number;
 
