@@ -3,6 +3,8 @@ import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/shared/users.service';
 import { LoginService } from '../../shared/login.service';
+import { RegisterService } from 'src/app/shared/register.service';
+// import { Register } from 'src/app/models/register';
 // import { NgForm } from '@angular/forms';
 
 
@@ -19,11 +21,14 @@ export class ProfileComponent implements OnInit {
   public year: number
   public dateStart: Date
   public date: string
+  // public userData:Register;
+  public newpass: string
 
-    constructor(private toastr: ToastrService, private apiService: UsersService, public loginService: LoginService) {
+    constructor(private toastr: ToastrService, private apiService: UsersService, public loginService: LoginService, public registerService:RegisterService) {
       this.user=new User(0,"","","","",new Date(),"","")
       console.log(loginService.login.userId)
       // this.loginService = loginService
+      this.newpass =""
      }
 
   showSuccess() {
@@ -50,8 +55,9 @@ export class ProfileComponent implements OnInit {
   }
 
   changeProfile(urlFoto: string, nombreCompleto:string, username:string,  fechaNacimiento:string, telefono: string, mail: string, password: string, newPassword:string, repeatnewpass:string) {
-    if (this.loginService.login.password === password && newPassword != "" && newPassword === repeatnewpass)
+    if ((this.loginService.login.password === password) && (newPassword != "" && newPassword === repeatnewpass))
     {
+      password = newPassword
       let id_usuario = this.loginService.login.userId;
       let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
       console.log(usuario)
@@ -61,9 +67,10 @@ export class ProfileComponent implements OnInit {
         this.showUser(id_usuario)     
       })
       this.showSuccess()
-    if (this.loginService.login.password === password && newPassword === "" && newPassword === repeatnewpass)
+    }
+    else if ((this.loginService.login.password === password) && (newPassword === "" && newPassword === repeatnewpass))
     {    
-      password = newPassword 
+       
       let id_usuario = this.loginService.login.userId;
       let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
       console.log(usuario)
@@ -75,7 +82,7 @@ export class ProfileComponent implements OnInit {
       this.showSuccess()
     // } else {
     //   this.toastr.error('', 'Las nuevas contraseñas no coinciden',{timeOut:4000, positionClass:"toast-top-full-width"})
-    }
+    
     } else {
       this.showError()
     }

@@ -8,6 +8,7 @@ export class User {
     public fechaNacimiento: Date;
     public telefono:        string;
     public urlFoto:         string;
+    public newpass:         string
     constructor(id_usuario:Number, username: string, mail:string, password:string, nombreCompleto:string, fechaNacimiento:Date, telefono:string, urlFoto:string){
         this.id_usuario = id_usuario;
         this.username = username;

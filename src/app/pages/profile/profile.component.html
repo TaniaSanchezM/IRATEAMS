@@ -92,42 +92,42 @@
                             <input type="text" id="urlFoto" #urlFoto class="form-control" [value]="user.urlFoto">
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Nombre completo: </label>
+                            <label for="nombreCompleto" class="form-label">Nombre completo: </label>
                             <input type="text" id="nombreCompleto" #nombreCompleto class="form-control" [value]="user.nombreCompleto">
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Nombre Usuario: </label>
+                            <label for="userName" class="form-label">Nombre Usuario: </label>
                             <input type="text" id="userName" #username class="form-control" [value]="user.username">
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Fecha de nacimiento: </label>
+                            <label for="fechaNacimiento" class="form-label">Fecha de nacimiento: </label>
                             <input type="date" id="fechaNacimiento" #fechaNacimiento class="form-control" value="{{date}}">
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Número teléfono: </label>
+                            <label for="telefono" class="form-label">Número teléfono: </label>
                             <input type="text" id="telefono" #telefono class="form-control" [value]="user.telefono">
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Email: </label>
+                            <label for="mail" class="form-label">Email: </label>
                             <input type="text" id="mail" #mail class="form-control" [value]="user.mail">
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Contraseña: </label>
+                            <label for="password" class="form-label">Contraseña: </label>
                             <input type="password" id="pass" #password class="form-control"> 
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Nueva contraseña: </label>
-                            <input type="password" id="newpass" #newPassword class="form-control">
-                             <!-- name="password" [(ngModel)]="this.user.password" [ngClass]="{'is-invalid': newPassword.invalid}" minlength="8" required>
+                            <label for="newpass" class="form-label">Nueva contraseña: </label>
+                            <input type="password" id="newpass" #newPassword="ngModel" class="form-control"
+                             name="password" [(ngModel)]="newpass" [ngClass]="{'is-invalid': newPassword.invalid}" minlength="8">
                             <div class="invalid-feedback" *ngIf="newPassword.invalid">
                                 <div *ngIf="newPassword.errors?.['minlength']"><p>La contraseña debe tener 8 caracteres</p></div>
-                            </div> -->
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="titulo" class="form-label">Repetir contraseña: </label>
-                            <input type="password" id="repeatnewpass" class="form-control" #repeatnewpass >
-                            <!-- name="repeatnewpass" [(ngModel)]="this.userData.repeatPassword" #repeatnewpass="ngModel" 
-                            [ngClass]="{'is-invalid': repeatnewpass.invalid}" minlength="8" required (ngModelChange)="samePassword(repeatnewpass.value,newPassword.value)">
+                            <label for="repeatnewpass" class="form-label">Repetir contraseña: </label>
+                            <input type="password" id="repeatnewpass" class="form-control" #repeatnewpass>
+                            <!-- name="repeatnewpass" [(ngModel)]="this.user.repeatPassword" #repeatnewpass="ngModel" 
+                            [ngClass]="{'is-invalid': repeatnewpass.invalid}" minlength="8" required >
                             <div class="invalid-feedback" >
                                 <div *ngIf="repeatnewpass.errors?.['minlength']"><p>La contraseña debe tener 8 caracteres</p></div>>
                             </div>   -->
