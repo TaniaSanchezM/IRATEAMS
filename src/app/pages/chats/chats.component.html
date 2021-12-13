@@ -10,14 +10,10 @@
         <hr>
     
     </header>
-    <!-- <li *ngFor="let ciudad of servicioService.ciudades; let i = index" >
-        <div>
-            {{i+1}}. Nombre: {{ciudad.ciudad}}.&nbsp; Código: {{ciudad.codigo}}.&nbsp; País: {{ciudad.pais}}
-        </div>
-    </li> -->
+
     <section class="content">
-        <div *ngFor=" let chat of chats;">
-            <article class="card2" (click)="showMSG(chat.id_chat)">
+        <div *ngFor=" let chat of chats let i = index;">
+            <article class="card2" (click)="showMSG(i)">
                 <article class="chat-img-container">
                     <img src="{{chat.urlFoto}}" alt="" class="chat-img">
                 </article>

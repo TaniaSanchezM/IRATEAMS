@@ -1,14 +1,14 @@
 export class Mensaje {
-    public msgId:       Number;
-    public chatId:      Number;
-    public idEmisor:    Number;
-    public msg:         String;
+    public id_mensaje:  Number;
+    public id_chat:     Number;
+    public id_emisor:   Number;
+    public mensaje:     String;
     public fecha:       Date;
     constructor( msgId:Number,chatId:Number,idEmisor:Number,msg:String,fecha:Date){
-        this.msgId       = msgId;
-        this.chatId      = chatId;
-        this.idEmisor    = idEmisor;
-        this.msg         = msg;
-        this.fecha       = fecha;
+        this.id_mensaje = msgId;
+        this.id_chat    = chatId;
+        this.id_emisor  = idEmisor;
+        this.mensaje    = msg;
+        this.fecha      = fecha;
     }
 }
