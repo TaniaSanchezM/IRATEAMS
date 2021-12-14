@@ -34,9 +34,15 @@
     <div class="card" routerLink="/event-details" *ngFor="let event of events" (click)="getIdEvento(event.id_evento)" > 
      <!-- (click)="getIdEvento(event.id_evento)" -->
      
-      <div class="col-4" >
-        <img src= {{event.urlFotoEvento}} class="img-fluid-rounded-start" alt="..." >
+      <div class="col-4" ngIf="event.urlFotoEvento === ''; else havePhoto">
+        <img src="../../../assets/img/baloncesto.jpg" class="img-fluid-rounded-start" alt="..." >
       </div>
+      <ng-template class="col-4" #havePhoto>
+        <img src= {{event.urlFotoEvento}} class="img-fluid-rounded-start" alt="..." >
+      </ng-template>
+      <!-- <div class="col-4">
+        <img src="../../../assets/img/baloncesto.jpg" class="img-fluid-rounded-start" alt="..." >
+      </div> -->
       <div class="right">
        
         <!-- AQUI VA EL BOTON DE GUARDADOOOO!!!!!!!!!! -->

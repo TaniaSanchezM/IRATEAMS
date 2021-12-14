@@ -21,7 +21,7 @@ export class CreateEventsComponent implements OnInit {
   }
   createEvent(img:string, titulo:string, deporte:string, fecha:string, hora:string, ubicacion:string, personas:string, material:string, pago:string, edad:string){
     // if (material === "option1")
-    this.evento = [img,titulo, deporte, fecha, hora, ubicacion, personas, material, pago, edad]
+    this.evento = [img, titulo, deporte, fecha, hora, ubicacion, personas, material, pago, edad]
     console.log(this.evento);
     let error = false
     if(error){

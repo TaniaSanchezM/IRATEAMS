@@ -71,5 +71,6 @@ export class HomeComponent implements OnInit {
    }
   ngOnInit(): void {
     this.mostrarEventos()
+    console.log(this.events)
   }
 }
