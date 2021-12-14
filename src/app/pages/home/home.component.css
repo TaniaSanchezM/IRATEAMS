@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,14 +24,16 @@
     box-shadow: 0 0 2vh var(--primaryButton);
     border: none;
     border-radius: 0.25rem;
+    background-color: var(--fontColor2);
 }
 
 
 .firstPart2{
+    color: var(--fontColor);
     margin-left: 326%;
     width: 120%;
     height: 110%;
-    background-color: transparent;
+    background-color: var(--fontColor2);
     box-shadow: 0 0 2vh var(--primaryButton);
     border: transparent;
     border-radius: 0.25rem;
@@ -176,4 +178,198 @@ img{
 
 .red {
    color: var(--secundaryButton)
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.firstPart{
+    background-color:var(--fontColor2);
+    display: flex;
+    flex-direction: column;
+    margin-top: 18%;
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: -7%;
+   
+}
+.firstPart2{
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+   
+}
+.firstPart3{
+    width: 4vh;
+    height: 4vh;
+    margin-top: 3vh;
+    background-color: white;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    border: transparent;
+    border-radius: 0.25rem;
+    
+   
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    width: 38%;
+    margin-left: 2vh;
+   
+}
+#dropdownMenuButton1{
+    background-color: white;
+    margin-right: 2vh;
+    color: black;
+    margin-top: 3vh;
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    box-shadow: 0 0 2vh var(--primaryButton);
+
+}
+.hr{
+    width:90%;
+    margin-left: 5%;
+    margin-top: -1%;
+}
+.input-1 {
+    box-shadow: 0 0 2vh var(--primaryButton);
+    text-align: center;
+    width: 80vh;
+    height: 6%;
+    margin-left: 2.5vh;
+    line-height: 4vh;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 6vh;
+    margin-top: 3vh;
+}
+
+
+.card{
+    margin-top: 2vh;
+    box-shadow: 0 0 2vh var(--primaryButton);
+    max-height: 80%;
+    margin-left:3% ;
+    margin-right:3%;
+    display: flex;
+    flex-direction: row;
+}
+
+#filtrosDropdown{
+    margin-top: 0.5vh;
+    display: flex;
+    flex-direction: row;
+    margin-left: -66%;
+    border: none; 
+    text-align: center;
+    outline:none !important;
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-menu{
+    width: 90%;
+   border: none;
+   background-color: transparent;
+   box-shadow: 0 0 2vh var(--primaryButton);  
+
+}
+.choose-date1,.choose-place1{
+    margin-left: -66%;
+    margin: auto;
+    text-align: center;
+    /* color: var(--secondaryColor); */
+    border:none;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+ 
+    outline:none !important;
+    
+    /* border: 1px red solid; */
+} 
+
+
+img{
+    width: 140%;
+    height: 80%; 
+    margin-top: 15%; 
+    margin-left: 15%; 
+    border-radius: 0.25rem;
+}
+#save{
+    width:3vh; 
+    height:3vh;
+    fill:currentColor;
+}
+.all-card-text{
+    margin-top: -1.5vh; 
+    margin-left: 6vh;
+}
+.container{
+    margin-top: -3vh;  
+}
+.col-4{
+    width: 30%;
+}
+.buttonSave{
+    position: absolute; 
+    left: 90%;
+    top: 13%;
+    width: 3vh;
+    height: 3vh;
+    background-color: transparent;
+    border-color: transparent;
+}
+.left{
+    margin-top: -1vh;
+    margin-left: -1vh;
+    width: 30%;
+}
+
+.right{
+    line-height: 0.2vh;
+    margin-left: 12%;
+    margin-top: 2vh;
+    width: 60%;
+    /* border: 1px red solid; */
+}
+
+
+.green {
+    color: var(--secundaryButton)
+}
+
+.red {
+    color: var(--fontColor);
+}
+    
+.texto{
+    margin-left: 10%;
+    /* border: solid 1px red; */
+    height: 90%;
+    width: 88%;
+    text-align:left ;
+}
+p{
+    line-height: -1vh;
+}
+.containerSave{
+    margin-bottom: 19vh;
+}
+
+.verticalLine {
+    margin-top: 0.75vh;
+    height: 3.5vh;
+    border-left: thick solid #e7e7e7;
+   
 }
