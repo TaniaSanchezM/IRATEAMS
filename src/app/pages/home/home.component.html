@@ -28,6 +28,7 @@
         <div class="left">
           <img src={{event.urlFotoEvento}} alt=""> 
         </div>
+
         <div class="right">
           <button class="buttonSave" (click)="getIdEvento(event.id_evento)">
             <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -4vh; " width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16" (click)="enableDisableRule()" [ngClass]="{'green' : toggle, 'red': !toggle}">
