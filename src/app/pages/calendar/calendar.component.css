@@ -95,7 +95,15 @@ h2 {
     border: 1px solid var(--mainColor);
     border-radius: 5px;
 }
-
+.eventDay{
+    border: 1px solid var(--secundaryButton);
+    border-radius: 5px;
+}
+.todayEvent{
+    font-weight: bolder;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
 .cardeventslist {
     text-align: left;
     padding: 1vh;
