@@ -11,6 +11,8 @@
                     </svg>
                 </button>
             </div>
+                
+            
             <h1>{{dateSelect.format("MMMM YYYY")}}</h1>
             <div>
                 <button (click)="changeMonth(1)" class="btn-next">
@@ -21,15 +23,22 @@
                     </svg>
                 </button>
             </div>
+                
+            
         </div>
         <ol>
             <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
 
-            <li [ngClass]="this.today.getDate() === day?.value && this.today.getMonth()+1 === this.month ? 'numberColor':''"
+            <li [ngClass]="this.today.getDate() === day?.value && this.today.getMonth()+1 === this.month && this.isEvent(day?.value,this.month) === true ? 'todayEvent':this.today.getDate() === day?.value && this.today.getMonth()+1 === this.month ? 'numberColor':this.isEvent(day?.value,this.month) === true ? 'eventDay':''"
                 (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
                 *ngFor="let day of monthSelect;let first = first">
                 <span>{{day?.value}}</span>
             </li>
+            <!-- <li 
+                (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+                *ngFor="let day of monthSelect;let first = first let i=index" [ngClass]="check(i) ? 'numberColor' : 'eventDay'">
+                <span>{{day?.value}}</span>
+            </li> -->
         </ol>
     </div>
 </section>
