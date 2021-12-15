@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { EventosService } from '../../shared/eventos.service';
+
 // import { Event } from '@angular/router';
 import { Event } from 'src/app/models/events';
 import { LoginService } from 'src/app/shared/login.service';
 import { User } from 'src/app/models/user';
 // import { EventosService } from 'src/app/shared/eventos.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create-events',
@@ -14,6 +16,7 @@ import { User } from 'src/app/models/user';
 })
 export class CreateEventsComponent implements OnInit {
   public evento: Event;
+  // public evento2: Event;
 
   public user: User 
   public id_usuario: number
@@ -24,6 +27,8 @@ export class CreateEventsComponent implements OnInit {
     console.log(loginService.login.userId)
     this.id_usuario = this.loginService.login.userId;
     console.log(this.id_usuario)
+
+    // this.evento2 = new Event("", "", 0, 0, new Date, "", "", "", false, false, "", 0)
   }
 
   public showSuccess():void {
@@ -32,6 +37,7 @@ export class CreateEventsComponent implements OnInit {
   public showError():void{
     this.toastr.error('', 'No se ha podido crear el evento',{timeOut:4000, positionClass:"toast-top-full-width"});
   }
+  
   
   createEvent(img:string, titulo:string, deporte:string, fecha:string, hora:string, direccion: string, localidad:string, personas:string, material:boolean, pago:boolean, descripcion:string){
     // if (material === "option1")
@@ -44,24 +50,24 @@ export class CreateEventsComponent implements OnInit {
     
 
     this.evento = new Event (deporte, titulo, this.id_usuario, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 200)
-    // INSERT INTO evento(deporte, titulo, id_creador, nPersSolicitadas, fecha, direccion, localidad, descripcion, material, pago, urlFotoEvento)
-
+    
     console.log(this.evento);
     console.log(this.id_usuario);
 
     this.EventosService.postEventos(new Event(deporte, titulo, id_creador, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 0)).subscribe((data: any)=>
     {
+      if(data = Error)
+      {
+        this.showError()
+      }else
+      {
+         console.log(data);
+        console.log(data.resultado)
+        this.showSuccess()
+      }
       // this.events = data.resultado
-      console.log(data);
-      console.log(data.resultado)
+     
     })
-
-    let error = false
-    if(error){
-      this.showError();
-    } else {
-      this.showSuccess();
-    }
     
   }
 
