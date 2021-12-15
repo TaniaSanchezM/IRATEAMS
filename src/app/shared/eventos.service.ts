@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Event} from '../models/events';
 
 @Injectable({
@@ -31,8 +31,19 @@ export class EventosService {
   }
 
   deleteEventos(id:number){
-    const httpOptions = {headers: null, body:id}
-    return this.http.delete(this.url, httpOptions)
+    // const httpOptions = {headers: null, body:id}
+    // return this.http.delete(this.url, httpOptions)
+
+    let options= {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+      body: {
+            id_evento: id
+          },
+    }
+
+    return this.http.delete(this.url, options)
   }
 
 }
