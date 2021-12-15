@@ -19,10 +19,17 @@ export class MySaveEventsComponent implements OnInit {
   public toggle = true;
   public status = 'Enable'; 
   constructor(private homeService: EventosService, private filtroHome: FiltroHomeService) {}
+  
   mostrarEventos(){
     this.homeService.getEventos().subscribe((data: any)=>
     {
       this.events = data.resultado
+      for (let event of this.events) {
+        console.log(event.titulo, event.urlFotoEvento)
+        if(event.urlFotoEvento == null || event.urlFotoEvento == ''){
+          event.urlFotoEvento = '../../../assets/img/deportes.jpg'
+        }
+      }
     })
   }
 
