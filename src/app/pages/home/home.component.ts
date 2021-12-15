@@ -23,6 +23,12 @@ export class HomeComponent implements OnInit {
    this.homeService.getEventos().subscribe((data: any)=>
    {
      this.events = data.resultado
+     for (const event of this.events) {
+       console.log(event.titulo,event.urlFotoEvento)
+       if(event.urlFotoEvento == null || event.urlFotoEvento == ''){
+         event.urlFotoEvento = '../../../assets/img/deportes.jpg'
+       }
+     }
    })
  }
    mostrarFiltro(){
@@ -71,5 +77,6 @@ export class HomeComponent implements OnInit {
    }
   ngOnInit(): void {
     this.mostrarEventos()
+    console.log(this.events)
   }
 }

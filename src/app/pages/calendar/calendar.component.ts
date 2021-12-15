@@ -23,6 +23,8 @@ export class CalendarComponent implements OnInit {
   ];
 
 
+
+
   monthSelect!: any[];
   dateSelect: any;
   dateValue: any;
@@ -30,13 +32,8 @@ export class CalendarComponent implements OnInit {
   public today: Date;
   public month: number;
 
-  public event1: any;
-  public event2: any;
-  public event3: any;
-  public event4: any;
-  public event5: any;
-
   public myEvents: Event[];
+  public fechas: Date[];
   
   constructor(public calendarService: CalendarService, public loginService:LoginService,  public homeService: EventosService) {
     moment.locale("es")
@@ -108,5 +105,23 @@ export class CalendarComponent implements OnInit {
       console.log(this.myEvents)
     })   
     
+    
+  }
+  isEvent(day:number,month:number):boolean{
+    let res:boolean;
+    if(this.loginService.login.userId == undefined){
+      res = false;
+    } else{
+      let i = 0;
+      let marked = false;
+      while (i < this.myEvents.length && marked == false) {
+        if(new Date(this.myEvents[i].fecha).getDate() === day && new Date(this.myEvents[i].fecha).getMonth()+1 === month){
+          res = true;
+          marked = true
+        }
+        i++
+      }
+    }
+    return res;
   }
 }

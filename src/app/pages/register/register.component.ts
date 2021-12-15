@@ -13,20 +13,10 @@ import { Location } from '@angular/common';
 })
 export class RegisterComponent implements OnInit {
   public userData:Register;
-  public error:boolean
   constructor(private toastr: ToastrService,public registerService:RegisterService,private location: Location) {
     this.userData = new Register();
-    this.error = false;
    }
-   public samePassword(repeatedPassword:string,password:string):void{
-    if(repeatedPassword !== password){
-      this.error = true
-    }
-    else{
-      this.error= false
-    }
-    console.log(this.error)
-   }
+   
   onSubmit(form:NgForm){
     if(this.userData.repeatPassword == this.userData.password){
       this.registerService.registro = this.userData;

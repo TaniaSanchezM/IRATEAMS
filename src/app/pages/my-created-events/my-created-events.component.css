@@ -52,23 +52,87 @@ h1{
    margin-left: 20%;
    margin-top: -18%;
 }
-.card{
-   box-shadow: 0 0 2vh var(--primaryButton);
-}
 .container{
    margin-top: 2vh;
+   width: 100%;
 }
 .final{
    margin-bottom: 15vh;
 }
 
+#staticBackdrop{
+   width: 100vw;
+}
+.card{
+   margin-top: 2vh;
+   box-shadow: 0 0 2vh var(--primaryButton);
+   max-height: 80%;
+   margin-left:3% ;
+   margin-right:3%;
+   display: flex;
+   flex-direction: row;
+   width: 94%;
+}
+img{
+   width: 18vh;
+   height: 16vh;
+   max-height: 100%;
+   margin-top: 15%; 
+   margin-left: 15%; 
+   border-radius: 0.25rem;
+}
+.all-card-text{
+   margin-top: -1.5vh; 
+   margin-left: 6vh;
+}
+.container{
+   margin-top: -3vh;  
+}
+.col-4{
+   width: 30%;
+}
+.buttonEdit{
+   position: absolute; 
+   left: 88%;
+   top: 13%;
+   width: 3vh;
+   height: 3vh;
+   background-color: transparent;
+   border-color: transparent;
+}
+.buttonTrash{
+   position: absolute; 
+   left: 88%;
+   top: 79%;
+   width: 3vh;
+   height: 3vh;
+   background-color: transparent;
+   border-color: transparent;
+}
+.left{
+   margin-top: -1vh;
+   margin-left: -1vh;
+   width: 30%;
+}
 
+.right{
+   line-height: 0.2vh;
+   margin-left: 12%;
+   margin-top: 2vh;
+   width: 60%;
+}
+.texto{
+   margin-left: 10%;
+   height: 90%;
+   width: 88%;
+   text-align:left ;
+}
 .btn-cancelar{
    background-color: var(--fontColor);
    color: var(--fontColor2)
 }
 .btn-guardar{
-   background-color: var(--secundaryButton);
+   background-color: var(--mainColor);
    color: var(--fontColor2);
 }
 .modal {
@@ -77,12 +141,9 @@ h1{
    left: 0;
    z-index: 1055;
    display: none;
-   width: 100vw ;
-   height:fit-content ;
+   width: fit-content;
+   height: fit-content;
    overflow-x: hidden;
    overflow-y: auto;
    outline: 0;
-}
-#staticBackdrop{
-   width: 100vw;
 }

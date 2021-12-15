@@ -3,6 +3,21 @@
     background-image:url('../../../assets/img/fondo.png');
     background-size: cover;
 }
+
+.superior{
+    height: 70vh;
+}
+
+.inferior{
+    height: 30vh;
+}
+
+/* @media (max-height: 31vh){
+    .inferior{
+        display: none;
+    }
+} */
+
 .center{
     margin-top: 7vh;
     text-align: center;
@@ -20,7 +35,7 @@
     border: 1px solid white;
 }
 .bottomLinks{
-    position: fixed;
+    margin-top: 41%;
     bottom: 0;
     display: flex;
     justify-content: center;
