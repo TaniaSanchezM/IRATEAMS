@@ -468,7 +468,7 @@ img{
     padding: 1vh 1vh 0vh 1vh;
 }
 
-button{
+.button{
     height: auto;
     /* width: 300px;
     height: 40px; */
@@ -485,6 +485,15 @@ button{
     margin-bottom: 0.5vh;
 }
 
+.btn-cancelar{
+    background-color: var(--fontColor);
+    color: var(--fontColor2);
+}
+.button-guardar{
+    background-color: var(--secundaryButton);
+    color: var(--fontColor2);
+    
+}
 #submit{
     width: 30%;
 }

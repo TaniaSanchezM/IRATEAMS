@@ -26,8 +26,12 @@
             </div>            
         </div>
         <div class="mb-3">
-            <label for="ubicacion" class="form-label">Ubicación: </label>
-            <input type="text" class="form-control" #ubicacion id="ubicacion">
+            <label for="localidad" class="form-label">Localidad: </label>
+            <input type="text" class="form-control" #localidad id="localidad">
+        </div>
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Direccion: </label>
+            <input type="text" class="form-control" #direccion id="direccion">
         </div>
         <div class="row mb-3">
             <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
@@ -37,22 +41,22 @@
         </div>
         <div class="checkInline">
             <div class="form-switch">
-                <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" value="option1" style="width:3.5em; height:1.75em">
+                <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked="true" style="width:3.5em; height:1.75em">
                 <label class="form-check-label" for="inlineCheckbox1">Material necesario</label>
             </div>
             <div class="form-switch">
-                <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" value="option2" style="width:3.5em; height:1.75em">
+                <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked="false" style="width:3.5em; height:1.75em">
                 <label class="form-check-label" for="inlineCheckbox2">Pago necesario</label>
             </div>
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="rangoEdad" class="form-label">Rango de edad: </label>
             <input type="text" class="form-control" #edad id="rangoEdad">
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción:</label>
-            <textarea class="form-control" id="descripcion" rows="4"></textarea>
+            <textarea class="form-control" #descripcion id="descripcion" rows="4"></textarea>
         </div>
-    <button type="button" class="btn btn-dark"(click)="createEvent(img.value, titulo.value, deporte.value, fecha.value, hora.value, ubicacion.value, personas.value, material.value, pago.value, edad.value)">Crear evento</button>
+    <button type="button" class="btn btn-dark"(click)="createEvent(img.value, titulo.value, deporte.value, fecha.value, hora.value, localidad.value, direccion.value, personas.value, material.checked, pago.checked, descripcion.value)" [routerLink]="['/home']" routerLinkActive="router-link-active" >Crear evento</button>
 </form>
 

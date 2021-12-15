@@ -8,10 +8,17 @@ import { MapService } from '../../shared/map.service';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
-  
   public map:Map;
-  public greenIcon = new Icon({
+  public redIcon = new Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+  public orangeIcon = new Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -31,7 +38,6 @@ export class MapsComponent implements OnInit {
     this.mapService.getEvents().subscribe((data:any)=>{
       let allEvents = data.resultado;
       for (const event of allEvents) {
-        
         let res: string = event.direccion + "," + event.localidad
         this.getCoords(res)
         .then((coords)=>{
@@ -47,24 +53,35 @@ export class MapsComponent implements OnInit {
     
   }
   async mostrar(value: string){
-    console.log(value)
    let coords:any = await this.getCoords(value + ", España");    
-   this.map.setView([coords.latitud,coords.longitud],18);
+   this.map.setView([coords.latitud,coords.longitud],16.6);
    this.mysearch.remove()
-   this.mysearch =  marker([coords.latitud,coords.longitud], {icon: this.greenIcon}).addTo(this.map)
+   this.mysearch =  marker([coords.latitud,coords.longitud], {icon: this.redIcon}).addTo(this.map)
    .bindTooltip("Tu busqueda").openTooltip();
   }
   async getCoords(lugar:string):Promise<any> {
-    
     let result = await this.provider.search({ query: lugar });
     let coords:any = {latitud:result[0].y,longitud:result[0].x};    
-    console.log(result);
-    console.log(coords);
-
     return coords;  
   }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        if (position) {
+          let lat = position.coords.latitude;
+          let lng = position.coords.longitude;
+          this.map.setView([lat,lng],16.6);
+          this.mysearch.remove()
+          this.mysearch =  marker([lat,lng], {icon: this.orangeIcon}).addTo(this.map)
+          .bindTooltip("Estas aqui").openTooltip();
+        }
+      },
+      (error) => console.error(error));
+    }
+  }
   ngAfterViewInit(): void {
-    this.map = new Map('map').setView([40.4167047, -3.7035825], 18);
+      this.map = new Map('map').setView([40.4167047, -3.7035825], 16.6);
     tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd',
@@ -72,9 +89,10 @@ export class MapsComponent implements OnInit {
     }).addTo(this.map);
     this.addMarkers()
     this.mysearch =  marker([-69.0041712,39.5814979])
-      .bindTooltip("Tu busqueda").openTooltip();
+      .bindTooltip("Tu busqueda").openTooltip(); 
   }
   ngOnInit(): void {
+    this.getLocation();
   }
 
 }
