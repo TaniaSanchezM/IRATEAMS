@@ -32,12 +32,12 @@
         </div>
         <footer class="card-img-footer">
             <article class="creator">
-                <p id="creator-icon"><img src="{{eventSelected.urlFoto}}" alt="" id="img-creator">{{eventSelected.nombreCompleto}}</p>
+                <p id="creator-icon"><img src="{{eventCreator.urlFoto}}" alt="" id="img-creator">{{eventCreator.nombreCompleto}}</p>
                 
             </article>
-            <article class="daysLeft">
+            <!-- <article class="daysLeft">
                 Quedan {{(eventSelected.fecha - today) | date:'shortDate' }} dias
-            </article>
+            </article> -->
         </footer>
 
 
@@ -125,7 +125,7 @@
 
                 </div>
                 <div class="boolean2">
-                    <div class="cost2" *ngIf="eventSelected.pago === 'true'">
+                    <div class="cost2" *ngIf="eventSelected.pago === true">
                     
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
                         <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
@@ -136,7 +136,7 @@
                     </div> -->
         
                 </div>
-                <div class="material2" *ngIf="eventSelected.material === 'true'">  
+                <div class="material2" *ngIf="eventSelected.material === true">  
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
                         <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
                     </svg> -->
@@ -156,111 +156,14 @@
         
         <article class="description">
             {{eventSelected.descripcion}}
-        </article>
-
-        <!-- <article *ngIf="id_usuario === eventSelected.id_creador; else noCreador" class="edit-data">
-            
-            <div class="edit-data">
-                <a  class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Modificar datos
-                </a>
-            </div>
-            
-        </article>
-        <article>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                <form>
-                  
-                    <div class="mb-3">
-                        <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar al evento: </label>
-                        <input type="text" class="form-control" #img id="imagen" [value]="">
-                    </div>
-                    <div class="mb-3">
-                        <label for="titulo" class="form-label">Título del evento: </label>
-                        <input type="text" class="form-control" #titulo id="titulo" [value]="eventSelected.titulo">
-                    </div>
-                    <div class="mb-3">
-                        <label for="deporte" class="form-label">Deporte: </label>
-                        <input type="text" class="form-control" #deporte id="deporte" [value]="eventSelected.deporte">
-                    </div>
-                    <div class=" row mb-3">
-                        <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
-                        <div class="col-sm-10">
-                            <input type="date" class="form-control" #fecha id="fecha" [value]="eventSelected.fecha | date:'shortDate'">
-                        </div>            
-                    </div>
-                    <div class="row mb-3">
-                        <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" #hora id="hora" [value]="eventSelected.fecha | date:'shortTime'">
-                        </div>            
-                    </div>
-                    <div class="mb-3">
-                        <label for="ubicacion" class="form-label">Localidad: </label>
-                        <input type="text" class="form-control" #localidad id="loaclidad" [value]="eventSelected.localidad">
-                    </div>
-                    <div class="mb-3">
-                        <label for="ubicacion" class="form-label">direccion </label>
-                        <input type="text" class="form-control" #direccion id="direccion" [value]="eventSelected.direccion">
-                    </div>
-                    <div class="row mb-3">
-                        <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" #personas id="nPersSolicitadas" [value]="eventSelected.nPersSolicitadas">
-                        </div>
-                    </div>
-                    <div class="checkInline">
-                        <div class="form-switch" >
-                            <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" value="option1" >
-                            <label class="form-check-label" for="inlineCheckbox1" >Material necesario</label>
-                        </div>
-                        <div class="form-switch">
-                            <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" value="option2" >
-                            <label class="form-check-label" for="inlineCheckbox2" >Pago necesario</label>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="rangoEdad" class="form-label">Rango de edad: </label>
-                        <input type="text" class="form-control" #edad id="rangoEdad">
-                    </div>
-                    <div class="mb-3">
-                        <label for="descripcion" class="form-label">Descripción:</label>
-                        <textarea class="form-control" id="descripcion" rows="4" [value]="eventSelected.descripcion"></textarea>
-                    </div>
-
-                    <button id="submit" type="button" class="btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>   
-              </form>
-  
-              </div>
-            </div>
-      </article> -->
-
-       <!-- MODAL -->
-      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body"><h3>Se va a modificar tu evento. <br> ¿Estás seguro?</h3>
-           
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-guardar" >Guardar cambios</button>
-            </div>
-        </div>
-        </div>
-      </div>
+        </article>  
 
         <hr>
         <section class="buttons">
             <article *ngIf="id_usuario === eventSelected.id_creador; else noCreador" class="edit-data">
             
                 <div class="edit-data">
-                    <a  class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a  class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="collapse">
                         Modificar datos
                     </a>
                 </div>
@@ -271,69 +174,90 @@
 
 
                   <div class="card card-body">
-                    <form>
-                      
-                        <div class="mb-3">
-                            <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar al evento: </label>
-                            <input type="text" class="form-control" #img id="imagen" [value]="">
-                        </div>
-                        <div class="mb-3">
-                            <label for="titulo" class="form-label">Título del evento: </label>
-                            <input type="text" class="form-control" #titulo id="titulo" [value]="eventSelected.titulo">
-                        </div>
-                        <div class="mb-3">
-                            <label for="deporte" class="form-label">Deporte: </label>
-                            <input type="text" class="form-control" #deporte id="deporte" [value]="eventSelected.deporte">
-                        </div>
-                        <div class=" row mb-3">
-                            <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
-                            <div class="col-sm-10">
-                                <input type="date" class="form-control" #fecha id="fecha" [value]="eventSelected.fecha | date:'shortDate'">
-                            </div>            
-                        </div>
-                        <div class="row mb-3">
-                            <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" #hora id="hora" [value]="eventSelected.fecha">
-                            </div>            
-                        </div>
-                        <div class="mb-3">
-                            <label for="ubicacion" class="form-label">Localidad: </label>
-                            <input type="text" class="form-control" #localidad id="loaclidad" [value]="eventSelected.localidad">
-                        </div>
-                        <div class="mb-3">
-                            <label for="ubicacion" class="form-label">direccion </label>
-                            <input type="text" class="form-control" #direccion id="direccion" [value]="eventSelected.direccion">
-                        </div>
-                        <div class="row mb-3">
-                            <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" #personas id="nPersSolicitadas" [value]="eventSelected.nPersSolicitadas">
+                        <form>
+                        
+                            <div class="mb-3">
+                                <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar al evento: </label>
+                                <input type="text" class="form-control" #img id="imagen" [value]="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label">Título del evento: </label>
+                                <input type="text" class="form-control" #titulo id="titulo" [value]="eventSelected.titulo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="deporte" class="form-label">Deporte: </label>
+                                <input type="text" class="form-control" #deporte id="deporte" [value]="eventSelected.deporte">
+                            </div>
+                            <div class=" row mb-3">
+                                <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" #fecha id="fecha" [value]="eventSelected.fecha | date:'shortDate'">
+                                </div>            
+                            </div>
+                            <div class="row mb-3">
+                                <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" #hora id="hora" [value]="eventSelected.fecha | date:'shortTime'">
+                                </div>            
+                            </div>
+                            <div class="mb-3">
+                                <label for="localidad" class="form-label">Localidad: </label>
+                                <input type="text" class="form-control" #localidad id="loacalidad" [value]="eventSelected.localidad">
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">direccion </label>
+                                <input type="text" class="form-control" #direccion id="direccion" [value]="eventSelected.direccion">
+                            </div>
+                            <div class="row mb-3">
+                                <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" #personas id="nPersSolicitadas" [value]="eventSelected.nPersSolicitadas">
+                                </div>
+                            </div>
+                            <div class="checkInline">
+                                <div class="form-switch" >
+                                    <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked="false" value="eventSelected.material" >
+                                    <label class="form-check-label" for="inlineCheckbox1" >Material necesario</label>
+                                </div>
+                                <div class="form-switch">
+                                    <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked="false" value="eventSelected.pago" >
+                                    <label class="form-check-label" for="inlineCheckbox2" >Pago necesario</label>
+                                </div>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <label for="rangoEdad" class="form-label">Rango de edad: </label>
+                                <input type="text" class="form-control" #edad id="rangoEdad">
+                            </div> -->
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Descripción:</label>
+                                <textarea class="form-control" id="descripcion" #descripcion rows="4" [value]="eventSelected.descripcion"></textarea>
+                            </div>
+        
+                            <button id="submit" type="button" class="button btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="pasarDatos(deporte.value, titulo.value, personas.value, fecha.value, hora.value, localidad.value, direccion.value,  material.checked, pago.checked, descripcion.value, img.value)">Modificar</button>   
+                        </form>
+                    </div>
+
+                    <!-- MODAL -->
+                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3>Se va a modificar tu evento. <br> ¿Estás seguro?</h3>
+                            
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                                    <!-- <button type="button" class="btn btn-guardar button-guardar" data-bs-dismiss="modal" data-bs-toggle="collapse" href="#collapseExample" (click)="editEvento()" >Guardar cambios</button> -->
+                                    <button type="button" class="btn btn-guardar button-guardar" data-bs-dismiss="modal" data-bs-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" (click)="editEvento()" routerLink="/event-details" >Guardar cambios</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="checkInline">
-                            <div class="form-switch" >
-                                <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" value="option1" >
-                                <label class="form-check-label" for="inlineCheckbox1" >Material necesario</label>
-                            </div>
-                            <div class="form-switch">
-                                <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" value="option2" >
-                                <label class="form-check-label" for="inlineCheckbox2" >Pago necesario</label>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="rangoEdad" class="form-label">Rango de edad: </label>
-                            <input type="text" class="form-control" #edad id="rangoEdad">
-                        </div>
-                        <div class="mb-3">
-                            <label for="descripcion" class="form-label">Descripción:</label>
-                            <textarea class="form-control" id="descripcion" rows="4" [value]="eventSelected.descripcion"></textarea>
-                        </div>
-    
-                        <button id="submit" type="button" class="btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>   
-                  </form>
-      
-                  </div>
+                    </div>
+
                 </div>
           </article>
     
@@ -354,15 +278,15 @@
 
                 <hr>
         
-                <button type="button" *ngIf="id_usuario === undefined; else esFalso5" routerLink="/login">Sign-in</button>
+                <button type="button" class="button" *ngIf="id_usuario === undefined; else esFalso5" routerLink="/login">Sign-in</button>
                 <ng-template #esFalso5> 
-                    <button type="button">Apuntarme</button>
+                    <button class="button" type="button">Apuntarme</button>
                     <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
                     <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
                 
-                    <button  type="button">Apuntarme</button>
+                    <button class="button"  type="button">Apuntarme</button>
                         <!-- <button *ngIf="apuntado === false" type="button">Apuntarme</button> -->
-                    <button  type="button" routerLink="/chats">Chat</button>
+                    <button class="button"  type="button" routerLink="/chats">Chat</button>
                 </ng-template>
 
             </ng-template>
@@ -506,5 +430,3 @@
     </section>
 </main>
  -->
-
-
