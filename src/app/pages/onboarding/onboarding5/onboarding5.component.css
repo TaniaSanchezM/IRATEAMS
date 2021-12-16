@@ -153,8 +153,8 @@ body {
     animation-iteration-count: infinite;
     /* animation-timing-function: linear; */
     position: absolute;
-    bottom: 7vh;
-    left: 23.3vh;
+    bottom: 6.99%;
+    left: 42.2%;
     z-index: 1;
     background-color: transparent;
 } 

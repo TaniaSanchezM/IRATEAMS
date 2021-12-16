@@ -14,8 +14,8 @@
 }
 .circle {
     background-color:transparent;
-    margin-bottom: 14vh;
-    margin-left: -20vh;
+    margin-bottom: 17%;
+    margin-left: -34%;
     height: 120px;
     width: 120px;
     display: block;
@@ -46,7 +46,7 @@
     font-size: 5vh;
     color: var(--secundaryButton);
     position: absolute;
-    margin-left: -6vh;
+    margin-left: -56%;
     animation-name:arrow;
     animation-duration:1s;
     animation-timing-function:linear;
@@ -60,7 +60,8 @@
     -webkit-animation-delay:0s;
     -webkit-animation-iteration-count:infinite;
     -webkit-animation-direction:normal;
-    -webkit-animation-play-state:running;           
+    -webkit-animation-play-state:running;     
+    left: 15%;      
 }
 @keyframes arrow
 {
@@ -152,8 +153,8 @@ body {
     animation-iteration-count: infinite;
     /* animation-timing-function: linear; */
     position: absolute;
-    bottom: 1.5vh;
-    left: 2.6vh;
+    bottom: 1.6%;
+    left: 5.4%;
     z-index: 1;
     background-color: transparent;
 } 
