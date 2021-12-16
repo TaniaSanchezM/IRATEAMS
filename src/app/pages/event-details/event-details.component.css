@@ -485,6 +485,11 @@ img{
     margin-bottom: 0.5vh;
 }
 
+.disabled{
+    color: var(--fontColor);
+    /* background: linear-gradient(180deg, #888888 0%, var(--primaryButton) 100%); */
+    background: var(--primaryButton);
+}
 .btn-cancelar{
     background-color: var(--fontColor);
     color: var(--fontColor2);

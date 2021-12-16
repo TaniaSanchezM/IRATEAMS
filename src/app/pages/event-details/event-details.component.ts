@@ -9,6 +9,12 @@ import { UsersService } from 'src/app/shared/users.service';
 import { LoginService } from '../../shared/login.service';
 import { Event } from 'src/app/models/events';
 import { Router } from '@angular/router';
+import { ApuntadosService } from 'src/app/shared/apuntados.service';
+import { Apuntados } from '../../models/apuntados';
+import { ChatService } from '../../shared/chat.service';
+import { Chat } from 'src/app/models/chat';
+import { Mensaje } from 'src/app/models/mensaje';
+import { MensajesService } from '../../shared/mensajes.service';
 
 
 @Component({
@@ -27,9 +33,20 @@ export class EventDetailsComponent implements OnInit {
   public user: User 
   public id_usuario: number
   public evento: Event
+  public evento2: Event
   public router: Router
+  public cost: boolean;
+  public mat: boolean;
+  public personasApuntadas: Apuntados[];
+  public numPersonasApuntadas: number;
+  public nuevoApuntado: Apuntados
+  public modNumApuntadosEvento: number
+  public nuevoChat: Chat
+  public nuevoChat2: Chat
+  public mensajeApuntado: Mensaje
 
-  constructor(private toastr: ToastrService,public routeLocation: Location, private EventosService: EventosService, private loginService: LoginService, private UsuarioServicio: UsersService) { 
+
+  constructor(private toastr: ToastrService,public routeLocation: Location, private EventosService: EventosService, private loginService: LoginService, private UsuarioServicio: UsersService, private ApuntadosServicio: ApuntadosService, private ChatServicios: ChatService, private MensajesService: MensajesService) { 
     this.today = Date.now()
     this.today2 = new Date(2021,12,1)
 
@@ -43,6 +60,11 @@ export class EventDetailsComponent implements OnInit {
       console.log(data.resultado[0]);
       console.log("flagconst")
       this.eventSelected = data.resultado[0];
+      this.cost =  this.eventSelected.pago.valueOf();
+      console.log(this.cost);
+      
+      this.mat =  this.eventSelected.material.valueOf();
+      console.log(this.mat)
 
       this.UsuarioServicio.getUser(this.eventSelected.id_creador).subscribe((data: any)=>
       {
@@ -50,9 +72,20 @@ export class EventDetailsComponent implements OnInit {
         this.eventCreator = data.resultado[0];
       })
 
+      this.ApuntadosServicio.getApuntado(this.eventSelected.id_evento).subscribe((data: any)=>
+      {
+        console.log(data.resultado)
+        this.personasApuntadas = data.resultado
+        this.numPersonasApuntadas = data.resultado.length
+        console.log(this.personasApuntadas)
+
+      })
+      
+      
+
     })
- 
-    // this.daysLeft =  this.today2.getDate() -this.today.getDate()
+
+        // this.daysLeft =  this.today2.getDate() -this.today.getDate()
 
     // console.log(EventosService.eventoId)
     // this.EventosService.getEvento().subscribe((data: any)=>
@@ -71,6 +104,34 @@ export class EventDetailsComponent implements OnInit {
     console.log(this.id_usuario)
 
   }
+
+  usuarioApuntado()
+        {
+          let respuesta: boolean
+
+          for(let apuntado of this.personasApuntadas)
+          {
+            
+              
+            do {
+                respuesta = false
+
+            } while (apuntado.id_usuario != this.id_usuario);
+
+            respuesta = true
+          
+            // if(apuntado.id_usuario == this.id_usuario)
+            // {
+            //   respuesta =  true
+            // }else
+            // {
+            //   respuesta = false
+            // }
+          }
+          console.log(respuesta)
+          return respuesta
+          
+        }
   
   pasarDatos(deporte: string, titulo: string, personas: string, fecha: string, hora:string,  localidad: string, direccion: string,  material: boolean, pago: boolean, descripcion: string, img: string){
     
@@ -116,6 +177,90 @@ export class EventDetailsComponent implements OnInit {
     
     
   }
+
+  apuntarme()
+  {
+    this.eventSelected.nPersSolicitadas = this.eventSelected.nPersSolicitadas-1
+    
+    this.nuevoApuntado = new Apuntados(this.id_usuario, this.eventSelected.id_evento)
+
+    this.EventosService.putEventos(this.eventSelected).subscribe((data: any)=>
+        {
+          console.log(data)
+          console.log(data.resultado)
+
+          // this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
+          // {
+          //   console.log(data)
+          //   console.log(data.resultado)
+
+          // })
+
+        })
+
+
+    this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
+        {
+          console.log(data)
+          console.log(data.resultado)
+
+        })
+
+
+
+    // this.evento2 = this.eventSelected
+    // this.evento2.nPersSolicitadas = this.evento2.nPersSolicitadas -1
+    // console.log(this.evento2)
+    // this.modNumApuntadosEvento = this.eventSelected.nPersSolicitadas -1
+    // this.eventSelected.nPersSolicitadas = this.modNumApuntadosEvento
+    
+    
+    // this.mensajeApuntado = new Mensaje()
+    // this.nuevoChat = new Chat(0, this.id_usuario, this.eventSelected.id_creador)
+
+    // this.ChatServicios.postChat(this.nuevoChat).subscribe((data: any)=>
+    // {
+    //     console.log(data)
+    //     console.log(data.resultado)
+    // })
+
+  }
+
+
+  borrarme()
+  {
+    // this.modNumApuntadosEvento = this.eventSelected.nPersSolicitadas +1
+    // this.evento.nPersSolicitadas = this.modNumApuntadosEvento
+
+    this.eventSelected.nPersSolicitadas = this.eventSelected.nPersSolicitadas+1
+
+    this.EventosService.putEventos(this.eventSelected).subscribe((data: any)=>
+      {
+        console.log(data)
+        console.log(data.resultado)
+
+    })
+
+    this.ApuntadosServicio.deleteApuntado(this.eventSelected.id_evento, this.id_usuario).subscribe((data: any)=>
+    {
+      console.log(data)
+      console.log(data.resultado)
+    })
+    
+  }
+
+  // crearChat()
+  // {
+  //   this.nuevoChat2 = new Chat(0, this.eventSelected.id_creador, this.id_usuario)
+  //   this.ChatServicios.postChat(this.nuevoChat2).subscribe((data: any)=>
+  //   {
+  //     console.log(data)
+  //     console.log(data.resultado)
+
+  //   })
+  // }
+
+
   // ngAfterViewInit(): void {
   //   //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
   //   //Add 'implements AfterViewInit' to the class.
