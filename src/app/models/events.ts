@@ -12,10 +12,10 @@ export class Event {
     public pago:        Boolean;
     public urlFotoEvento:     String; 
     public id_evento : number;
-    public guardado : boolean
+    public guardado : Boolean
 
     constructor(deporte:String,titulo:String,id_creador:number, nPersSolicitadas : number, fecha:Date,
-        direccion:String, localidad:String, descripcion:String, material:Boolean, pago:Boolean, urlFotoEvento:String, id_evento: number, guardado:boolean){
+        direccion:String, localidad:String, descripcion:String, material:Boolean, pago:Boolean, urlFotoEvento:String, id_evento: number, guardado:Boolean){
             this.deporte        =   deporte;
             this.titulo         =   titulo;
             this.id_creador      =   id_creador;
