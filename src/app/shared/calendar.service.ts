@@ -7,7 +7,8 @@ import { EventosReducido } from '../models/eventos-reducido';
 })
 export class CalendarService {
 
-  private url = "https://api-irateams.herokuapp.com/calendario"
+ private url = "https://api-irateams.herokuapp.com/calendario"
+  // private url = "http://localhost:3000/calendario"
 
   constructor(private http: HttpClient) { }
 

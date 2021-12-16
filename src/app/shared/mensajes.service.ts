@@ -11,6 +11,7 @@ export class MensajesService {
   public chat: Chat; 
   public mensaje: Mensaje; 
   private url: string = 'https://api-irateams.herokuapp.com/mensajes';
+  // private url = "http://localhost:3000/mensajes"
 
   constructor(private http: HttpClient) { }
 

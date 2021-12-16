@@ -9,6 +9,7 @@ import { Pipe } from '@angular/core';
 export class RegisterService {
   public registro: Register;
   private url:string = 'https://api-irateams.herokuapp.com/usuarios';
+  // private url = "http://localhost:3000/usuarios"
   constructor(private http:HttpClient) { }
   register(){
     let registerData = {username:this.registro.userName,mail:this.registro.email,password:this.registro.password}
