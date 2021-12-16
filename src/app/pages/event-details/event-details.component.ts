@@ -182,7 +182,7 @@ export class EventDetailsComponent implements OnInit {
   {
     this.eventSelected.nPersSolicitadas = this.eventSelected.nPersSolicitadas-1
     
-    this.nuevoApuntado = new Apuntados(this.id_usuario, this.eventSelected.id_evento)
+    // this.nuevoApuntado = new Apuntados(this.id_usuario, this.eventSelected.id_evento)
 
     this.EventosService.putEventos(this.eventSelected).subscribe((data: any)=>
         {
@@ -199,12 +199,12 @@ export class EventDetailsComponent implements OnInit {
         })
 
 
-    this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
-        {
-          console.log(data)
-          console.log(data.resultado)
+    // this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
+    //     {
+    //       console.log(data)
+    //       console.log(data.resultado)
 
-        })
+    //     })
 
 
 
@@ -241,11 +241,11 @@ export class EventDetailsComponent implements OnInit {
 
     })
 
-    this.ApuntadosServicio.deleteApuntado(this.eventSelected.id_evento, this.id_usuario).subscribe((data: any)=>
-    {
-      console.log(data)
-      console.log(data.resultado)
-    })
+    // this.ApuntadosServicio.deleteApuntado(this.eventSelected.id_evento, this.id_usuario).subscribe((data: any)=>
+    // {
+    //   console.log(data)
+    //   console.log(data.resultado)
+    // })
     
   }
 
