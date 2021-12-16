@@ -155,7 +155,7 @@ export class EventDetailsComponent implements OnInit {
     this.toastr.error('', 'Has abandonado el evento',{timeOut:4000, positionClass:"toast-top-full-width"});
   }
   public showJoin():void {
-    this.toastr.success('', 'Te has unido al evento',{timeOut:4000, positionClass:"toast-top-full-width"});
+    this.toastr.success('', 'Te has unido al evento',{timeOut:4000, positionClass:"toast-top-full-width"})
   }
   public goBack():void{
     this.routeLocation.back()
