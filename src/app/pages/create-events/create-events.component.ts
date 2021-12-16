@@ -49,12 +49,12 @@ export class CreateEventsComponent implements OnInit {
     let id_creador = this.id_usuario;
     
 
-    this.evento = new Event (deporte, titulo, this.id_usuario, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 200)
+    this.evento = new Event (deporte, titulo, this.id_usuario, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 200,null)
     
     console.log(this.evento);
     console.log(this.id_usuario);
 
-    this.EventosService.postEventos(new Event(deporte, titulo, id_creador, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 0)).subscribe((data: any)=>
+    this.EventosService.postEventos(new Event(deporte, titulo, id_creador, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 0, null)).subscribe((data: any)=>
     {
       if(data = Error)
       {

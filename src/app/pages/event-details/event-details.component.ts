@@ -143,7 +143,7 @@ export class EventDetailsComponent implements OnInit {
     let id_creador = this.id_usuario;
     
 
-    this.evento = new Event (deporte, titulo, this.id_usuario, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, this.eventSelected.id_evento)
+    this.evento = new Event (deporte, titulo, this.id_usuario, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, this.eventSelected.id_evento, null)
   
     
     console.log(this.evento);
