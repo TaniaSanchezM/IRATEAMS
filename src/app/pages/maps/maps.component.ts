@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Icon, Map, Marker, marker, tileLayer } from 'leaflet';
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
 import { MapService } from '../../shared/map.service';
+import { EventosService } from '../../shared/eventos.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
@@ -26,7 +28,7 @@ export class MapsComponent implements OnInit {
     shadowSize: [41, 41]
   });
   public mysearch;
-  constructor(public mapService:MapService) { }
+  constructor(public mapService:MapService, private evtService:EventosService, private router:Router) { }
   public provider:OpenStreetMapProvider = new OpenStreetMapProvider({
     params: {
       'accept-language': 'es', // render results in Spanish
@@ -34,15 +36,22 @@ export class MapsComponent implements OnInit {
       addressdetails: 1, // include additional address detail parts
     }
   });
+  redireccion(evn){
+    console.log('entra en el evento')
+    if(evn.target.classList.contains('popupMarker')){
+      this.evtService.eventoId = evn.target.id
+      this.router.navigate(['/event-details'])
+    }
+  }
   async addMarkers(){
     this.mapService.getEvents().subscribe((data:any)=>{
       let allEvents = data.resultado;
       for (const event of allEvents) {
-        let res: string = event.direccion + "," + event.localidad
+        let res: string = event.direccion + " "+ event.localidad
         this.getCoords(res)
         .then((coords)=>{
           marker([coords.latitud,coords.longitud]).addTo(this.map)
-          .bindPopup(`${event.titulo}`); //No se como hacer que al clickar en el texto te lleve al evento
+          .bindPopup(`<div id="${event.id_evento}" class="popupMarker">${event.titulo}</div>`); //No se como hacer que al clickar en el texto te lleve al evento
         })
         .catch(err =>{
           console.error(err);
