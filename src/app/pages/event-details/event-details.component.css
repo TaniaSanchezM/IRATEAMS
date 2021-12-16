@@ -6,9 +6,9 @@
 
 
 
-
-
 img-creator
+
+
 main {
     /* position: relative; */
     
@@ -210,7 +210,7 @@ img{
     width: 35px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     margin-right: auto;
-    margin-top: 16%;
+    margin-top: 7%;
 }
 
 
@@ -531,7 +531,7 @@ img{
  }
 
 .firstPart{
-    margin-top: -5%;
+    margin-top: -9%;
 }
 /* 
 .people, .cost{
