@@ -13,7 +13,7 @@
 }
 .nav-link{
     color: var(--fontColor2);
-    font-weight: 100;
+    font-weight: 100px;
     border-color: var(--fontColor2);
 }
 .nav-item{

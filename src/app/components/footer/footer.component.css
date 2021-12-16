@@ -6,7 +6,7 @@
     background-color: var(--fontColor);
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    width: 100vw;
 }
 
 .addbutton {
@@ -23,7 +23,7 @@
 }
 
 .buttons {
-    width: 100%;
+    width: 100vw;
     height: 7vh;
     display: flex;
     flex-direction: row;
@@ -37,11 +37,11 @@
 }
 
 #maps {
-    margin-right: 2vh;
+    margin-right: 2vw;
 }
 
 #calendar {
-    margin-left: 2vh;
+    margin-left: 2vw;
 }
 
 #chat {
@@ -55,13 +55,4 @@
 .secundaryButton {
     fill: var(--primaryButton);
 }
-
-
-
-/* .button {
-    width: 90vh;
-    height: 0px;
-    border-radius: 60px;
-    background-color: var(--fontColor2);
-} */
 

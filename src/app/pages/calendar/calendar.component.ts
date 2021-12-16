@@ -42,8 +42,8 @@ export class CalendarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getDaysFromDate(this.today.getMonth() + 1, this.today.getFullYear())
-    this.myEventsList()
+    this.getDaysFromDate(this.today.getMonth() + 1, this.today.getFullYear());
+    this.myEventsList();
   }
 
   getDaysFromDate(month: any, year: any) {
@@ -101,15 +101,16 @@ export class CalendarComponent implements OnInit {
     let id_usuario = this.loginService.login.userId;
     this.calendarService.getCalendar(id_usuario).subscribe((data:any)=>
     {
-      this.myEvents = data.resultado    
-      console.log(this.myEvents)
-    })   
-    
-    
+      if(data == null){
+        this.myEvents = [];
+      } else {
+        this.myEvents = data.resultado;
+      }
+    });   
   }
   isEvent(day:number,month:number):boolean{
     let res:boolean;
-    if(this.loginService.login.userId == undefined){
+    if(this.loginService.login.userId == undefined || this.myEvents.length == 0){
       res = false;
     } else{
       let i = 0;
