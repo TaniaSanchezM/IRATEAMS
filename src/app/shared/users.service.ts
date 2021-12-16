@@ -8,6 +8,7 @@ import { User } from '../models/user';
 export class UsersService {
 
   private url = "https://api-irateams.herokuapp.com/usuarios"
+  // private url = "http://localhost:3000/usuarios"
 
   constructor(private http: HttpClient) { }
 

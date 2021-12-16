@@ -72,6 +72,7 @@ export class ProfileComponent implements OnInit {
     {    
        
       let id_usuario = this.loginService.login.userId;
+      
       let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
       console.log(usuario)
       this.apiService.putUser(usuario).subscribe((data: any) =>

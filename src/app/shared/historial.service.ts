@@ -8,6 +8,7 @@ import { EventosReducido } from '../models/eventos-reducido';
 export class HistorialService {
 
   private url = "https://api-irateams.herokuapp.com/historial"
+  // private url = "http://localhost:3000/historial"
 
   constructor(private http: HttpClient) { }
   getHistorial(id:number)

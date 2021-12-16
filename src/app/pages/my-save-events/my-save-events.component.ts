@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Event } from 'src/app/models/events';
 import { EventosService } from 'src/app/shared/eventos.service';
 import { FiltroHomeService } from 'src/app/shared/filtro-home.service';
+import { GuardadosService } from '../../shared/guardados.service';
+import { LoginService } from '../../shared/login.service';
+import { MyhomeService } from '../../shared/myhome.service';
+import { Guardado } from 'src/app/models/guardados';
 
 
 
@@ -12,25 +16,62 @@ import { FiltroHomeService } from 'src/app/shared/filtro-home.service';
   styleUrls: ['./my-save-events.component.css']
 })
 export class MySaveEventsComponent implements OnInit {
+  public mysave: Event [] = []
   public events : Event[]
   public siClick : boolean = false
   public filtro : Event[]
   public beginSliding : boolean = false
-  public toggle = true;
-  public status = 'Enable'; 
-  constructor(private homeService: EventosService, private filtroHome: FiltroHomeService) {}
-  
-  mostrarEventos(){
-    this.homeService.getEventos().subscribe((data: any)=>
+  public deletesave : Guardado
+  constructor(private homeService: EventosService, private filtroHome: FiltroHomeService, public guardarService: GuardadosService, public loginService: LoginService, public myhomeservice: MyhomeService) {}
+  mostrarEventos(id_usuario:number){
+    
+    this.myhomeservice.getHome(id_usuario).subscribe((data:any)=>
     {
+      console.log(data.resultado);
+      
       this.events = data.resultado
-      for (let event of this.events) {
-        console.log(event.titulo, event.urlFotoEvento)
-        if(event.urlFotoEvento == null || event.urlFotoEvento == ''){
-          event.urlFotoEvento = '../../../assets/img/deportes.jpg'
+      for (let event of this.events){
+        if (event.guardado != null){
+          console.log(this.mysave);          
+          this.mysave.push(event)
+          console.log(this.mysave);
+      }}
+      for (const myevent of this.mysave) {
+        console.log(myevent.titulo,myevent.urlFotoEvento)
+        if(myevent.urlFotoEvento == null || myevent.urlFotoEvento == ''){
+          myevent.urlFotoEvento = '../../../assets/img/deportes.jpg'
         }
+      
       }
     })
+  }
+
+  changeEvent(evento:Event){
+    console.log(evento);
+    let id_usuario = this.loginService.login.userId;
+    
+   if (!evento.guardado || evento.guardado ===null){  
+     evento.guardado = !evento.guardado;    
+     console.log(id_usuario);
+     console.log(evento.id_evento);
+     let newguardado = new Guardado(id_usuario,evento.id_evento)
+     this.guardarService.postGuardados(newguardado).subscribe((data:any)=>
+     {
+       newguardado = data.resultado
+       console.log(data.resultado);
+       
+     })
+   }
+   else{
+     evento.guardado = !evento.guardado;
+     let id_usuario = this.loginService.login.userId;    
+     this.guardarService.deleteGuardados(id_usuario, evento.id_evento).subscribe((data:any)=>
+     {
+       this.deletesave= data.resultado
+       console.log(this.deletesave);
+       
+     })    
+     }
   }
 
   filtroIncluye(filtro1:string, filtro2:any, filtro3:string){
@@ -49,19 +90,15 @@ export class MySaveEventsComponent implements OnInit {
   getIdEvento(id: number)
   {
     console.log(id)
-     // let x = id
     this.homeService.eventoId = id;
     console.log(this.homeService.eventoId)
   }
  
-   enableDisableRule() { 
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
-    
-}
+
 
   ngOnInit(): void {
-    this.mostrarEventos()
+    let id_usuario = this.loginService.login.userId;
+    this.mostrarEventos(id_usuario)
   }
 
 }

@@ -7,7 +7,8 @@ import { Event } from '../models/events';
   providedIn: 'root'
 })
 export class FiltroHomeService {
-  private url = 'https://api-irateams.herokuapp.com/filtroHome'
+ private url = 'https://api-irateams.herokuapp.com/filtroHome'
+  // private url = "http://localhost:3000/filtroHome"
   constructor(private http: HttpClient) { }
       getfiltroHome(filtro1:string, filtro2:any, filtro3:string){
         let params = new HttpParams()

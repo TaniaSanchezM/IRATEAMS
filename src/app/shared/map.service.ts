@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class MapService {
   private url:string = 'https://api-irateams.herokuapp.com/eventos';
+  // private url = "http://localhost:3000/eventos"
   constructor(private http:HttpClient) {
    }
    getEvents(){
