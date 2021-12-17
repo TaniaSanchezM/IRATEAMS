@@ -1,7 +1,6 @@
 
 * {
-    margin: 0;
-    padding: 0;
+   background-color: var(--bgColor2);
     box-sizing: border-box;
 }
 
@@ -23,13 +22,16 @@ img{
     display: flex;
     flex-direction: row;
     width: 96%;
-   
+    margin-top: 3%;
+  
 }
+   
+
 .firstPart3{
     width: 4vh;
     height: 4vh;
     margin-top: 3vh;
-    background-color: white;
+    background-color: var(--bgColor2);
     box-shadow: 0 0 2vh var(--primaryButton);
     border: transparent;
     border-radius: 0.25rem;
@@ -44,7 +46,7 @@ img{
    
 }
 #dropdownMenuButton1{
-    background-color: white;
+    background-color: var(--bgColor2);
     margin-right: 2vh;
     color: black;
     margin-top: 3vh;
@@ -67,7 +69,7 @@ img{
     margin-left: 2.5vh;
     line-height: 4vh;
     border: none;
-    background-color: white;
+    background-color: var(--bgColor2);
     border-radius: 5px;
     margin-bottom: 6vh;
     margin-top: 3vh;

@@ -17,8 +17,8 @@
 }
 .circle {
     background-color:transparent;
-    margin-bottom: 17%;
-    margin-left: -35%;
+    margin-bottom: 22%;
+    margin-left: -46%;
     height: 120px;
     width: 120px;
     display: block;
@@ -143,8 +143,8 @@ body {
 }
 .focus {
     overflow:hidden;
-    width: 60px;
-    height: 60px;
+    width: 16%;
+    height: 7%;
     border: 7px solid #eee;
     border-top: 7px solid var(--secundaryButton);
     border-radius: 50%;
