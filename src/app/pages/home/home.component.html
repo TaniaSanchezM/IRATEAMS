@@ -26,7 +26,7 @@
     <div class="container">
       <div class="card" *ngFor="let event of events"> 
         <div class="left">
-          <img class="img" src={{event.urlFotoEvento}} alt=""> 
+          <img class="img" src={{event.urlFotoEvento}} alt="" routerLink="/event-details"(click)="getIdEvento(event.id_evento)"> 
         </div>
 
         <div class="right">

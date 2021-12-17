@@ -174,8 +174,7 @@ export class EventDetailsComponent implements OnInit {
       this.eventSelected = this.evento
       
     })
-    
-    
+        
   }
 
   apuntarme()
