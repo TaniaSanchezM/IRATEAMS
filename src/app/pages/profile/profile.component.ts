@@ -43,6 +43,9 @@ export class ProfileComponent implements OnInit {
     this.apiService.getUser(id).subscribe((data: any) =>
     {
       this.user = data.resultado[0]
+      if(this.user.urlFoto == null || this.user.urlFoto == ''){
+        this.user.urlFoto = '../../../assets/img/fotoPerfilUsuario.jpg'
+      }
       this.dateStart = new Date(this.user.fechaNacimiento)
       this.day= this.dateStart.getDate()
       this.month=this.dateStart.getMonth()+1
@@ -69,8 +72,7 @@ export class ProfileComponent implements OnInit {
       this.showSuccess()
     }
     else if ((this.loginService.login.password === password) && (newPassword === "" && newPassword === repeatnewpass))
-    {    
-       
+    {
       let id_usuario = this.loginService.login.userId;
       
       let usuario = new User (id_usuario, username, mail, password, nombreCompleto, new Date(fechaNacimiento), telefono, urlFoto)
@@ -87,13 +89,8 @@ export class ProfileComponent implements OnInit {
     } else {
       this.showError()
     }
-    
-    
   }
 
-  // onSubmit(form:NgForm){
-  //   if(form.)
-  // }
 
   ngOnInit(): void {
     let id_usuario = this.loginService.login.userId;

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { LoginService } from '../../shared/login.service';
 import { ToastrService } from 'ngx-toastr';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Location } from '@angular/common';
 export class LoginComponent implements OnInit {
 
   
-  constructor(private toastr: ToastrService,public loginService: LoginService,private location: Location) {
+  constructor(private toastr: ToastrService,public loginService: LoginService,private location: Location, private router: Router) {
   }
 
   onSubmit(form:NgForm){
@@ -25,10 +26,9 @@ export class LoginComponent implements OnInit {
         if (apiResponse.resultado.length > 0) {
           this.loginService.login.userId = apiResponse.resultado[0].id_usuario;
           this.toastr.success("",'Inicio de sesion completado',{timeOut:4000, positionClass:"toast-top-full-width"});
-          this.location.back();
+          this.router.navigate(["/home"]);
         } else {
           this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
-          alert('Error')
         }
       }
     });

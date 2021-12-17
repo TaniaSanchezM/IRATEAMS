@@ -16,6 +16,7 @@ export class MyCreatedEventsComponent implements OnInit {
   public eventSelected: Event
   public id_eventoSelect:number
   public borrado: Event
+  public events: Event[]
 
   constructor(public misCreadosService:MyCreatedService, public loginService:LoginService, public homeService: EventosService, private toastr: ToastrService) { 
   }
@@ -28,7 +29,13 @@ export class MyCreatedEventsComponent implements OnInit {
     this.misCreadosService.getMisCreados(id_usuario).subscribe((data:any)=>
     {
       this.misCreados = data.resultado
-      console.log(this.misCreados);      
+      console.log(this.misCreados);
+      for (let event of this.misCreados) {
+        console.log(event.titulo, event.urlFotoEvento)
+        if(event.urlFotoEvento == null || event.urlFotoEvento == ''){
+          event.urlFotoEvento = '../../../assets/img/deportes.jpg'
+        }
+      }     
     })
   }
   getIdEvento(id: number)

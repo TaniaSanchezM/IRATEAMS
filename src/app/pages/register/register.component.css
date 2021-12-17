@@ -12,14 +12,11 @@
     height: 30vh;
 }
 
-/* @media (max-height: 31vh){
-    .inferior{
-        display: none;
-    }
-} */
-
-.center{
-    margin-top: 7vh;
+.center1{
+    text-align: center;
+}
+.center2{
+    margin-top: 3vh;
     text-align: center;
 }
 .labelText{
@@ -35,7 +32,7 @@
     border: 1px solid white;
 }
 .bottomLinks{
-    margin-top: 41%;
+    margin-top: 17vh;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -43,6 +40,7 @@
     width: 100vw;
     padding-right: 10vw;
 }
+
 .marginForm{
     padding-top: 25px;
 }
