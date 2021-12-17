@@ -264,46 +264,27 @@
     
 
             <ng-template #noCreador>
-
-                <!-- <button type="button">Loggin/Sign-in</button>
-                    <button type="button" *ngIf="loggin === false; else esFalso2">Loggin/Sign-in</button>
-                    <ng-template #esFalso2> 
-                    <button type="button"  >Apuntarme</button>
-                    <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button>
-                    <ng-template #esFalso><button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Borrarme</button></ng-template>
-                
-                <button  type="button">Apuntarme</button>
-                <button *ngIf="apuntado === false" type="button">Apuntarme</button>
-                <button  type="button" routerLink="chats">Chat</button>
-                </ng-template> -->
-
                 <hr>
         
                 <button type="button" class="button" *ngIf="id_usuario === undefined; else Logeado" routerLink="/login">Sign-in</button>
                 <ng-template #Logeado> 
-                    <button type="button" class="button disabled" disabled *ngIf="numPersonasApuntadas != eventSelected.nPersSolicitadas && usuarioApuntado() === true; else habilitarApuntarme">Apuntarme</button>
+                    
+                    <button type="button" class="button"  *ngIf="(numPersonasApuntadas < eventSelected.nPersSolicitadas || numPersonasApuntadas == 0) && usuarioApuntado() === false; false habilitarApuntarme" (click)="apuntarme()">Apuntarme</button>
+                    <button type="button" class="button " *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas && usuarioApuntado() === true" (click)="borrarme()" >Borrarme</button>
+                    <button class="button disabled" disabled type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" disabled *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false" >Apuntarme</button>
                     <ng-template #habilitarApuntarme>
-
-                        <button class="button" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" *ngIf="numPersonasApuntadas != eventSelected.nPersSolicitadas && usuarioApuntado() === false ; else apuntadoEvento">Apuntarme</button>
+                        
+                        <!-- <button class="button" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" disabled *ngIf="numPersonasApuntadas != eventSelected.nPersSolicitadas && usuarioApuntado() === true ; else apuntadoEvento" (click)="apuntarme()">Apuntarme</button> -->
+                        
                         <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
-                        <ng-template #apuntadoEvento>
+                        <!-- <ng-template #apuntadoEvento>
             
-                            <button type="button" class="button" *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas">Borrarme</button>
+                            <button type="button" class="button" *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas" (click)="borrarme()">Borrarme</button>
                             
-                        </ng-template>  
+                        </ng-template>   -->
                     </ng-template>
-                    
-                    
-                    <!-- <button  type="button" class="button" (click)="apuntarme()">Apuntarme</button>
-                    <button  type="button" class="button" (click)="borrarme()">Borrarme</button>
-                    <button class="button"  type="button" (click)="crearChat()" routerLink="/chats" >Chat</button> -->
                 </ng-template>
-
             </ng-template>
-            <button  type="button"  (click)="apuntarme()">Apuntarme</button>
-            <button  type="button"  (click)="borrarme()">Borrarme</button>
-            <!-- <button   type="button" (click)="crearChat()" routerLink="/chats" >Chat</button> -->
-            
 
         </section>
     </section>
