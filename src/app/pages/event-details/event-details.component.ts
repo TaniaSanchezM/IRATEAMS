@@ -109,16 +109,50 @@ export class EventDetailsComponent implements OnInit {
         {
           let respuesta: boolean
 
-          for(let apuntado of this.personasApuntadas)
+
+
+          // respuesta = true
+          // console.log(respuesta)
+          if(this.personasApuntadas.length == 0)
           {
+            respuesta = false
+            return respuesta
+          }
+          else{
+            let i = 0;
+          while (i<this.personasApuntadas.length) {
+            respuesta = false
+            // console.log(respuesta)
+            if(this.personasApuntadas[i].id_usuario === this.id_usuario )
+            {
+              respuesta = true;
+              break;
+            }
+            i++;
+          }
+          console.log(respuesta)
+          return respuesta
+          }
+          
+          
+
+          // for(let apuntado of this.personasApuntadas)
+          // {
             
+            // var text = "";
+            // var i = 0;
+            // while (i < 5) {
+            //   text += "<br>The number is " + i;
+            //   i++;
+            // }
+
               
-            do {
-                respuesta = false
+            // do {
+            //     respuesta = false
 
-            } while (apuntado.id_usuario != this.id_usuario);
+            // } while (apuntado.id_usuario != this.id_usuario);
 
-            respuesta = true
+            // respuesta = true
           
             // if(apuntado.id_usuario == this.id_usuario)
             // {
@@ -127,9 +161,9 @@ export class EventDetailsComponent implements OnInit {
             // {
             //   respuesta = false
             // }
-          }
-          console.log(respuesta)
-          return respuesta
+          // }
+          // console.log(respuesta)
+          // return respuesta
           
         }
   
@@ -182,29 +216,21 @@ export class EventDetailsComponent implements OnInit {
   {
     this.eventSelected.nPersSolicitadas = this.eventSelected.nPersSolicitadas-1
     
-    // this.nuevoApuntado = new Apuntados(this.id_usuario, this.eventSelected.id_evento)
+    this.nuevoApuntado = new Apuntados(this.id_usuario, this.eventSelected.id_evento)
 
     this.EventosService.putEventos(this.eventSelected).subscribe((data: any)=>
         {
           console.log(data)
           console.log(data.resultado)
 
-          // this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
-          // {
-          //   console.log(data)
-          //   console.log(data.resultado)
-
-          // })
-
         })
 
+    this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
+        {
+          console.log(data)
+          console.log(data.resultado)
 
-    // this.ApuntadosServicio.postApuntado(this.nuevoApuntado).subscribe((data: any)=>
-    //     {
-    //       console.log(data)
-    //       console.log(data.resultado)
-
-    //     })
+        })
 
 
 
@@ -216,13 +242,15 @@ export class EventDetailsComponent implements OnInit {
     
     
     // this.mensajeApuntado = new Mensaje()
-    // this.nuevoChat = new Chat(0, this.id_usuario, this.eventSelected.id_creador)
+    this.nuevoChat = new Chat(this.id_usuario, this.eventSelected.id_creador, null)
+    console.log(this.id_usuario)
+    console.log(this.eventSelected.id_creador)
 
-    // this.ChatServicios.postChat(this.nuevoChat).subscribe((data: any)=>
-    // {
-    //     console.log(data)
-    //     console.log(data.resultado)
-    // })
+    this.ChatServicios.postChat(this.id_usuario, this.eventSelected.id_creador).subscribe((data3: any)=>
+    {
+        console.log(data3)
+        console.log(data3.resultado)
+    })
 
   }
 
@@ -241,11 +269,11 @@ export class EventDetailsComponent implements OnInit {
 
     })
 
-    // this.ApuntadosServicio.deleteApuntado(this.eventSelected.id_evento, this.id_usuario).subscribe((data: any)=>
-    // {
-    //   console.log(data)
-    //   console.log(data.resultado)
-    // })
+    this.ApuntadosServicio.deleteApuntado(this.eventSelected.id_evento, this.id_usuario).subscribe((data: any)=>
+    {
+      console.log(data)
+      console.log(data.resultado)
+    })
     
   }
 
