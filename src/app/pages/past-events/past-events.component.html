@@ -7,8 +7,8 @@
         <h1>Mi historial</h1>
     </div>
     <hr id="linea">
-    <div class="card" routerLink="/event-details" *ngFor="let event of historial" (click)="getIdEvento(event.id_evento)">
-        <div class="orden">
+    <div class="card" *ngFor="let event of historial">
+        <div class="orden"  routerLink="/event-details" (click)="getIdEvento(event.id_evento)">
             <div class="etiquetas">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor"
                     class="bi bi-calendar-fill" viewBox="0 0 16 16">
@@ -33,7 +33,7 @@
                 &nbsp; <b>Ubicación:</b> &nbsp;
             </div>
         </div>
-        <div class="resultados">
+        <div class="resultados" routerLink="/event-details" (click)="getIdEvento(event.id_evento)">
             {{event.titulo}} <br/>
             {{event.fecha | date:'shortDate'}}<br/>
             {{event.direccion}}, {{event.localidad}}

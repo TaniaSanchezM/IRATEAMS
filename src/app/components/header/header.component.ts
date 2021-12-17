@@ -34,6 +34,7 @@ export class HeaderComponent implements OnInit {
   }
 
   cerrarSesion(){
+    this.loginService.login.userId = undefined
     let id_usuario = undefined
     this.login = false
   }
