@@ -56,7 +56,7 @@ export class CreateEventsComponent implements OnInit {
 
     this.EventosService.postEventos(new Event(deporte, titulo, id_creador, parseInt(personas), date, direccion, localidad, descripcion, material, pago, img, 0, null)).subscribe((data: any)=>
     {
-      if(data = Error)
+      if(data == Error)
       {
         this.showError()
       }else

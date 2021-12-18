@@ -1,19 +1,20 @@
-
 <main>
     <div class="firstPart">
         <h1 class="titulo">
             Detalles del evento
         </h1>
         <hr>
-   
+
         <a type="button" id="back-button" (click)="goBack()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(secondaryColor)" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(secondaryColor)"
+                class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
             </svg>
         </a>
     </div>
     <section class="card-img">
-        
+
         <!-- <div class="back-btn">
             <a href="" routerLink="/home">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -32,8 +33,9 @@
         </div>
         <footer class="card-img-footer">
             <article class="creator">
-                <p id="creator-icon"><img src="{{eventCreator.urlFoto}}" alt="" id="img-creator">{{eventCreator.nombreCompleto}}</p>
-                
+                <p id="creator-icon"><img src="{{eventCreator.urlFoto}}" alt=""
+                        id="img-creator">{{eventCreator.nombreCompleto}}</p>
+
             </article>
             <!-- <article class="daysLeft">
                 Quedan {{(eventSelected.fecha - today) | date:'shortDate' }} dias
@@ -45,31 +47,34 @@
     <section class="content">
         <article class="icons-box">
             <div class="sm-icons-content location">
-                <svg  xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor)" class="bi bi-geo-alt-fill"
-                    viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor)"
+                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                 </svg>
                 <div style="margin-top: 4px; margin-left: -5px;">
-                  &nbsp; {{eventSelected.localidad}}  
+                    &nbsp; {{eventSelected.localidad}}
                 </div>
-                
+
             </div>
             <div class="sm-icons-content date">
-                <svg  xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor)" class="bi bi-calendar-fill"
-                    viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+                <svg xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor)"
+                    class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
                 </svg>
                 <div style="margin-top: 4px; margin-left: -5px;">
-                    &nbsp; {{eventSelected.fecha | date:'shortDate'}}   
+                    &nbsp; {{eventSelected.fecha | date:'shortDate'}}
                 </div>
-                
+
             </div>
             <div class="sm-icons-content time">
-                <svg style="margin-right: 12px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor)" class="bi bi-clock-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                <svg style="margin-right: 12px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="var(--fontColor)" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                 </svg>
                 <div style="margin-top: 4px; margin-left: -10px;">
-                  &nbsp;{{eventSelected.fecha | date:'shortTime'}}  
+                    &nbsp;{{eventSelected.fecha | date:'shortTime'}}
                 </div>
             </div>
 
@@ -77,36 +82,36 @@
         <article class="icons-box2">
             <div class="sport">
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'Futbol'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png"/>
-                     <div>{{ eventSelected.deporte }}</div>
+                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png" />
+                    <div>{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'BALONCESTO'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png"/>
-                     <div>{{ eventSelected.deporte }}</div>
+                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png" />
+                    <div>{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'Tenis'; else otroDeporte">
-                    <img src="https://img.icons8.com/material/30/000000/badminton-racquet.png"/>
-                     <div>{{ eventSelected.deporte }}</div>
+                    <img src="https://img.icons8.com/material/30/000000/badminton-racquet.png" />
+                    <div>{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte ==='PADEL'">
-                    <img src="https://img.icons8.com/material/30/000000/tennis.png"/>
-                     <div>{{ eventSelected.deporte }}</div>
+                    <img src="https://img.icons8.com/material/30/000000/tennis.png" />
+                    <div>{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'BICI'">
-                    <img src="https://img.icons8.com/material/30/000000/tennis.png"/>
-                     <div>{{ eventSelected.deporte }}</div>
+                    <img src="https://img.icons8.com/material/30/000000/tennis.png" />
+                    <div>{{ eventSelected.deporte }}</div>
                 </div>
                 <ng-template #otroDeporte>
                     <div>
                         {{eventSelected.deporte}}
                     </div>
                 </ng-template>
-                
-    
-                
+
+
+
 
             </div>
-            
+
 
             <div class="boolean">
                 <div class="people2">
@@ -116,113 +121,127 @@
                     <div>
                         {{eventSelected.nPersSolicitadas}}
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi bi-people-fill" viewBox="0 0 16 16">
-                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)"
+                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd"
+                            d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
                     </svg>
-                    
+
 
                 </div>
                 <div class="boolean2">{{cost}}{{mat}}
                     <div class="cost2" *ngIf="eventSelected.pago === true">
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
-                        <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
-                    </svg>
-                    <!-- <div class="mid-icons-details">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)"
+                            class="bi-currency-euro" viewBox="0 0 16 16">
+                            <path
+                                d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z" />
+                        </svg>
+                        <!-- <div class="mid-icons-details">
                         
                         {{event.cost}}
                     </div> -->
-        
-                </div>
-                
-                <div class="material2" *ngIf="mat == true">  
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
+
+                    </div>
+
+                    <div class="material2" *ngIf="mat == true">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--fontColor)" class="bi-currency-euro" viewBox="0 0 16 16">
                         <path d="M4 9.42h1.063C5.4 12.323 7.317 14 10.34 14c.622 0 1.167-.068 1.659-.185v-1.3c-.484.119-1.045.17-1.659.17-2.1 0-3.455-1.198-3.775-3.264h4.017v-.928H6.497v-.936c0-.11 0-.219.008-.329h4.078v-.927H6.618c.388-1.898 1.719-2.985 3.723-2.985.614 0 1.175.05 1.659.177V2.194A6.617 6.617 0 0 0 10.341 2c-2.928 0-4.82 1.569-5.244 4.3H4v.928h1.01v1.265H4v.928z"/>
                     </svg> -->
-                    <img src="https://img.icons8.com/fluency-systems-regular/30/000000/basketball-jersey.png"/>
-                    
-                    <!-- <div class="mid-icons-details">
+                        <img src="https://img.icons8.com/fluency-systems-regular/30/000000/basketball-jersey.png" />
+
+                        <!-- <div class="mid-icons-details">
                         
                         {{event.material}}
                     </div> -->
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
-            
+
         </article>
-        
-        
+
+
         <article class="description">
             {{eventSelected.descripcion}}
-        </article>  
+        </article>
 
         <hr>
         <section class="buttons">
             <article *ngIf="id_usuario === eventSelected.id_creador; else noCreador" class="edit-data">
-            
+
                 <div class="edit-data">
-                    <a  class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="collapse">
+                    <a class="btn btn-outline-dark btn-block" data-bs-toggle="collapse" href="#collapseExample"
+                        role="button" aria-expanded="false" aria-controls="collapseExample" id="collapse">
                         Modificar datos
                     </a>
                 </div>
-                
+
             </article>
             <article>
                 <div class="collapse" id="collapseExample">
-
-
-                  <div class="card card-body">
+                    <div class="card card-body">
                         <form>
-                        
+
                             <div class="mb-3">
-                                <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar al evento: </label>
+                                <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar
+                                    al evento: </label>
                                 <input type="text" class="form-control" #img id="imagen" [value]="">
                             </div>
                             <div class="mb-3">
                                 <label for="titulo" class="form-label">Título del evento: </label>
-                                <input type="text" class="form-control" #titulo id="titulo" [value]="eventSelected.titulo">
+                                <input type="text" class="form-control" #titulo id="titulo"
+                                    [value]="eventSelected.titulo">
                             </div>
                             <div class="mb-3">
                                 <label for="deporte" class="form-label">Deporte: </label>
-                                <input type="text" class="form-control" #deporte id="deporte" [value]="eventSelected.deporte">
+                                <input type="text" class="form-control" #deporte id="deporte"
+                                    [value]="eventSelected.deporte">
                             </div>
                             <div class=" row mb-3">
                                 <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control" #fecha id="fecha" [value]="eventSelected.fecha | date:'shortDate'">
-                                </div>            
+                                    <input type="date" class="form-control" #fecha id="fecha"
+                                        [value]="eventSelected.fecha | date:'shortDate'">
+                                </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" #hora id="hora" [value]="eventSelected.fecha | date:'shortTime'">
-                                </div>            
+                                    <input type="text" class="form-control" #hora id="hora"
+                                        [value]="eventSelected.fecha | date:'shortTime'">
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="localidad" class="form-label">Localidad: </label>
-                                <input type="text" class="form-control" #localidad id="loacalidad" [value]="eventSelected.localidad">
+                                <input type="text" class="form-control" #localidad id="loacalidad"
+                                    [value]="eventSelected.localidad">
                             </div>
                             <div class="mb-3">
                                 <label for="direccion" class="form-label">direccion </label>
-                                <input type="text" class="form-control" #direccion id="direccion" [value]="eventSelected.direccion">
+                                <input type="text" class="form-control" #direccion id="direccion"
+                                    [value]="eventSelected.direccion">
                             </div>
                             <div class="row mb-3">
                                 <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" #personas id="nPersSolicitadas" [value]="eventSelected.nPersSolicitadas">
+                                    <input type="number" class="form-control" #personas id="nPersSolicitadas"
+                                        [value]="eventSelected.nPersSolicitadas">
                                 </div>
                             </div>
                             <div class="checkInline">
-                                <div class="form-switch" >
-                                    <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked=true value="eventSelected.material" >
-                                    <label class="form-check-label" for="inlineCheckbox1" >Material necesario</label>
+                                <div class="form-switch">
+                                    <input class="form-check-input" role="switch" type="checkbox" #material
+                                        id="inlineCheckbox1" class="form-check-input" checked=true
+                                        value="eventSelected.material">
+                                    <label class="form-check-label" for="inlineCheckbox1">Material necesario</label>
                                 </div>
                                 <div class="form-switch">
-                                    <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked=true value="eventSelected.pago" >
-                                    <label class="form-check-label" for="inlineCheckbox2" >Pago necesario</label>
+                                    <input class="form-check-input" role="switch" type="checkbox" #pago
+                                        id="inlineCheckbox2" checked=true value="eventSelected.pago">
+                                    <label class="form-check-label" for="inlineCheckbox2">Pago necesario</label>
                                 </div>
                             </div>
                             <!-- <div class="mb-3">
@@ -231,51 +250,68 @@
                             </div> -->
                             <div class="mb-3">
                                 <label for="descripcion" class="form-label">Descripción:</label>
-                                <textarea class="form-control" id="descripcion" #descripcion rows="4" [value]="eventSelected.descripcion"></textarea>
+                                <textarea class="form-control" id="descripcion" #descripcion rows="4"
+                                    [value]="eventSelected.descripcion"></textarea>
                             </div>
-        
-                            <button id="submit" type="button" class="button btn2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="pasarDatos(deporte.value, titulo.value, personas.value, fecha.value, hora.value, localidad.value, direccion.value,  material.checked, pago.checked, descripcion.value, img.value)">Modificar</button>   
+                            <div class="btnsave">
+                            <button id="submit" type="button" class="button btn2" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"
+                                (click)="pasarDatos(deporte.value, titulo.value, personas.value, fecha.value, hora.value, localidad.value, direccion.value,  material.checked, pago.checked, descripcion.value, img.value)">Modificar</button>
+                            </div>
                         </form>
                     </div>
 
                     <!-- MODAL -->
-                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <h3>Se va a modificar tu evento. <br> ¿Estás seguro?</h3>
-                            
+
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-cancelar"
+                                        data-bs-dismiss="modal">Cancelar</button>
                                     <!-- <button type="button" class="btn btn-guardar button-guardar" data-bs-dismiss="modal" data-bs-toggle="collapse" href="#collapseExample" (click)="editEvento()" >Guardar cambios</button> -->
-                                    <button type="button" class="btn btn-guardar button-guardar" data-bs-dismiss="modal" data-bs-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" (click)="editEvento()" routerLink="/event-details" >Guardar cambios</button>
+                                    <button type="button" class="btn btn-guardar button-guardar" data-bs-dismiss="modal"
+                                        data-bs-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample" (click)="editEvento()"
+                                        routerLink="/event-details">Guardar cambios</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
-          </article>
-    
+            </article>
+
 
             <ng-template #noCreador>
                 <hr>
-        
-                <button type="button" class="button" *ngIf="id_usuario === undefined; else Logeado" routerLink="/login">Sign-in</button>
-                <ng-template #Logeado> 
-                    
-                    <button type="button" class="button"  *ngIf="(numPersonasApuntadas < eventSelected.nPersSolicitadas || numPersonasApuntadas == 0) && usuarioApuntado() === false; false habilitarApuntarme" (click)="apuntarme()">Apuntarme</button>
-                    <button type="button" class="button " *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas && usuarioApuntado() === true" (click)="borrarme()" >Borrarme</button>
-                    <button class="button disabled" disabled type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" disabled *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false" >Apuntarme</button>
+
+                <button type="button" class="button" *ngIf="id_usuario === undefined; else Logeado"
+                    routerLink="/login">Sign-in</button>
+                <ng-template #Logeado>
+
+                    <button type="button" class="button"
+                        *ngIf="(numPersonasApuntadas < eventSelected.nPersSolicitadas || numPersonasApuntadas == 0) && usuarioApuntado() === false; false habilitarApuntarme"
+                        (click)="apuntarme()">Apuntarme</button>
+                    <button type="button" class="button "
+                        *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas && usuarioApuntado() === true"
+                        (click)="borrarme()">Borrarme</button>
+                    <button class="button disabled" disabled type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop1" disabled
+                        *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false">Apuntarme</button>
                     <ng-template #habilitarApuntarme>
-                        
+
                         <!-- <button class="button" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" disabled *ngIf="numPersonasApuntadas != eventSelected.nPersSolicitadas && usuarioApuntado() === true ; else apuntadoEvento" (click)="apuntarme()">Apuntarme</button> -->
-                        
+
                         <!-- <button type="button" *ngIf="apuntado === false; else esFalso" >Apuntarme</button> -->
                         <!-- <ng-template #apuntadoEvento>
             
@@ -288,23 +324,25 @@
 
         </section>
     </section>
-    <div class="modal fade " id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+    <div class="modal fade " id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title" id="staticBackdropLabel">¡Atecion!</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body"><h3> ¿Estás seguro que quieres desapuntarte del evento?</h3>
-           
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-guardar">Aceptar</button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">¡Atecion!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3> ¿Estás seguro que quieres desapuntarte del evento?</h3>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-guardar">Aceptar</button>
+                </div>
             </div>
         </div>
-        </div>
-      </div>
+    </div>
 </main>
 
 
