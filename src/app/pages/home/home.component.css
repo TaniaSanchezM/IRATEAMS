@@ -1,17 +1,21 @@
 
 * {
-   background-color: var(--bgColor2);
+   background-color: var(--fondoOscuro);
     box-sizing: border-box;
+    padding: auto;
 }
 
+
 .firstPart{
-    background-color:var(--fontColor2);
+    background-color: var(--fondoOscuro);
     display: flex;
     flex-direction: column;
     margin-top: 18%;
     text-align: center;
-    margin-top: 20%;
+    /* margin-top: ; */
     margin-bottom: -7%;
+    color: white;
+    padding: auto;
    
 }
 img{
@@ -21,7 +25,7 @@ img{
 .firstPart2{
     display: flex;
     flex-direction: row;
-    width: 96%;
+    width: 99%;
     margin-top: 3%;
   
 }
@@ -31,13 +35,14 @@ img{
     width: 4vh;
     height: 4vh;
     margin-top: 3vh;
-    background-color: var(--bgColor2);
-    box-shadow: 0 0 2vh var(--primaryButton);
+    background-color: var(--fondoOscuro);
+    box-shadow: 0px 0px 0.5vh var(--primaryButton);
     border: transparent;
     border-radius: 0.25rem;
-    
-   
+    margin-left: -2vh;
+    color: white;
 }
+
 .botones{
     display: flex;
     flex-direction: row;
@@ -45,15 +50,32 @@ img{
     margin-left: 2vh;
    
 }
+dropdown-toggle::after {
+    display: grid;
+    margin-left: .89em;
+    vertical-align: 0.3em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+elemento {
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(20.5px, 124px, 0px);
+    background-color: white;
+}
 #dropdownMenuButton1{
-    background-color: var(--bgColor2);
-    margin-right: 2vh;
-    color: black;
+    background-color: var(--fondoOscuro);
+    margin-right: 3vh;
+    color: white;
     margin-top: 3vh;
     width: 4vh;
     height: 4vh;
     border: none;
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow: 0px 0px 0.5vh var(--primaryButton);
 
 }
 .hr{
@@ -62,14 +84,14 @@ img{
     margin-top: -1%;
 }
 .input-1 {
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow: 0px 0px 1vh var(--primaryButton);
     text-align: center;
     width: 80vh;
     height: 6%;
     margin-left: 2.5vh;
     line-height: 4vh;
     border: none;
-    background-color: var(--bgColor2);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     margin-bottom: 6vh;
     margin-top: 3vh;
@@ -78,49 +100,66 @@ img{
 
 .card{
     margin-top: 2vh;
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow:  0px 0px 1vh var(--primaryButton);
     max-height: 80%;
     margin-left:3% ;
     margin-right:3%;
     display: flex;
     flex-direction: row;
-    width: 94%;
+    width: 95%;
 }
 
 #filtrosDropdown{
     margin-top: 0.5vh;
     display: flex;
     flex-direction: row;
-    margin-left: -66%;
-    border: none; 
+    margin-left: 4%;
+    border: none;
     text-align: center;
-    outline:none !important;
+    outline: none !important;
+}
+#filtrosDropdown[_ngcontent-fir-c16] {
+    margin-top: -0.5vh;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    border: none;
+    text-align: center;
+    outline: none !important;
+    background-color: transparent;
+}
+.datetime-input-edit-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1;
+    width: 3vh;
+    margin-left: 5vh;
+    background: beige;
 }
 
 .dropdown{
     display: flex;
     flex-direction: column;
 }
-.dropdown-menu{
-    width: 90%;
-   border: none;
-   background-color: transparent;
-   box-shadow: 0 0 2vh var(--primaryButton);  
+/* .dropdown-menu{
+    background-color: var(--primaryButton);
+    box-shadow: 0 0 2vh var(--primaryButton);
 
-}
+} */
 .choose-date1,.choose-place1{
-    margin-left: -66%;
-    margin: auto;
-    text-align: center;
-    /* color: var(--secondaryColor); */
-    border:none;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
- 
-    outline:none !important;
     
-    /* border: 1px red solid; */
+    margin: inherit;
+    text-align: center;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    outline: none !important;
+    color: var(--primaryButton);
+    background-color: var(--primaryButton)e;
+    border-radius: 00.25rem;
+    box-shadow: 0px 0px 1vh var(--primaryButton) ;
+    
 } 
 
 
@@ -156,14 +195,13 @@ img{
     border-color: transparent;
 }
 .left{
-    margin-top: -1vh;
-    margin-left: -1vh;
+   
     width: 30%;
 }
 
 .right{
     line-height: 0.2vh;
-    margin-left: 12%;
+    margin-left: 15%;
     margin-top: 2vh;
     width: 60%;
     /* border: 1px red solid; */
@@ -175,7 +213,7 @@ img{
 }
 
 .red {
-    color: var(--fontColor);
+    color: white;
 }
     
 .texto{
@@ -187,6 +225,7 @@ img{
 }
 p{
     line-height: -1vh;
+    color: white;
 }
 .containerSave{
     margin-bottom: 19vh;
