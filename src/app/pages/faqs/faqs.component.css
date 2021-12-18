@@ -1,12 +1,12 @@
 body{
-    background-color: var( --bgColor);
+    background-color: black;
     margin-top: 12vh;
     margin-bottom: 28vh;
     width:100% ;
 }
 h2{
     margin-top: 10vh;
-    color: var(--fontColor);
+    color: white;
     text-align: center;
 }
 .content{
