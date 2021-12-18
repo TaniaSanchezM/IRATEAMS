@@ -1,10 +1,13 @@
+<body style="margin-top: -0.5vh;">
+    
+
 <!--START CALENDAR-->
 <section class="calendar">
     <div class="wrapper-calendar">
         <div class="header-calendar">
             <div class="arrows">
                 <button (click)="changeMonth(-1)" class="btn-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--fontColor)"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--fontColor2"
                         class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                         <path
                             d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
@@ -17,7 +20,7 @@
 
             <div class="arrows">
                 <button (click)="changeMonth(1)" class="btn-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--fontColor)"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--fontColor2)"
                         class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                         <path
                             d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
@@ -46,7 +49,7 @@
 </section>
 <!--END CALENDAR-->
 
-<hr>
+<hr style="color: white;">
 
 <!-- START EVENTS LIST-->
 
@@ -54,7 +57,7 @@
     <div class="card" routerLink="/event-details" *ngFor="let event of myEvents" (click)="getIdEvento(event.id_evento)">
         <div class="orden">
             <div class="etiquetas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)"
                     class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
@@ -62,7 +65,7 @@
                     &nbsp; <b>Evento:</b> &nbsp;
             </div>
             <div class="etiquetas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor"
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)"
                     class="bi bi-calendar-fill" viewBox="0 0 16 16">
                     <path
                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
@@ -70,7 +73,7 @@
                 &nbsp; <b>Fecha:</b> &nbsp;
             </div>
             <div class="etiquetas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor"
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)"
                     class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                 </svg>

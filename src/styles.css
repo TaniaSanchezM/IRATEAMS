@@ -5,7 +5,9 @@
     padding: 0;
     box-sizing: border-box;    
 }
-:root{
+/* 
+  VERSIÓN EN BLANCO
+ :root{
     --bgColor: #F5F5F5;
     --mainColor: #FF0D06;
     --secondaryColor: #545454;
@@ -14,7 +16,23 @@
     --fontColor2: #ffffff;
     --primaryButton: #D9D9D9;
     --secundaryButton: #EFAC00;
-}
+}  */
+
+:root{
+  --fondoOscuro:#151515;
+  --bgColor: black;
+  /* --bgColor: #F5F5F5; */
+  --mainColor: #FF0D06;
+  --secondaryColor: #545454;
+  /* --bgColor2: #ffffff;  */
+  --bgColor2: black;
+  --fontColor: black;
+  /* --fontColor: #000000; */
+  --fontColor2: #ffffff;
+  --primaryButton: #D9D9D9;
+  --secundaryButton: #EFAC00;
+}   
+
 h1,h2,h3,h4{
     font-family: Ubuntu;
 }

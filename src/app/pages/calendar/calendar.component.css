@@ -1,5 +1,10 @@
 *{
-    outline: none !important
+    outline: none !important;
+    background-color: var(--fondoOscuro);
+}
+
+h1{
+    color: var(--fontColor2);
 }
 
 .calendar {
@@ -15,9 +20,9 @@
     height: 40vh;
     margin: 2vh;
     padding: 1vh;
-    border: 1px solid #eaeaea;
+    /* border: 1px solid #eaeaea; */
     border-radius: 0.25rem;
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow:  0px 0px 1vh var(--primaryButton);
     text-align: center;
 }
 
@@ -51,6 +56,8 @@ ol {
     grid-template-columns: repeat(7, 1fr);
     margin: 0;
     padding: 0;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
 }
     
 li {
@@ -66,6 +73,7 @@ li:hover{
 h2 {
     margin-bottom: 4px;
     padding: 0;
+    color: var(--fontColor2);
 }
     
 .first-day {
@@ -89,18 +97,18 @@ h2 {
 
 .numberColor {
     font-weight: bolder;
-    border: 1px solid var(--mainColor);
+    border: 1px solid var(--secundaryButton);
     border-radius: 5px;
 }
 
 .eventDay{
-    border: 1px solid var(--secundaryButton);
+    border: 1px solid var(--fontColor2);
     border-radius: 5px;
 }
 
 .todayEvent{
     font-weight: bolder;
-    border: 1px solid blue;
+    border: 1px solid var(--secundaryButton);
     border-radius: 5px;
 }
 
@@ -118,10 +126,10 @@ h2 {
     text-align: left;
     width: 97%;
     padding: 3vh;
-    box-shadow: 0 0 2vh var(--primaryButton);
-    border-radius: 0.25rem;
-    margin: 1vh;
+    box-shadow: 1px 1px 1vh var(--primaryButton);
+    margin: 3vh;
     margin-left: 1vh;
+    color: var(--fontColor2);
 }
 
 .orden {
@@ -139,4 +147,17 @@ h2 {
     max-width: fit-content;
     margin-left: -50%;
     text-align: left;
+}
+
+.bi-arrow-right-circle-fill{
+    color: white;
+}
+.container-fluid{
+    background-color:var(--fondoOscuro) ;
+}
+.bi-arrow-right-circle-fill{
+    color: white;
+}
+span{
+    color: white;
 }

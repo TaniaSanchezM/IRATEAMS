@@ -5,7 +5,7 @@
     padding: 2vh;
     padding-top: 13vh;
     padding-bottom: 17vh;
-    background-color: black;
+    background-color:var(--fondoOscuro);
     color: white;
 }
 
@@ -59,7 +59,8 @@
     width: 22vw;
 }
 .bi-linkedin{
-    color: var(--bgColor2);
-   
+    margin-top: -1vh;
+    margin-left: -0.5vh;
+    width: 4vh;
 }
 
