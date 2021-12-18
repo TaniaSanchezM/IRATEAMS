@@ -5,6 +5,8 @@
     padding: 2vh;
     padding-top: 13vh;
     padding-bottom: 17vh;
+    background-color: black;
+    color: white;
 }
 
 .title {
@@ -35,7 +37,7 @@
     justify-content: center;
     align-items: center;
     height: 18vh;
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow: 0.1px 0.1px 1vh var(--primaryButton);
     margin-bottom: 2vh;
     border-radius: 0.25rem;
 }
@@ -55,5 +57,9 @@
 .logo {
     height: 10vh;
     width: 22vw;
+}
+.bi-linkedin{
+    color: var(--bgColor2);
+   
 }
 
