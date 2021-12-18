@@ -65,28 +65,12 @@ export class HomeComponent implements OnInit {
     })
    }
 
-   enableDisableRule() {
-     
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
-}
-
    getIdEvento(id: number)
    {
      console.log(id)
-      // let x = id
      this.homeService.eventoId = id;
      console.log(this.homeService.eventoId)
-     
 
-    // this.card_evento = id;
-
-    // console.log(this.card_evento)
-    //  this.homeService.getEvento(card).subscribe((data: any)=>
-    //  {
-    //    console.log(data.resultado)
-       
-    //  })
    }
    changeEvent(evento:Event){
      console.log(evento);

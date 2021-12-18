@@ -31,7 +31,7 @@ export class MySaveEventsComponent implements OnInit {
       
       this.events = data.resultado
       for (let event of this.events){
-        if (event.guardado != null){
+        if (event.guardado == true){
           console.log(this.mysave);          
           this.mysave.push(event)
           console.log(this.mysave);
