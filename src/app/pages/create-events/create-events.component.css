@@ -6,6 +6,13 @@
     font-weight: 800;
     margin-left: 5%;
 } */
+main{
+  /* background-color: var( --fondoOscuro); */
+  color: white;
+  padding: auto;
+  /* margin-bottom: 20vh; */
+
+}
 .title {
     margin-top: 4%;
     display: flex;
@@ -59,15 +66,16 @@ hr{
     border-radius: 2%;
 } */
 .myForm{
-    background-color: var(--bgColor);
-    margin-bottom: 10%;
+    background-color: var(--fondoOscuro);
+    margin-bottom: 20%;
     padding: 7%;
-    padding-bottom: 14vh;
+    /* padding-bottom: 24vh; */
     margin-top: 16%;
 }
 .header{
-    background-color: var(--bgColor);
+    background-color: var(--fondoOscuro);
 }
+
 
 .form-check-label{
     margin-top: 0.7vh;

@@ -5,21 +5,19 @@
 /* } */
 
 
-
-img-creator
-
-
 main {
     /* position: relative; */
-    
+    background-color: var(--fondoOscuro); 
     margin-top: 17%;
     padding-bottom: 17vh;
-    /* height: 100vh; */
-    
+    /* height: 100vh; */ 
     display: flex;
     flex-direction: column;
-    /* border: 3px solid blue; */
-    
+    /* border: 3px solid blue; */  
+}
+body{
+    background-color: var(--fondoOscuro); 
+    color: var(--fontColor2);
 }
 
 .row{
@@ -79,6 +77,7 @@ header{
 
 .bi{
     margin-top: -2%;
+    color: var(--fontColor2);
 }
 
 a{
@@ -96,12 +95,8 @@ hr{
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
+    color: var(--fontColor2);
 }
-
-
-
-
-
 
 
 .top{
@@ -115,12 +110,6 @@ hr{
     display: flex;
 }
 
-
-
-
-
-
-
 .card-img-container{
     border: 1px solid black;
     /* height: 200px;
@@ -130,14 +119,15 @@ hr{
     border-radius: 2vh;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+h3,p{
+    color: white;
+}
 
-img{
-    
+img{  
     height: 100%;
     width: 100%;
-    
+    border: var(--fontColor2);
     border-radius: 2vh;
-
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -210,7 +200,7 @@ img{
     width: 35px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     margin-right: auto;
-    margin-top: 7%;
+    margin-top: 0.5vh;
 }
 
 
@@ -237,7 +227,7 @@ img{
 }
 
 .icons-box{
-    border: 1px solid var(--fontColor);
+    border: 1px solid var(--fontColor2);
 
     width: 100%;
     border-radius: 1vh;
@@ -313,7 +303,7 @@ img{
 .sport{
     width: fit-content;
     
-    border: 1px solid var(--fontColor);
+    border: 1px solid var(--fontColor2);
     border-radius: 1vh;
     padding: 1vh 1vh 1vh 1vh;
 
@@ -321,8 +311,6 @@ img{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-
 
 }
 
@@ -471,7 +459,7 @@ img{
 .buttons{
     display: flex;
     flex-direction: column;
-
+   
     justify-content: center;
     align-items: center;
     /* padding: 1vh 1vh 0vh; */
@@ -492,8 +480,8 @@ img{
     height: 6vh;
     border-radius: 0.25rem;
     border: none;
-    
-    background: linear-gradient(180deg, #313131 0%, #000000 100%);
+    background-color:var(--fontColor2) ;
+    /* background: linear-gradient(180deg, #313131 0%, #000000 100%); */
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     color: var(--fontColor2);
     margin-left: 69%;
@@ -538,7 +526,8 @@ img{
  }
 
 .firstPart{
-    margin-top: -9%;
+    margin-top: -15vh;
+    color: var(--fontColor2);
 }
 /* .collapse{
     padding-bottom: 10%

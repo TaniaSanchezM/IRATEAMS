@@ -6,14 +6,14 @@
         <hr>
 
         <a type="button" id="back-button" (click)="goBack()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(secondaryColor)"
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(--fontColor2)"
                 class="bi bi-arrow-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
             </svg>
         </a>
     </div>
-    <section class="card-img">
+    <section class="content">
 
         <!-- <div class="back-btn">
             <a href="" routerLink="/home">
@@ -47,33 +47,33 @@
     <section class="content">
         <article class="icons-box">
             <div class="sm-icons-content location">
-                <svg xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor)"
+                <svg xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor2)"
                     class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                 </svg>
-                <div style="margin-top: 4px; margin-left: -5px;">
+                <div style="margin-top: 4px; margin-left: -5px; color: white;">
                     &nbsp; {{eventSelected.localidad}}
                 </div>
 
             </div>
             <div class="sm-icons-content date">
-                <svg xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor)"
+                <svg xmlns="http://www.w3.org/2000/svg" routerLink="#" width="16" height="16" fill="var(--fontColor2)"
                     class="bi bi-calendar-fill" viewBox="0 0 16 16">
                     <path
                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
                 </svg>
-                <div style="margin-top: 4px; margin-left: -5px;">
+                <div style="margin-top: 4px; margin-left: -5px; color: white;">
                     &nbsp; {{eventSelected.fecha | date:'shortDate'}}
                 </div>
 
             </div>
             <div class="sm-icons-content time">
                 <svg style="margin-right: 12px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="var(--fontColor)" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    fill="var(--fontColor2)" class="bi bi-clock-fill" viewBox="0 0 16 16">
                     <path
                         d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                 </svg>
-                <div style="margin-top: 4px; margin-left: -10px;">
+                <div style="margin-top: 4px; margin-left: -10px; color: white;">
                     &nbsp;{{eventSelected.fecha | date:'shortTime'}}
                 </div>
             </div>
@@ -82,27 +82,27 @@
         <article class="icons-box2">
             <div class="sport">
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'Futbol'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png" />
+                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png" style="color: white;" />
                     <div>{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'BALONCESTO'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png" />
-                    <div>{{ eventSelected.deporte }}</div>
+                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png"  />
+                    <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'Tenis'; else otroDeporte">
                     <img src="https://img.icons8.com/material/30/000000/badminton-racquet.png" />
-                    <div>{{ eventSelected.deporte }}</div>
+                    <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte ==='PADEL'">
                     <img src="https://img.icons8.com/material/30/000000/tennis.png" />
-                    <div>{{ eventSelected.deporte }}</div>
+                    <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'BICI'">
                     <img src="https://img.icons8.com/material/30/000000/tennis.png" />
-                    <div>{{ eventSelected.deporte }}</div>
+                    <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
                 <ng-template #otroDeporte>
-                    <div>
+                    <div style="color: white">
                         {{eventSelected.deporte}}
                     </div>
                 </ng-template>
@@ -164,7 +164,7 @@
         </article>
 
 
-        <article class="description">
+        <article class="description" style="color: white">
             {{eventSelected.descripcion}}
         </article>
 
