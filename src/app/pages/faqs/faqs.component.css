@@ -1,8 +1,14 @@
+main{
+    background-color: var(--fondoOscuro);
+    padding:auto ;
+    height: 100% ;
+    color: white;
+}
 body{
-    background-color: black;
-    margin-top: 12vh;
-    margin-bottom: 28vh;
-    width:100% ;
+    margin: 0px;
+    margin-top: 0px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin-top: -3vh;
 }
 h2{
     margin-top: 10vh;
@@ -12,15 +18,17 @@ h2{
 .content{
     margin-left: 3vh;
     margin-top: 3vh;
+    border: white;
 }
 .Title{
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 12vh;
 }
 .hr{
     width: 90%;
     margin-left: 5%;
 }
 .card-body{
+  
     width: 95%;
 }
