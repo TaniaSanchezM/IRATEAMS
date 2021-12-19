@@ -1,26 +1,32 @@
 .registerContainer{
+    width: 100vw;
     height:100vh; 
-    background-image:url('../../../assets/img/fondo.png');
-    background-size: cover;
-}
-
-.superior{
-    height: 70vh;
-}
-
-.inferior{
-    height: 30vh;
-}
-
-.center1{
-    text-align: center;
-}
-.center2{
-    margin-top: 3vh;
-    text-align: center;
+    background-color: black;
+    overflow: hidden;
 }
 .labelText{
     color: var(--fontColor2);
+}
+.centro{
+    height: 15vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 5vh;
+}
+.center{
+    text-align: center;
+    line-height: 14vh;
+}
+.bottomLinks{
+    margin-top: 15vh;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 40vh;
+    background-color: white;
+    border-top-left-radius: 40px 20px;
+    border-top-right-radius: 40px 20px;
 }
 .btn-black{
     background-color:#27241E;
@@ -29,20 +35,8 @@
     border-radius: 50px;
     font-family: Ubuntu;
     font-weight: bolder;
+    margin-top: 6vh;
     border: 1px solid white;
-}
-.bottomLinks{
-    margin-top: 17vh;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100vw;
-    padding-right: 10vw;
-}
-
-.marginForm{
-    padding-top: 25px;
 }
 .link{
     color:var(--mainColor);
