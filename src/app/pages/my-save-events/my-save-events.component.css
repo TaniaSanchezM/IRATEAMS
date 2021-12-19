@@ -157,11 +157,13 @@ img{
 
 
 .green {
-    color: var(--secundaryButton)
+    color: var(--secundaryButton);
+    fill: var(--secundaryButton)
 }
 
 .red {
     color: var(--fontColor2);
+    fill: var(--fontColor2)
 }
     
 .texto{
