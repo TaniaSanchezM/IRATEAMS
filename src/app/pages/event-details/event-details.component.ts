@@ -201,13 +201,18 @@ export class EventDetailsComponent implements OnInit {
     
     this.EventosService.putEventos(this.evento).subscribe((data: any)=>
     { 
-      
+      if(data == Error)
+      {
+        this.showErrorEdit()
+      }else{
         console.log(data);
         console.log(data.resultado)
         console.log(this.EventosService.eventoId)
         
         this.eventSelected = this.evento
         this.showCorrectEdit()
+      }
+        
       
     })
         
@@ -249,12 +254,11 @@ export class EventDetailsComponent implements OnInit {
 
     this.ChatServicios.postChat(this.id_usuario, this.eventSelected.id_creador).subscribe((data3: any)=>
     {
-        console.log(data3)
-        console.log(data3.resultado)
-
-        
+      console.log(data3)
+      console.log(data3.resultado)
     })
 
+    this.showJoin()
   }
 
 
@@ -278,6 +282,7 @@ export class EventDetailsComponent implements OnInit {
       console.log(data.resultado)
     })
     
+    this.showLeave()
   }
 
   crearChat()
