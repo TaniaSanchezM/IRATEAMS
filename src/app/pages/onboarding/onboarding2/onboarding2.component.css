@@ -121,7 +121,7 @@ body {
 }
 
 .arrow.left {
-    left: 13%;
+    left: 10%;
     /* transform: translate3d(0, -50%, 0) rotate(-135deg); */
     /* margin-top:-7vh */
   }

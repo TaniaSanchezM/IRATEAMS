@@ -161,7 +161,7 @@ img{
 }
 
 .red {
-    color: var(--fontColor);
+    color: var(--fontColor2);
 }
     
 .texto{
@@ -174,6 +174,12 @@ img{
 
 p{
     line-height: -1vh;
+}
+hr{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2vh;
+    color:var(--fontColor2)
 }
 
 .containerSave{
