@@ -11,14 +11,14 @@
     /* padding: 15vh; */
 }
 .texto{
-    margin-top: -20vh;
-    color: var(--mainColor);
-    font-weight: 500;
+  color: var(--fontColor2);
+  font-weight: 500;
+  font-size: 15px;
 }
 .circle {
     background-color:transparent;
-    margin-bottom: 17%;
-    margin-left: -33%;
+    margin-bottom: 22%;
+    margin-left: -48%;
     height: 120px;
     width: 120px;
     display: block;
@@ -107,56 +107,43 @@ body {
 }
 
 .arrow {
-    position: absolute;
-    top: 50%;
-    width: 3vmin;
-    height: 3vmin;
-    background: transparent;
-    border-top: 1vmin solid rgb(15, 14, 14);
-    border-right: 1vmin solid rgb(3, 3, 3);
-    box-shadow: 0 0 0 rgb(27, 21, 21);
-    transition: all 200ms ease;
-  }
+  position: absolute;
+  top: 35%;
+  right: 13%;
+  width: 3vmin;
+  height: 3vmin;
+  background: transparent;
+  border-top: 1vmin solid rgb(15, 14, 14);
+  border-right: 1vmin solid rgb(3, 3, 3);
+  box-shadow: 0 0 0 rgb(27, 21, 21);
+  transition: all 200ms ease;
+}
 
 .arrow.left {
-    left: 10vw;
-    transform: translate3d(0, -50%, 0) rotate(-135deg);
-    margin-top:-7vh
+    left: 10%;
+    /* transform: translate3d(0, -50%, 0) rotate(-135deg); */
+    /* margin-top:-7vh */
   }
   .arrow.right {
-    right: 10vw;
-    transform: translate3d(0, -50%, 0) rotate(45deg);
-    margin-top:-7vh
+    right: 13%;
+    /* transform: translate3d(0, -50%, 0) rotate(45deg); */
+    /* margin-top:-7vh */
   }
-  .arrow:hover {
-    border-color: orange;
-    box-shadow: 0.5vmin -0.5vmin 0 white;
-}
-  .arrow:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -60%) rotate(45deg);
-    width: 200%;
-    height: 200%;
-}
 .focus {
-    overflow:hidden;
-    width: 60px;
-    height: 60px;
-    border: 7px solid #eee;
-    border-top: 7px solid var(--secundaryButton);
-    border-radius: 50%;
-    animation-name: girar;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    /* animation-timing-function: linear; */
-    position: absolute;
-    bottom: 1%;
-    left: 57.5%;
-    z-index: 1;
-    background-color: transparent;
+  overflow:hidden;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #eee;
+  border-top: 6px solid var(--secundaryButton);
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  bottom: 1.7%;
+  left: 57.2%;
+  z-index: 1;
+  background-color: transparent;
 } 
   @keyframes girar {
     from {

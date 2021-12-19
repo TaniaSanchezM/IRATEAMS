@@ -57,6 +57,12 @@ h1{
    margin-left: 20%;
    margin-top: -18%;
 }
+.container{
+   margin-top: 2vh;
+   width: 100%;
+   padding-bottom: 35%;
+   background-color:var(--fondoOscuro) ;
+}
 .final{
    margin-bottom: 15vh;
 }
