@@ -59,7 +59,10 @@ export class CreateEventsComponent implements OnInit {
       if(data.error)
       {
         this.showError()
-      } else {
+      }else
+      {
+        console.log(data);
+        console.log(data.resultado)
         this.showSuccess()
       }
       // this.events = data.resultado

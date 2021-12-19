@@ -35,8 +35,7 @@ export class EventDetailsComponent implements OnInit {
   public evento: Event
   public evento2: Event
   public router: Router
-  public cost: boolean;
-  public mat: boolean;
+ 
   public personasApuntadas: Apuntados[];
   public numPersonasApuntadas: number;
   public nuevoApuntado: Apuntados
@@ -60,11 +59,6 @@ export class EventDetailsComponent implements OnInit {
       console.log(data.resultado[0]);
       console.log("flagconst")
       this.eventSelected = data.resultado[0];
-      this.cost =  this.eventSelected.pago.valueOf();
-      console.log(this.cost);
-      
-      this.mat =  this.eventSelected.material.valueOf();
-      console.log(this.mat)
 
       this.UsuarioServicio.getUser(this.eventSelected.id_creador).subscribe((data: any)=>
       {
@@ -81,7 +75,9 @@ export class EventDetailsComponent implements OnInit {
 
       })
       
-      
+      if(this.eventSelected.urlFotoEvento == null || this.eventSelected.urlFotoEvento == ''){
+        this.eventSelected.urlFotoEvento = '../../../assets/img/deportes.jpg'
+      }
 
     })
 
@@ -109,29 +105,28 @@ export class EventDetailsComponent implements OnInit {
         {
           let respuesta: boolean
 
-
-
-          // respuesta = true
-          // console.log(respuesta)
+          respuesta = true
+          
           if(this.personasApuntadas.length == 0)
           {
             respuesta = false
+            
             return respuesta
           }
           else{
             let i = 0;
-          while (i<this.personasApuntadas.length) {
-            respuesta = false
-            // console.log(respuesta)
-            if(this.personasApuntadas[i].id_usuario === this.id_usuario )
-            {
-              respuesta = true;
-              break;
+            while (i<this.personasApuntadas.length) {
+              respuesta = false
+              
+              if(this.personasApuntadas[i].id_usuario === this.id_usuario )
+              {
+                respuesta = true;
+                break;
+              }
+              i++;
             }
-            i++;
-          }
-          console.log(respuesta)
-          return respuesta
+            console.log(respuesta)
+            return respuesta
           }
           
           
@@ -191,6 +186,12 @@ export class EventDetailsComponent implements OnInit {
   public showJoin():void {
     this.toastr.success('', 'Te has unido al evento',{timeOut:2000, positionClass:"toast-top-full-width"})
   }
+  public showCorrectEdit():void{
+    this.toastr.error('', 'Evento modificado correctamente',{timeOut:2000, positionClass:"toast-top-full-width"});
+  }
+  public showErrorEdit():void {
+    this.toastr.success('', 'Error al modificar el evento',{timeOut:2000, positionClass:"toast-top-full-width"})
+  }
   public goBack():void{
     this.routeLocation.back()
   }
@@ -199,13 +200,14 @@ export class EventDetailsComponent implements OnInit {
   {
     
     this.EventosService.putEventos(this.evento).subscribe((data: any)=>
-    {      
-      console.log(data);
-      console.log(data.resultado)
-      console.log(this.EventosService.eventoId)
-      this.eventSelected.titulo = "Hola que tal";
+    { 
       
-      this.eventSelected = this.evento
+        console.log(data);
+        console.log(data.resultado)
+        console.log(this.EventosService.eventoId)
+        
+        this.eventSelected = this.evento
+        this.showCorrectEdit()
       
     })
         
@@ -213,7 +215,7 @@ export class EventDetailsComponent implements OnInit {
 
   apuntarme()
   {
-    this.eventSelected.nPersSolicitadas = this.eventSelected.nPersSolicitadas-1
+    this.eventSelected.nPersSolicitadas--
     
     this.nuevoApuntado = new Apuntados(this.id_usuario, this.eventSelected.id_evento)
 
@@ -249,6 +251,8 @@ export class EventDetailsComponent implements OnInit {
     {
         console.log(data3)
         console.log(data3.resultado)
+
+        
     })
 
   }
@@ -276,16 +280,16 @@ export class EventDetailsComponent implements OnInit {
     
   }
 
-  // crearChat()
-  // {
-  //   this.nuevoChat2 = new Chat(0, this.eventSelected.id_creador, this.id_usuario)
-  //   this.ChatServicios.postChat(this.nuevoChat2).subscribe((data: any)=>
-  //   {
-  //     console.log(data)
-  //     console.log(data.resultado)
+  crearChat()
+  {
+    this.nuevoChat2 = new Chat(0, this.eventSelected.id_creador, this.id_usuario)
+    this.ChatServicios.postChat(this.id_usuario, this.eventSelected.id_creador).subscribe((data: any)=>
+    {
+      console.log(data)
+      console.log(data.resultado)
 
-  //   })
-  // }
+    })
+  }
 
 
   // ngAfterViewInit(): void {
