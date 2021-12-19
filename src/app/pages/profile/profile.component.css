@@ -234,20 +234,14 @@ main{
     background-color: var(--fontColor);
     color: var(--fontColor2);
     font-weight: bold;
-
     height: auto;
-    /* width: 77.5vw; */
-    /* height: 40px; */
     border-radius: 0.25rem;
-    border: none;
-    /* background-color: ; */
-    background: linear-gradient(180deg, #313131 0%, #000000 100%);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: #fff;
+    background: black;
+    box-shadow: 0.5px 1px 1px 4px rgba(253, 253, 253, 0.2);
     color: var(--fontColor2);
-
-    /* margin-top: 4px;
-    margin-bottom: 4px;
-    margin-left: 2.6vh; */
+    
+    background: linear-gradient(180deg, #000 -2%, #171717 90%);
 }
 
 button{
