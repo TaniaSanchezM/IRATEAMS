@@ -75,7 +75,7 @@ export class MySaveEventsComponent implements OnInit {
   }
 
   filtroIncluye(filtro1:string, filtro2:any, filtro3:string){
-    this.filtroHome.getfiltroHome(filtro1,filtro2,filtro3).subscribe((data:any)=>
+    this.filtroHome.getfiltroHome(filtro1).subscribe((data:any)=>
     {
       this.filtro = data.resultado
       console.log(data.resultado);

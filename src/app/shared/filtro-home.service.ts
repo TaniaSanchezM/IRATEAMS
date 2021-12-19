@@ -10,12 +10,9 @@ export class FiltroHomeService {
  private url = 'https://api-irateams.herokuapp.com/filtroHome'
   // private url = "http://localhost:3000/filtroHome"
   constructor(private http: HttpClient) { }
-      getfiltroHome(filtro1:string, filtro2:any, filtro3:string){
+      getfiltroHome(filtro1:string, ){
         let params = new HttpParams()
-                .set('filtro1', filtro1)
-                .set('filtro2', filtro2)
-                .set('filtro3', filtro3);
-                
+                .set('filtro1', filtro1);
         const filtroEvento = {headers: null,params:params}
         return this.http.get(this.url, filtroEvento)
       }
