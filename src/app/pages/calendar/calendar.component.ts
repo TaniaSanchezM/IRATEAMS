@@ -58,7 +58,7 @@ export class CalendarComponent implements OnInit {
 
     const arrayDays = Object.keys([...Array(numberDays)]).map((a: any) => {
       a = parseInt(a) + 1;
-      const dayObject = moment(`${year}-${month}-${a}`);
+      const dayObject = moment(`${year}-${month}-${a}`, 'YYYY-MM-DD');
       return {
         name: dayObject.format("dddd"),
         value: a,
