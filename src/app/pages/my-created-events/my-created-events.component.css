@@ -2,19 +2,23 @@
 .searcher{
    margin-top: 13vh;
 }
+.container{
+   margin-top: 2vh;
+   width: 100%;
+   background-color: var(--fondoOscuro);
+   padding-bottom: 17vh;
+}
 body{
-   background-color:var(--fondoOscuro);
+   background-color: var(--fondoOscuro);
    display: flex;
    flex-direction: column;
    margin-left: auto;
    margin-right: auto;
    scroll-behavior:initial ;
    color: white;
-  
    margin-top: -2%;
 }
 .hr{
-   
    width: 90%;
    margin-left: 5%;
    margin-top: 2vh;
@@ -27,8 +31,6 @@ h1{
    margin-left: 87%;
 }
 .btn-group{
-   /* margin-left:  auto;
-   margin-right: auto; */
    margin-top: 3vh; 
    width:50%;
    height:40px;
@@ -54,10 +56,6 @@ h1{
 .textEvent{
    margin-left: 20%;
    margin-top: -18%;
-}
-.container{
-   margin-top: 2vh;
-   width: 100%;
 }
 .final{
    margin-bottom: 15vh;
@@ -90,9 +88,6 @@ img{
    margin-top: -1.5vh; 
    margin-left: 6vh;
 }
-/* .container{
-   margin-top: -3vh;  
-} */
 .col-4{
    width: 30%;
 }
