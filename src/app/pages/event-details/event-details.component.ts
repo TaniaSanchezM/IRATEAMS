@@ -36,7 +36,7 @@ export class EventDetailsComponent implements OnInit {
   public evento2: Event
   public router: Router
  
-  public personasApuntadas: Apuntados[];
+  public personasApuntadas: number[];
   public numPersonasApuntadas: number;
   public nuevoApuntado: Apuntados
   public modNumApuntadosEvento: number
@@ -70,7 +70,7 @@ export class EventDetailsComponent implements OnInit {
       {
         console.log(data.resultado)
         this.personasApuntadas = data.resultado
-        this.numPersonasApuntadas = data.resultado.length
+        // this.numPersonasApuntadas = data.resultado.length
         console.log(this.personasApuntadas)
 
       })
@@ -102,65 +102,22 @@ export class EventDetailsComponent implements OnInit {
   }
 
   usuarioApuntado()
-        {
-          let respuesta: boolean
+  {
+    let respuesta: boolean
 
-          respuesta = true
-          
-          if(this.personasApuntadas.length == 0)
-          {
-            respuesta = false
-            
-            return respuesta
-          }
-          else{
-            let i = 0;
-            while (i<this.personasApuntadas.length) {
-              respuesta = false
-              
-              if(this.personasApuntadas[i].id_usuario === this.id_usuario )
-              {
-                respuesta = true;
-                break;
-              }
-              i++;
-            }
-            console.log(respuesta)
-            return respuesta
-          }
-          
-          
-
-          // for(let apuntado of this.personasApuntadas)
-          // {
-            
-            // var text = "";
-            // var i = 0;
-            // while (i < 5) {
-            //   text += "<br>The number is " + i;
-            //   i++;
-            // }
-
-              
-            // do {
-            //     respuesta = false
-
-            // } while (apuntado.id_usuario != this.id_usuario);
-
-            // respuesta = true
-          
-            // if(apuntado.id_usuario == this.id_usuario)
-            // {
-            //   respuesta =  true
-            // }else
-            // {
-            //   respuesta = false
-            // }
-          // }
-          // console.log(respuesta)
-          // return respuesta
-          
-        }
+    respuesta = true
+    
+    if(this.personasApuntadas.length == 0 || this.personasApuntadas.includes(this.id_usuario) == false)
+    {
+      respuesta = false
+    }
+    else{
+      if(this.personasApuntadas.includes(this.id_usuario) == true)
+      respuesta = true;
+    }
+    return respuesta
+    console.log(respuesta)
+  }
   
   pasarDatos(deporte: string, titulo: string, personas: string, fecha: string, hora:string,  localidad: string, direccion: string,  material: boolean, pago: boolean, descripcion: string, img: string){
     
@@ -267,7 +224,7 @@ export class EventDetailsComponent implements OnInit {
     // this.modNumApuntadosEvento = this.eventSelected.nPersSolicitadas +1
     // this.evento.nPersSolicitadas = this.modNumApuntadosEvento
 
-    this.eventSelected.nPersSolicitadas = this.eventSelected.nPersSolicitadas+1
+    this.eventSelected.nPersSolicitadas++
 
     this.EventosService.putEventos(this.eventSelected).subscribe((data: any)=>
       {
