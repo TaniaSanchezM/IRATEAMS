@@ -32,10 +32,10 @@ export class CreateEventsComponent implements OnInit {
   }
 
   public showSuccess():void {
-    this.toastr.success('', 'Evento creado correctamente',{timeOut:4000, positionClass:"toast-top-full-width"});
+    this.toastr.success('', 'Evento creado correctamente',{timeOut:2000, positionClass:"toast-top-full-width"});
   }
   public showError():void{
-    this.toastr.error('', 'No se ha podido crear el evento',{timeOut:4000, positionClass:"toast-top-full-width"});
+    this.toastr.error('', 'No se ha podido crear el evento',{timeOut:2000, positionClass:"toast-top-full-width"});
   }
   
   

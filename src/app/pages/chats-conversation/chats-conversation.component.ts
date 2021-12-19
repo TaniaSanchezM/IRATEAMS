@@ -55,12 +55,12 @@ export class ChatsConversationComponent implements OnInit {
       }
       this.mensajesService.postMensajes(msg).subscribe((data:any)=>{
         if(data.error){
-          this.toastr.error("",data.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.toastr.error("",data.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
         } else{
           if(data.resultado.affectedRows === 1){
             this.getMSGs();
           } else {
-            this.toastr.error("",data.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+            this.toastr.error("",data.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
           }
           
         }
