@@ -17,6 +17,7 @@ export class MyCreatedEventsComponent implements OnInit {
   public id_eventoSelect:number
   public borrado: Event
   public events: Event[]
+  public index : number
 
   constructor(public misCreadosService:MyCreatedService, public loginService:LoginService, public homeService: EventosService, private toastr: ToastrService) { 
   }
@@ -45,9 +46,10 @@ export class MyCreatedEventsComponent implements OnInit {
     console.log(this.homeService.eventoId)
   }
 
-  saveId(id_evento:number){
+  saveId(id_evento:number, index:number){
 
     this.id_eventoSelect = id_evento
+    this.index =  index
     console.log(this.id_eventoSelect)
   }
   deleteEvento(){
@@ -58,15 +60,16 @@ export class MyCreatedEventsComponent implements OnInit {
       this.borrado = data
       console.log(this.borrado);
     })
+    this.misCreados.splice(this.index,1)
     this.showSuccess()
-    this.showMyCreated()
+    
   }
 
   showSuccess() {
-    this.toastr.success('', 'Perfil actualizado',{timeOut:2000, positionClass:"toast-top-full-width"});
+    this.toastr.success('', 'Evento eliminado correctamente',{timeOut:4000, positionClass:"toast-top-full-width"});
   }
   showError(){
-    this.toastr.error('', 'Error al actualizar el perfil',{timeOut:2000, positionClass:"toast-top-full-width"});
+    this.toastr.error('', 'Error al eliminar el evento',{timeOut:4000, positionClass:"toast-top-full-width"});
   }
   ngOnInit(): void {
     this.showMyCreated()

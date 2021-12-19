@@ -7,13 +7,13 @@
 </div> 
 
 <div class="container">
-  <div class="card" *ngFor="let event of misCreados"> 
+  <div class="card" *ngFor="let event of misCreados; let i=index"> 
     <div class="left">
       <img src={{event.urlFotoEvento}} alt=""> 
     </div>
     <div class="right" (click)="getIdEvento(event.id_evento)">
-      <button type="button" class="buttonTrash btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"(click)="saveId(event.id_evento)">
-        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -4vh; " width="16" height="16" fill="var(--fontColor2)" class="bi bi-bookmark" viewBox="0 0 16 16" >
+      <button type="button" class="buttonTrash btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"(click)="saveId(event.id_evento, i)">
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -4vh; " width="16" height="16" fill="var(--secondaryColor)" class="bi bi-bookmark" viewBox="0 0 16 16" >
           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
         </svg>
       </button>
