@@ -1,34 +1,42 @@
 <div class="loginContainer">
   <div class="divLogo">
-      <img src="../../../assets/img/logo.png" alt="Logo de la app" class="imgLogo">
+    <img src="../../../assets/img/logo.png" alt="Logo de la app" class="imgLogo">
   </div>
-  <div class="col-12 container">
-      <form #loginForm="ngForm" (ngSubmit)="loginForm" class="rounded-3 ">
-        <div class="form-group mb-3">
-          <p for="floatingUser" class="labelText">Usuario o email</p>
-          <input type="text"  name="loginName"  class="form-control" id="floatingUser" placeholder="" [(ngModel)]="loginService.login.userCredentials" #userName="ngModel" 
+  <div class="col-12">
+    <form #loginForm="ngForm" (ngSubmit)="loginForm" class="rounded-3 ">
+      <div class="form-group mb-3 centro">
+        <p for="floatingUser" class="labelText">Usuario o email</p>
+        <input type="text" name="loginName" class="form-control" id="floatingUser" placeholder=""
+          [(ngModel)]="loginService.login.userCredentials" #userName="ngModel"
           [ngClass]="{'is-invalid': userName.invalid && (userName.dirty || userName.touched)}" required>
-          <div class="invalid-feedback" *ngIf="userName.invalid && (userName.dirty || userName.touched)">
-            <div *ngIf="userName.errors?.['required']"><p>El userName es campo obligatorio</p></div>
+        <div class="invalid-feedback" *ngIf="userName.invalid && (userName.dirty || userName.touched)">
+          <div *ngIf="userName.errors?.['required']">
+            <p>El userName es campo obligatorio</p>
           </div>
-        </div>
-        <div class="form-group mb-3">
-          <p for="floatingPassword" class="labelText">Contraseña</p>
-          <input type="password" name="pass" class="form-control" id="floatingPassword" placeholder="" [(ngModel)]="loginService.login.password" #password="ngModel" 
-          [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched)}" required>
-          <div class="invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
-            <div *ngIf="password.errors?.['required']"><p>La contraseña es campo obligatorio</p></div>
-          </div>
-        </div>
-      </form>
-      <div class="bottomLinks">
-        <div class="center">
-            <button class="w-75 btn btn-lg btn-black" (click)="onSubmit(loginForm)">Iniciar sesión</button>
-        </div>
-        <div class="center">
-            <p class="text-muted">¿No tienes cuenta? <a routerLink="/register" class="link">Crear cuenta</a></p>
-            <small class="text-muted"> <p>¿Has olvidado tu contraseña? <a routerLink="/recover-password" class="link">Recuperar</a></p></small>
         </div>
       </div>
+      <div class="form-group mb-3 centro">
+        <p for="floatingPassword" class="labelText">Contraseña</p>
+        <input type="password" name="pass" class="form-control" id="floatingPassword" placeholder=""
+          [(ngModel)]="loginService.login.password" #password="ngModel"
+          [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched)}" required>
+        <div class="invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">
+          <div *ngIf="password.errors?.['required']">
+            <p>La contraseña es campo obligatorio</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="bottomLinks">
+    <div class="center">
+      <button class="w-75 btn btn-lg btn-black" (click)="onSubmit(loginForm)">Iniciar sesión</button>
+    </div>
+    <div class="center">
+      <p class="">¿No tienes cuenta? <a routerLink="/register" class="link">Crear cuenta</a></p>
+      <small class="">
+        <p>¿Has olvidado tu contraseña? <a routerLink="/recover-password" class="link">Recuperar</a></p>
+      </small>
+    </div>
   </div>
 </div>
