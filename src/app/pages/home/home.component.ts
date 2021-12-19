@@ -41,8 +41,8 @@ export class HomeComponent implements OnInit {
      this.siClick = true
    }
 
-   filtroIncluye(filtro1:string, filtro2:any, filtro3:string){
-     this.filtroHome.getfiltroHome(filtro1,filtro2,filtro3).subscribe((data:any)=>
+   filtroIncluye(filtro1:string){
+     this.filtroHome.getfiltroHome(filtro1).subscribe((data:any)=>
      {
        this.filtro = data.resultado
        console.log(data.resultado);
