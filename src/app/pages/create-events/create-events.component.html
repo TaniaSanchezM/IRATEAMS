@@ -105,7 +105,7 @@
     <!-- <button type="button" class="btn btn-dark"(click)="createEvent(img.value, titulo.value, deporte.value, fecha.value, hora.value, localidad.value, direccion.value, personas.value, material.checked, pago.checked, descripcion.value)" [routerLink]="['/home']" routerLinkActive="router-link-active" >Crear evento</button> -->
 
     <div class="form-group">
-        <button type="submit" >
+        <button type="button"  class="button" [disabled]="formCrearEvento.invalid" >
             Crear Evento
         </button>
     </div>
