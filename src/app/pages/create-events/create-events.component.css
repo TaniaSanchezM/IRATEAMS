@@ -67,10 +67,11 @@ hr{
 } */
 .myForm{
     background-color: var(--fondoOscuro);
-    margin-bottom: 20%;
+    
     padding: 7%;
     /* padding-bottom: 24vh; */
     margin-top: 16%;
+    padding-bottom: 30%;
 }
 .header{
     background-color: var(--fondoOscuro);

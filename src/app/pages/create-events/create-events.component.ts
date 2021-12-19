@@ -16,19 +16,26 @@ import { NgForm } from '@angular/forms';
 })
 export class CreateEventsComponent implements OnInit {
   public evento: Event;
+  public evento2: Event
   // public evento2: Event;
 
   public user: User 
   public id_usuario: number
 
-  constructor(private toastr: ToastrService, private loginService: LoginService, private EventosService: EventosService) {
+  public date: string;
+  public time: string;
+  
 
+  constructor(private toastr: ToastrService, private loginService: LoginService, private EventosService: EventosService) {
+    
     this.user=new User(0,"","","","",new Date(),"","")
     console.log(loginService.login.userId)
     this.id_usuario = this.loginService.login.userId;
     console.log(this.id_usuario)
 
-    // this.evento2 = new Event("", "", 0, 0, new Date, "", "", "", false, false, "", 0)
+    this.evento2 = new Event("", "", this.id_usuario, 1, new Date, "", "", "", false, false, "", 0, null)
+    
+
   }
 
   public showSuccess():void {
@@ -69,6 +76,26 @@ export class CreateEventsComponent implements OnInit {
      
     })
     
+  }
+
+  crearEvento(form: NgForm)
+  {
+    
+    console.log(form.value)
+    console.log(this.evento2)
+
+    this.EventosService.postEventos(this.evento2).subscribe((data: any) =>
+    {
+      if(data.error)
+      {
+        this.showError()
+      }else
+      {
+        console.log(data);
+        console.log(data.resultado)
+        this.showSuccess()
+      }
+    })
   }
 
 

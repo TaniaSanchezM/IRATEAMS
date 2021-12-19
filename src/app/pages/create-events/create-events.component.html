@@ -1,52 +1,95 @@
 <main>
-<form class="myForm">
+<form class="myForm"  (ngSubmit)="crearEvento(formCrearEvento)" #formCrearEvento="ngForm">
     <h1 class="title">Añadir evento</h1>
     <hr>
+        
         <div class="mb-3">
             <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar al evento: </label>
-            <input type="text" class="form-control" #img id="imagen">
+            <!-- <input type="text" class="form-control" #img id="imagen"> -->
+            <input type="text" class="form-control" name="urlFotoEvento" [(ngModel)]="evento2.urlFotoEvento" #urlFotoEvento="ngModel">
+                
         </div>
         <div class="mb-3">
             <label for="titulo" class="form-label">Título del evento: </label>
-            <input type="text" class="form-control" #titulo id="titulo">
+            <!-- <input type="text" class="form-control" #titulo id="titulo"> -->
+            <input type="text" class="form-control" name="titulo" [(ngModel)]="evento2.titulo" #titulo="ngModel"
+            [ngClass]="{ 'is-invalid': (titulo.dirty || titulo.touched) && titulo.invalid}" required>
+            <div class="invalid-feedback" *ngIf="(titulo.dirty || titulo.touched)&& titulo.invalid">
+                <p *ngIf="titulo.errors?.['required']">*El titulo es obligatorio*</p>
+            </div>
         </div>
         <div class="mb-3">
             <label for="deporte" class="form-label">Deporte: </label>
-            <input type="text" class="form-control" #deporte id="deporte">
+            <!-- <input type="text" class="form-control" #deporte id="deporte"> -->
+            <input type="text" class="form-control" name="deporte" [(ngModel)]="evento2.deporte" #deporte="ngModel"
+            [ngClass]="{ 'is-invalid': (deporte.dirty || deporte.touched) && deporte.invalid}" required>
+            <div class="invalid-feedback" *ngIf="(deporte.dirty || deporte.touched)&& deporte.invalid">
+                <p *ngIf="deporte.errors?.['required']">*El deporte es obligatorio*</p>
+            </div>
         </div>
         <div class=" row mb-3">
             <label for="fecha" class="col-sm-2 col-form-label">Fecha: </label>
             <div class="col-sm-10">
-                <input type="date" class="form-control" #fecha id="fecha">
+                <!-- <input type="date" class="form-control" #fecha id="fecha"> -->
+                <input type="datetime-local" class="form-control" name="fecha" [(ngModel)]="evento2.fecha" #fecha="ngModel"
+                [ngClass]="{ 'is-invalid': (fecha.dirty || fecha.touched) && fecha.invalid}" required>
+                <div class="invalid-feedback" *ngIf="(fecha.dirty || fecha.touched)&& fecha.invalid">
+                    <p *ngIf="fecha.errors?.['required']">*La fecha es obligatoria*</p>
+                </div>
             </div>            
         </div>
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <label for="hora" class="col-sm-2 col-form-label">Hora: </label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" #hora id="hora">
-            </div>            
-        </div>
+            <div class="col-sm-10"> -->
+                <!-- <input type="time" class="form-control" #hora id="hora" > -->
+                <!-- <input type="time" class="form-control"  id="hora" [(ngModel)]="evento2.fecha" #fecha="ngModel"> -->
+                <!-- <input type="text" class="form-control" name="hora" [(ngModel)]="evento.hora" #hora="ngModel"
+                [ngClass]="{ 'is-invalid': (hora.dirty || hora.touched) && hora.invalid}" required>
+                <div class="invalid-feedback" *ngIf="(hora.dirty || hora.touched)&& hora.invalid">
+                    <p *ngIf="hora.errors?.['required']">*La hora es obligatorio*</p>
+                </div> -->
+
+            <!-- </div>            
+        </div> -->
         <div class="mb-3">
             <label for="localidad" class="form-label">Localidad: </label>
-            <input type="text" class="form-control" #localidad id="localidad">
+            <!-- <input type="text" class="form-control" #localidad id="localidad"> -->
+            <input type="text" class="form-control" name="localidad" [(ngModel)]="evento2.localidad" #localidad="ngModel"
+            [ngClass]="{ 'is-invalid': (localidad.dirty || localidad.touched) && localidad.invalid}" required>
+            <div class="invalid-feedback" *ngIf="(localidad.dirty || localidad.touched)&& localidad.invalid">
+                <p *ngIf="localidad.errors?.['required']">*La localidad es obligatoria*</p>
+            </div>
         </div>
         <div class="mb-3">
             <label for="direccion" class="form-label">Direccion: </label>
-            <input type="text" class="form-control" #direccion id="direccion">
+            <!-- <input type="text" class="form-control" #direccion id="direccion"> -->
+            <input type="text" class="form-control" name="direccion" [(ngModel)]="evento2.direccion" #direccion="ngModel"
+            [ngClass]="{ 'is-invalid': (direccion.dirty || direccion.touched) && direccion.invalid}" required>
+            <div class="invalid-feedback" *ngIf="(direccion.dirty || direccion.touched)&& direccion.invalid">
+                <p *ngIf="direccion.errors?.['required']">*La direccion es obligatoria*</p>
+            </div>
         </div>
         <div class="row mb-3">
             <label for="nPersonas" class="col-sm-2 col-form-label">Personas necesarias: </label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" #personas id="nPersonas">
+                <!-- <input type="number" class="form-control" #personas id="nPersonas"> -->
+                <input type="number" class="form-control" name="nPersSolicitadas" [(ngModel)]="evento2.nPersSolicitadas" #nPersonas="ngModel"
+                [ngClass]="{ 'is-invalid': (nPersonas.dirty || nPersonas.touched) && nPersonas.invalid}" required>
+                <div class="invalid-feedback" *ngIf="(nPersonas.dirty || nPersonas.touched)&& nPersonas.invalid">
+                    <p *ngIf="nPersonas.errors?.['required']">*El numero de personas necesarias es obligatorio*</p>
+                </div>
             </div>
         </div>
         <div class="checkInline">
             <div class="form-switch">
-                <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked="1" style="width:3.5em; height:1.75em">
+                <!-- <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked="1" style="width:3.5em; height:1.75em">           -->
+                <input class="form-check-input" role="switch" type="checkbox"  id="inlineCheckbox1" class="form-check-input" checked="1" style="width:3.5em; height:1.75em" [(ngModel)]="evento2.material" #material="ngModel">          
+            
                 <label class="form-check-label" for="inlineCheckbox1">Material necesario</label>
             </div>
             <div class="form-switch">
-                <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked="1" style="width:3.5em; height:1.75em">
+                <!-- <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked="1" style="width:3.5em; height:1.75em"> -->
+                <input class="form-check-input" role="switch" type="checkbox" id="inlineCheckbox2" checked="1" style="width:3.5em; height:1.75em" [(ngModel)]="evento2.pago" #pago="ngModel">
                 <label class="form-check-label" for="inlineCheckbox2">Pago necesario</label>
             </div>
         </div>
@@ -56,9 +99,16 @@
         </div> -->
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción:</label>
-            <textarea class="form-control" #descripcion id="descripcion" rows="4"></textarea>
+            <!-- <textarea class="form-control" #descripcion id="descripcion" rows="4"></textarea> -->
+            <textarea class="form-control" id="descripcion" rows="4" [(ngModel)]="evento2.descripcion" #descripcion="ngModel"></textarea>
         </div>
-    <button type="button" class="btn btn-dark"(click)="createEvent(img.value, titulo.value, deporte.value, fecha.value, hora.value, localidad.value, direccion.value, personas.value, material.checked, pago.checked, descripcion.value)" [routerLink]="['/home']" routerLinkActive="router-link-active" >Crear evento</button>
+    <!-- <button type="button" class="btn btn-dark"(click)="createEvent(img.value, titulo.value, deporte.value, fecha.value, hora.value, localidad.value, direccion.value, personas.value, material.checked, pago.checked, descripcion.value)" [routerLink]="['/home']" routerLinkActive="router-link-active" >Crear evento</button> -->
+
+    <div class="form-group">
+        <button type="submit" >
+            Crear Evento
+        </button>
+    </div>
 </form>
 
 </main>
