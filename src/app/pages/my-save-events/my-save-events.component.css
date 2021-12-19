@@ -1,28 +1,40 @@
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--fondoOscuro);
+    color: white;
 }
-
+hr{
+    height: 3vh;
+    color: white;
+    width: 3vh;
+}
+.hrB{
+    
+   
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 2vh;
+     
+}
 .firstPart{
-    background-color:var(--fontColor2);
+    background-color: var(--fondoOscuro);
     display: flex;
     flex-direction: column;
-    margin-top: 45%;
     text-align: center;
     margin-top: 20%;
     margin-bottom: -7%;
    
 }
-.firstPart2{
+/* .firstPart2{
     display: flex;
     flex-direction: row;
     width: 96%;
     margin-top: 3vh;
    
-}
+} */
 .firstPart3{
     width: 4vh;
     height: 4vh;
@@ -52,12 +64,7 @@
     box-shadow: 0 0 2vh var(--primaryButton);
 
 }
-.hr{
-    width:90%;
-    margin-left: 5%;
-    margin-top: -1%;
-  
-}
+
 .input-1 {
     box-shadow: 0 0 2vh var(--primaryButton);
     text-align: center;
@@ -75,10 +82,10 @@
 
 .card{
     margin-top: 2vh;
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow: 0px 0 0.5vh var(--primaryButton);
     max-height: 80%;
-    margin-left:3% ;
-    margin-right:3%;
+    margin-left: 4%;
+    margin-right: 4%;
     display: flex;
     flex-direction: row;
 }
@@ -152,8 +159,8 @@ img{
     border-color: transparent;
 }
 .left{
-    margin-top: -1vh;
-    margin-left: -1vh;
+    margin-top: 0vh;
+    margin-left: 0vh;
     width: 30%;
 }
 
@@ -175,12 +182,11 @@ img{
 }
     
 .texto{
-    font-size: 7rem;
-    margin-left: 10%;
-    /* border: solid 1px red; */
-    height: 90%;
-    width: 88%;
-    text-align:left ;
+    font-size: 1rem;
+margin-left: 9%;
+height: 90%;
+width: 91%;
+text-align: left;
 }
 p{
     line-height: -1vh;

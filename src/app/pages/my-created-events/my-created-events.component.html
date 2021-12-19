@@ -1,6 +1,8 @@
- 
+<body>
+  
+
 <div class="searcher">
-  <h1 style="margin-top: 4vh;">Mis eventos</h1>
+  <h1 style="padding-top: 5%;">Mis eventos</h1>
      <hr class="hr">
 </div> 
 
@@ -11,7 +13,7 @@
     </div>
     <div class="right" (click)="getIdEvento(event.id_evento)">
       <button type="button" class="buttonTrash btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"(click)="saveId(event.id_evento)">
-        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -4vh; " width="16" height="16" fill="var(--secondaryColor)" class="bi bi-bookmark" viewBox="0 0 16 16" >
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -4vh; " width="16" height="16" fill="var(--fontColor2)" class="bi bi-bookmark" viewBox="0 0 16 16" >
           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
         </svg>
       </button>
@@ -21,10 +23,10 @@
         </svg>        
       </button>
       <div class="texto" routerLink="/event-details" (click)="getIdEvento(event.id_evento)">
-          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/></svg><small style="color: black; "> {{event.titulo}}</small></p>
-          <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small style="color: black; "> {{event.fecha | date :'shortDate' }} </small></p>
-          <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#currentColor" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg ><small style="color: black; font-size: x-small; "> {{event.direccion}} </small></p>
-          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small style="color: black;">  {{event.nPersSolicitadas}} </small></p>
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/></svg><small style="color: var(--fontColor2); "> {{event.titulo}}</small></p>
+          <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)" class="bi bi-calendar-fill" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" /></svg><small style="color: var(--fontColor2); "> {{event.fecha | date :'shortDate' }} </small></p>
+          <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)" class="bi bi-geo-alt-fill"  viewBox="0 0 16 16"> <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg ><small style="color: var(--fontColor2); font-size: x-small; "> {{event.direccion}} </small></p>
+          <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--fontColor2)" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/><path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg><small style="color: var(--fontColor2);">  {{event.nPersSolicitadas}} </small></p>
       </div>
     </div>          
   </div> 
@@ -49,7 +51,7 @@
 </div>
 
 
-
+</body> 
 
 
 
