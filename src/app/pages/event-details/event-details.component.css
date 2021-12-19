@@ -1,8 +1,8 @@
+
 /* *{
-    background-color: #F5F5F5;
-    /* background-color: rgb(252, 252, 252); */
-    
-/* } */
+    background-color: var(--fondoOscuro);
+    color: var(--fontColor2)
+} */
 
 
 main {
@@ -84,6 +84,7 @@ a{
     color: var(--fontColor);
     /* color: #000000; */
     text-decoration: none;
+    margin-bottom: 1vh;
     
 }
 
@@ -323,6 +324,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--fontColor2)
 }
 
 .boolean{
@@ -352,6 +354,7 @@ img{
 .boolean2{
     /* margin-left: 1rem; */
     display: flex;
+    background-color: #D9D9D9;
 }
 
 .cost2{
@@ -380,6 +383,10 @@ img{
 
 .card-body{
     margin-top: 1rem;
+    /* background-color: var(--fondoOscuro);
+    color: var(--fontColor2); */
+    background-color: var(--fondoOscuro);
+    color: var(--fontColor2)
 }
 
 .form-check-label{
@@ -479,20 +486,34 @@ img{
 
 .button{
     height: auto;
-    /* width: 300px;
-    height: 40px; */
+    
     width: 90%;
     height: 6vh;
     border-radius: 0.25rem;
     border: none;
     background-color:var(--fontColor2) ;
-    /* background: linear-gradient(180deg, #313131 0%, #000000 100%); */
+    
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     color: var(--fontColor2);
     /* margin-left: 69%; */
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
 }
+
+.btn{
+    background-color: var(--fontColor);
+    color: var(--fontColor2);
+    font-weight: bold;
+    height: auto;
+    border-radius: 0.25rem;
+    border: #fff;
+    background: black;
+    box-shadow: 0.5px 1px 1px 4px rgba(253, 253, 253, 0.2);
+    color: var(--fontColor2);
+    
+    background: linear-gradient(180deg, #000 -2%, #171717 90%);
+}
+
 
 .disabled{
     color: var(--fontColor);
@@ -509,7 +530,16 @@ img{
     
 }
 #submit{
-    width: 30%;
+    width: 40%;
+}
+
+input, textarea{
+    background-color: var(--fontColor2);
+    color: var(--fontColor);
+}
+
+.bi{
+    z-index: 1;
 }
 
 
