@@ -24,7 +24,7 @@ hr{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 12vh;
     margin-bottom: -7%;
    
 }
@@ -196,7 +196,7 @@ p{
 }
 
 #linea {
-    margin-top: 3vh;
-    width: 96%;
-    margin-left: 2%;
+   
+    border: rgb(81, 255, 0) solid 2vh;
 }
+h1{margin-top: 3vh;}
