@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
         }
       });
     } else {
-      this.toastr.error("",'Las contraseñas deben ser identicas',{timeOut:4000, positionClass:"toast-top-full-width"});
+      this.toastr.error("",'Las contraseñas deben ser identicas',{timeOut:2000, positionClass:"toast-top-full-width"});
     }
   }
   ngOnInit(): void {

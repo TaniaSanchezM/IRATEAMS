@@ -15,7 +15,7 @@ export class ApuntadosService {
   constructor(private http: HttpClient) { }
 
   getApuntado(eventoIdApuntado: number){
-    return this.http.get(this.url + "?id=" + eventoIdApuntado)
+    return this.http.get(this.url + "?id_evento=" + eventoIdApuntado)
   }
   getApuntados(){
     return this.http.get(this.url)

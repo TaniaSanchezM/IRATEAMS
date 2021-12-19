@@ -12,7 +12,7 @@ export class ChatService {
    
   // private url = "http://localhost:3000/chats"
   private url: string = 'https://api-irateams.herokuapp.com/chats';
-  private url2: string = 'https://api-irateams.herokuapp.com/chat';
+  
   public numchat:number;
   public seeChatId:number;
   
@@ -26,18 +26,8 @@ export class ChatService {
     // console.log("entrada SERvicio")
     // console.log(nuevoChat)
     // return this.http.post(this.url, nuevoChat)
-    
-    let options= {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      }),
-      body: {
-        id_user1: id_usuario,
-        id_user2: id_creador
-      }
-    }
 
-    return this.http.post(this.url, options)
+    return this.http.post(this.url, {id_user1: id_usuario, id_user2:id_creador})
   } 
   
   deleteChat(chatId: number) { 

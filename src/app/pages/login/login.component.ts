@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
           this.toastr.success("",'Inicio de sesion completado',{timeOut:4000, positionClass:"toast-top-full-width"});
           this.router.navigate(["/home"]);
         } else {
-          this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.toastr.error("",apiResponse.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
         }
       }
     });
