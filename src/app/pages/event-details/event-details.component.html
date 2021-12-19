@@ -82,30 +82,34 @@
         <article class="icons-box2">
             <div class="sport">
                 <div class="sport-content" *ngIf="eventSelected.deporte === 'Futbol'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png" style="color: white;" />
+                    <img src="https://img.icons8.com/material/30/ffffff/football2--v1.png"/>
                     <div>{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="eventSelected.deporte === 'BALONCESTO'">
-                    <img src="https://img.icons8.com/material/30/000000/football2--v1.png"  />
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'Baloncesto'">
+                    <img src="https://img.icons8.com/material/30/ffffff/basketball.png"/>
                     <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="eventSelected.deporte === 'Tenis'; else otroDeporte">
-                    <img src="https://img.icons8.com/material/30/000000/badminton-racquet.png" />
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'Tenis'">
+                    <img src="https://img.icons8.com/material/30/ffffff/badminton-racquet.png" />
                     <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="eventSelected.deporte ==='PADEL'">
-                    <img src="https://img.icons8.com/material/30/000000/tennis.png" />
+                <div class="sport-content" *ngIf="eventSelected.deporte ==='Padel'">
+                    <img src="https://img.icons8.com/material/30/ffffff/tennis.png" />
                     <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
-                <div class="sport-content" *ngIf="eventSelected.deporte === 'BICI'">
-                    <img src="https://img.icons8.com/material/30/000000/tennis.png" />
+                <div class="sport-content" *ngIf="eventSelected.deporte === 'Bici'">
+                    <img src="https://img.icons8.com/material/30/ffffff/tennis.png" />
                     <div style="color: white">{{ eventSelected.deporte }}</div>
                 </div>
-                <ng-template #otroDeporte>
+                <div class="sport-content" *ngIf="eventSelected.deporte != 'Bici' && eventSelected.deporte != 'Futbol' && eventSelected.deporte != 'Baloncesto' && eventSelected.deporte != 'Tenis' && eventSelected.deporte != 'Padel'">
+                    <div style="color: white">{{ eventSelected.deporte }}</div>
+                </div>
+                
+                <!-- <ng-template #otroDeporte>
                     <div style="color: white">
                         {{eventSelected.deporte}}
                     </div>
-                </ng-template>
+                </ng-template> -->
 
 
 
@@ -194,7 +198,7 @@
                             <div class="mb-3">
                                 <label for="imagen" class="form-label">Escribe la URL de la imagen que quieras adjuntar
                                     al evento: </label>
-                                <input type="text" class="form-control" #img id="imagen" [value]="">
+                                <input type="text" class="form-control" #img id="imagen" [value]="eventSelected.urlFotoEvento">
                             </div>
                             <div class="mb-3">
                                 <label for="titulo" class="form-label">Título del evento: </label>
@@ -260,7 +264,7 @@
                                     [value]="eventSelected.descripcion"></textarea>
                             </div>
                             <div class="btnsave">
-                            <button id="submit" type="button" class="button btn2" data-bs-toggle="modal"
+                            <button id="submit" type="button" class="btn button btn2" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop"
                                 (click)="pasarDatos(deporte.value, titulo.value, personas.value, fecha.value, hora.value, localidad.value, direccion.value,  material.checked, pago.checked, descripcion.value, img.value)">Modificar</button>
                             </div>
@@ -301,17 +305,17 @@
             <ng-template #noCreador>
                 <hr>
 
-                <button type="button" class="button" *ngIf="id_usuario === undefined; else Logeado"
+                <button type="button" class="button btn" *ngIf="id_usuario === undefined; else Logeado"
                     routerLink="/login">Sign-in</button>
                 <ng-template #Logeado>
 
-                    <button type="button" class="button"
+                    <button type="button" class="button btn"
                         *ngIf="(numPersonasApuntadas < eventSelected.nPersSolicitadas || numPersonasApuntadas == 0) && usuarioApuntado() === false; false habilitarApuntarme"
                         (click)="apuntarme()">Apuntarme</button>
-                    <button type="button" class="button "
+                    <button type="button" class="button btn"
                         *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas && usuarioApuntado() === true"
                         (click)="borrarme()">Borrarme</button>
-                    <button class="button disabled" disabled type="button" data-bs-toggle="modal"
+                    <button class="button disabled btn" disabled type="button" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop1" disabled
                         *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false">Apuntarme</button>
                     <ng-template #habilitarApuntarme>
