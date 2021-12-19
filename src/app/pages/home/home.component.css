@@ -39,7 +39,7 @@ img{
     box-shadow: 0px 0px 0.5vh var(--primaryButton);
     border: transparent;
     border-radius: 0.25rem;
-    margin-left: -2vh;
+    margin-left: 1vh;
     color: white;
 }
 
@@ -86,9 +86,9 @@ elemento {
 .input-1 {
     box-shadow: 0px 0px 1vh var(--primaryButton);
     text-align: center;
-    width: 80vh;
+    width: 132vh;
     height: 6%;
-    margin-left: 2.5vh;
+    margin-left: 3.5vh;
     line-height: 4vh;
     border: none;
     background-color: rgb(255, 255, 255);
@@ -180,6 +180,7 @@ img{
     margin-left: 6vh;
 }
 .container{
+    margin-top: -4vh;
     padding-bottom: 17vh;  
 }
 .col-4{
