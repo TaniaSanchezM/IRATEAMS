@@ -6,19 +6,7 @@
     background-color: var(--fondoOscuro);
     color: white;
 }
-hr{
-    height: 3vh;
-    color: white;
-    width: 3vh;
-}
-.hrB{
-    
-   
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 2vh;
-     
-}
+
 .firstPart{
     background-color: var(--fondoOscuro);
     display: flex;
@@ -28,13 +16,7 @@ hr{
     margin-bottom: -7%;
    
 }
-/* .firstPart2{
-    display: flex;
-    flex-direction: row;
-    width: 96%;
-    margin-top: 3vh;
-   
-} */
+
 .firstPart3{
     width: 4vh;
     height: 4vh;
@@ -44,8 +26,8 @@ hr{
     border: transparent;
     border-radius: 0.25rem;
     
-   
 }
+
 .botones{
     display: flex;
     flex-direction: row;
@@ -53,6 +35,7 @@ hr{
     margin-left: 2vh;
    
 }
+
 #dropdownMenuButton1{
     background-color: white;
     margin-right: 2vh;
@@ -106,24 +89,20 @@ hr{
 }
 .dropdown-menu{
     width: 90%;
-   border: none;
-   background-color: transparent;
-   box-shadow: 0 0 2vh var(--primaryButton);  
-
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 2vh var(--primaryButton);  
 }
+
 .choose-date1,.choose-place1{
     margin-left: -66%;
     margin: auto;
     text-align: center;
-    /* color: var(--secondaryColor); */
     border:none;
     display: flex;
     flex-direction: column;
     width: 80%;
- 
     outline:none !important;
-    
-    /* border: 1px red solid; */
 } 
 
 
@@ -134,11 +113,13 @@ img{
     margin-left: 15%; 
     border-radius: 0.25rem;
 }
+
 #save{
     width:3vh; 
     height:3vh;
     fill:currentColor;
 }
+
 .all-card-text{
     margin-top: -1.5vh; 
     margin-left: 6vh;
@@ -146,9 +127,11 @@ img{
 .container{
     padding-bottom: 17vh;  
 }
+
 .col-4{
     width: 30%;
 }
+
 .buttonSave{
     position: absolute; 
     left: 90%;
@@ -158,6 +141,7 @@ img{
     background-color: transparent;
     border-color: transparent;
 }
+
 .left{
     margin-top: 0vh;
     margin-left: 0vh;
@@ -169,7 +153,6 @@ img{
     margin-left: 12%;
     margin-top: 2%;
     width: 60%;
-    /* border: 1px red solid; */
 }
 
 
@@ -183,20 +166,17 @@ img{
     
 .texto{
     font-size: 1rem;
-margin-left: 9%;
-height: 90%;
-width: 91%;
-text-align: left;
+    margin-left: 9%;
+    height: 90%;
+    width: 91%;
+    text-align: left;
 }
+
 p{
     line-height: -1vh;
 }
+
 .containerSave{
     margin-bottom: 19vh;
 }
 
-#linea {
-   
-    border: rgb(81, 255, 0) solid 2vh;
-}
-h1{margin-top: 3vh;}
