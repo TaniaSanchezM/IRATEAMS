@@ -20,6 +20,12 @@ export class ChatsComponent implements OnInit {
     this.chatService.getChats(this.loginService.login.userId).subscribe((data:any) => 
     {
       this.chats = data.resultado
+      for (let chat of this.chats) {
+        console.log(chat.urlFoto)
+        if(chat.urlFoto == null || chat.urlFoto == ''){
+          chat.urlFoto = '../../../assets/img/fotoPerfilUsuario.jpg'
+        }
+      }
     })
   }
   public showMSG(id:number){

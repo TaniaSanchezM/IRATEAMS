@@ -20,11 +20,15 @@ export class ChatsConversationComponent implements OnInit {
   constructor(private chatService: ChatService, private loginService: LoginService, private router: Router,private toastr: ToastrService, private mensajesService: MensajesService) 
   {
     this.myId = this.loginService.login.userId
-    this.chats = []
     this.mensajes = []
     this.chatService.getChats(this.loginService.login.userId).subscribe((data:any) => 
     {
       this.chats = data.resultado[this.chatService.numchat]
+      
+        if(this.chats.urlFoto == null || this.chats.urlFoto == ''){
+          this.chats.urlFoto = '../../../assets/img/fotoPerfilUsuario.jpg'
+        }
+      
     })
     this.getMSGs();
     
