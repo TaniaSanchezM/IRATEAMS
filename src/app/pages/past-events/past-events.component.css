@@ -4,6 +4,8 @@
     padding: 1vh;
     padding-top: 13vh;
     padding-bottom: 16vh;
+    background-color: var(--fondoOscuro);
+    color: var(--fontColor2);
 }
 
 .title {
@@ -19,10 +21,11 @@
     text-align: left;
     width: 95vw;
     padding: 3vh;
-    box-shadow: 0 0 2vh var(--primaryButton);
+    box-shadow: 0 0 0.5vh var(--primaryButton);
     border-radius: 0.25rem;
     margin: 1vh;
     margin-left: 1vh;
+    background-color: var(--fondoOscuro)
 }
 
 .orden {
@@ -37,4 +40,6 @@
 
 #linea {
     margin-top: 3vh;
+    width: 96%;
+    margin-left: 2%;
 }

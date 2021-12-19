@@ -1,5 +1,6 @@
 .myForm{
-    background-color: var(--bgColor);
+    background-color: var(--fondoOscuro);
+    color: white;
     margin-bottom: -18%;
     padding: 7%;
     padding-bottom: 17%;

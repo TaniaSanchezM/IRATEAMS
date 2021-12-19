@@ -1,7 +1,10 @@
-/* *{
-    background-color: var(--bgColor);
+*{
+    background-color: var(--fondoOscuro);
     
-} */
+}
+input{
+    background-color: white;
+}
 
 main{
     /* display: flex;
@@ -18,6 +21,8 @@ main{
     /* height: 80vh; */
     display: flex;
     flex-direction: column;
+    background-color: var(--fondoOscuro);
+    color: white;
 }
 
 .row{
