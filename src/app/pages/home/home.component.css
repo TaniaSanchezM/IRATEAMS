@@ -27,6 +27,7 @@ img{
     flex-direction: row;
     width: 99%;
     margin-top: 4vh;
+    /* margin-bottom: -10%; */
   
 }
    
@@ -180,9 +181,8 @@ img{
     margin-left: 6vh;
 }
 .container{
-    padding-bottom: 34vh;  
+    padding-bottom: 18vh;  
     margin-top: -4vh;
-    padding-bottom: 17vh;  
 }
 .col-4{
     width: 30%;
@@ -230,9 +230,9 @@ p{
     line-height: -1vh;
     color: white;
 }
-.containerSave{
+/* .containerSave{
     margin-bottom: 19vh;
-}
+} */
 
 .verticalLine {
     margin-top: 0.75vh;

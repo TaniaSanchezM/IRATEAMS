@@ -4,6 +4,8 @@ main{
     padding:auto ;
     height: 100% ;
     color: white;
+    padding-bottom: 10vh;
+    
 }
 body{
     margin: 0px;
@@ -38,4 +40,8 @@ h2{
 }
 p{
     color: black;
+}
+.container{
+    background-color: var(--fondoOscuro);
+    padding-bottom: 15%;
 }
