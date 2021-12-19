@@ -1,3 +1,6 @@
+*{
+  background-color: var(--fondoOscuro);
+}
 /* FLECHAS TRANSICIÓN ANIMADAS */
 #arrowAnim {
     height: 100vh;

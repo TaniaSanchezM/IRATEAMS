@@ -5,11 +5,12 @@
 }
 * {
   box-sizing: border-box;
-    background-color: var(--bgColor);
+    background-color: var(--fondoOscuro);
   }
+ 
 .texto{
     margin-top: -20vh;
-    color: var(--mainColor);
+    color: var(--fontColor2);
     font-weight: 500;
 }
 .circle {
@@ -61,7 +62,7 @@
     -webkit-animation-iteration-count:infinite;
     -webkit-animation-direction:normal;
     -webkit-animation-play-state:running;     
-    left: 15%;      
+    left: 15%;  
 }
 @keyframes arrow
 {
@@ -78,15 +79,15 @@
 
 
     
-:root {
+/* :root {
     background-color: var(--bg-color);
     --highlight-color: var(--mainColor);
-}
+} */
 
 body {
     /* width: 100vw;
     height: 100vh; */
-    background: var(--bg-color);
+    background: var(--fondoOscuro);
 }
 
 .container {
@@ -116,12 +117,14 @@ body {
     border-right: 1vmin solid rgb(3, 3, 3);
     box-shadow: 0 0 0 rgb(27, 21, 21);
     transition: all 200ms ease;
+    color: var(--fontColor2);
   }
 
 .arrow.left {
     left: 10vw;
     transform: translate3d(0, -50%, 0) rotate(-135deg);
     margin-top:-7vh
+    
   }
   .arrow.right {
     right: 10vw;

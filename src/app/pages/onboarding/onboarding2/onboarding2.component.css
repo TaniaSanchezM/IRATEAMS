@@ -1,10 +1,11 @@
 /* FLECHA DENTRO DEL CÍRCULO */
 .body{
     height: 100vh;
+  
 }
 * {
     box-sizing: border-box;
-    background-color: var(--bgColor);
+    background-color: var(--fondoOscuro);
   }
 .container {
     position: absolute;
