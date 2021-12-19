@@ -4,11 +4,11 @@
     <h3>Contacta con nosotros en el siguiente formulario</h3>
     <div class="mb-3">
         <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com">
+        <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" #mail>
     </div>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Escribe aquí tu consulta:</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" #question></textarea>
     </div>
-    <button type="button" class="btn btn-dark" (click)="showSuccess()">Enviar</button>
+    <button type="button" class="btn btn-dark" (click)="submitTicket(mail.value,question.value)">Enviar</button>
 </form>

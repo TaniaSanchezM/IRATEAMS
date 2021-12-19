@@ -23,18 +23,18 @@ export class RegisterComponent implements OnInit {
       this.registerService.register().subscribe((data:any)=>{
         let apiResponse = data;
         if (apiResponse.error) {
-          this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.toastr.error("",apiResponse.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
         } else {
           if (apiResponse.resultado.length = 0) {
-            this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+            this.toastr.error("",apiResponse.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
           } else {
-          this.toastr.success("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.toastr.success("",apiResponse.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
           this.location.back();
           }
         }
       });
     } else {
-      this.toastr.error("",'Las contraseñas deben ser identicas',{timeOut:4000, positionClass:"toast-top-full-width"});
+      this.toastr.error("",'Las contraseñas deben ser identicas',{timeOut:2000, positionClass:"toast-top-full-width"});
     }
   }
   ngOnInit(): void {

@@ -63,10 +63,10 @@ export class MyCreatedEventsComponent implements OnInit {
   }
 
   showSuccess() {
-    this.toastr.success('', 'Perfil actualizado',{timeOut:4000, positionClass:"toast-top-full-width"});
+    this.toastr.success('', 'Perfil actualizado',{timeOut:2000, positionClass:"toast-top-full-width"});
   }
   showError(){
-    this.toastr.error('', 'Error al actualizar el perfil',{timeOut:4000, positionClass:"toast-top-full-width"});
+    this.toastr.error('', 'Error al actualizar el perfil',{timeOut:2000, positionClass:"toast-top-full-width"});
   }
   ngOnInit(): void {
     this.showMyCreated()

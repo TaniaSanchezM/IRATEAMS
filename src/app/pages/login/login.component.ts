@@ -21,14 +21,14 @@ export class LoginComponent implements OnInit {
     this.loginService.logIn().subscribe((data:any)=>{
       let apiResponse = data;
       if (apiResponse.error) {
-        this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+        this.toastr.error("",apiResponse.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
       } else {
         if (apiResponse.resultado.length > 0) {
           this.loginService.login.userId = apiResponse.resultado[0].id_usuario;
-          this.toastr.success("",'Inicio de sesion completado',{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.toastr.success("",'Inicio de sesion completado',{timeOut:2000, positionClass:"toast-top-full-width"});
           this.router.navigate(["/home"]);
         } else {
-          this.toastr.error("",apiResponse.msg,{timeOut:4000, positionClass:"toast-top-full-width"});
+          this.toastr.error("",apiResponse.msg,{timeOut:2000, positionClass:"toast-top-full-width"});
         }
       }
     });
