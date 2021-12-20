@@ -282,7 +282,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h3 style="color: white;">Se va a modificar tu evento. <br> ¿Estás seguro?</h3>
+                                    <h3 style="color: black;">Se va a modificar tu evento. <br> ¿Estás seguro?</h3>
 
                                 </div>
                                 <div class="modal-footer">
@@ -305,25 +305,19 @@
             <ng-template #noCreador>
                 <hr>
 
-                <!-- <button type="button" class="button btn" *ngIf="id_usuario === undefined; else Logeado"
-                    routerLink="/login">Login</button> -->
-                    <button type="button" class="button btn" *ngIf="id_usuario === undefined; else Logeado"
-                    routerLink="/login">Login</button>
+                <button type="button" class="button btn" *ngIf="id_usuario === undefined; else Logeado"
+                    routerLink="/login">Sign-in</button>
                 <ng-template #Logeado>
 
-                    <!-- <button type="button" class="button btn"
+                    <button type="button" class="button btn"
                         *ngIf="(numPersonasApuntadas < eventSelected.nPersSolicitadas || numPersonasApuntadas == 0) && usuarioApuntado() === false; false habilitarApuntarme"
-                        (click)="apuntarme()">Apuntarme</button> -->
-                        <button type="button" class="button btn" *ngIf="usuarioApuntado() === false && personasApuntadas.length < eventSelected.nPersSolicitadas && personasApuntadas.length != eventSelected.nPersSolicitadas" ng-disabled="usuarioApuntado()" (click)="apuntarme()">Apuntarme</button>
-                    <!-- <button type="button" class="button btn"
+                        (click)="apuntarme()">Apuntarme</button>
+                    <button type="button" class="button btn"
                         *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas && usuarioApuntado() === true"
-                        (click)="borrarme()">Borrarme</button> -->
-                        <button type="button" class="button btn" *ngIf="usuarioApuntado() === true && personasApuntadas.length < eventSelected.nPersSolicitadas && personasApuntadas.length != eventSelected.nPersSolicitadas" (click)="borrarme()">Borrarme</button>
-                    <!-- <button class="button disabled btn" disabled type="button" data-bs-toggle="modal"
+                        (click)="borrarme()" >Borrarme</button>
+                    <button class="button disabled btn" disabled type="button" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop1" disabled
-                        *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false">Apuntarme</button> -->
-                        <button type="button" class="button btn disabled" disabled *ngIf="personasApuntadas.length == eventSelected.nPersSolicitadas">Apuntarme</button>
-                         <button class="button btn" type="button" [routerLink]="['/chats']" routerLinkActive="router-link-active" >Chats</button>
+                        *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false">Apuntarme</button>
                     <ng-template #habilitarApuntarme>
 
                         <!-- <button class="button" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" disabled *ngIf="numPersonasApuntadas != eventSelected.nPersSolicitadas && usuarioApuntado() === true ; else apuntadoEvento" (click)="apuntarme()">Apuntarme</button> -->
@@ -349,7 +343,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h3 style="color: black; background-color: white"> ¿Estás seguro que quieres desapuntarte del evento?</h3>
+                    <h2 style="color: black;"> ¿Estás seguro que quieres desapuntarte del evento?</h2>
 
                 </div>
                 <div class="modal-footer">

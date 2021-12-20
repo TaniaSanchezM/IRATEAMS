@@ -135,19 +135,19 @@
 
                         <button id="submit" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Guardar cambios</button>
                         <!-- Modal -->
-                        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background-color: white;">
                             <div class="modal-dialog">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-header" style="background-color: white">
+                                <h1 class="modal-title" id="staticBackdropLabel" style="color: black; background-color: white">¡Atencion!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: black; background-color: transparent;"></button>
                                 </div>
-                                <div class="modal-body"><h3 style="color: white; ">Se van a realizar cambios en los datos de tu perfil. <br> ¿Estás seguro?</h3>
+                                <div class="modal-body" style="background-color: white"><h3 style="color: black; background-color: white">Se van a realizar cambios en los datos de tu perfil. <br> ¿Estás seguro?</h3>
                             
                                 </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" (click)="changeProfile(urlFoto.value,nombreCompleto.value, username.value, fechaNacimiento.value ,telefono.value,mail.value, password.value, newPassword.value, repeatnewpass.value)" >Guardar cambios</button>
+                                <div class="modal-footer" style="background-color: white">
+                                <button type="button" class="btn btn-cancelar" data-bs-dismiss="modal" style="color: white;">Cancelar</button>
+                                <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" style="color: white;" (click)="changeProfile(urlFoto.value,nombreCompleto.value, username.value, fechaNacimiento.value ,telefono.value,mail.value, password.value, newPassword.value, repeatnewpass.value)" >Guardar cambios</button>
                                 <!-- <button type="button" class="btn btn-guardar" data-bs-dismiss="modal" (click)="onSubmit(editarPerfilForm)" >Guardar cambios</button> -->
                                 </div> 
                             </div>
