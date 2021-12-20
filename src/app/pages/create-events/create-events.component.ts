@@ -2,12 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { EventosService } from '../../shared/eventos.service';
 
-// import { Event } from '@angular/router';
+// import { Event, RouterModule } from '@angular/router';
 import { Event } from 'src/app/models/events';
 import { LoginService } from 'src/app/shared/login.service';
 import { User } from 'src/app/models/user';
 // import { EventosService } from 'src/app/shared/eventos.service';
 import { NgForm } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { EventDetailsComponent } from '../event-details/event-details.component';
+import { NavigationExtras } from '@angular/router';
+import { Router } from '@angular/router';
+import { add } from 'date-fns';
+
+const routes: Routes = [
+  { path: '/event-details', component: EventDetailsComponent },
+];
+
 
 @Component({
   selector: 'app-create-events',
@@ -26,7 +36,7 @@ export class CreateEventsComponent implements OnInit {
   public time: string;
   
 
-  constructor(private toastr: ToastrService, private loginService: LoginService, private EventosService: EventosService) {
+  constructor(private toastr: ToastrService, private loginService: LoginService, private EventosService: EventosService, private router: Router) {
     
     this.user=new User(0,"","","","",new Date(),"","")
     console.log(loginService.login.userId)
@@ -93,9 +103,20 @@ export class CreateEventsComponent implements OnInit {
       {
         console.log(data);
         console.log(data.resultado)
+        console.log(data.resultado.insertId)
+
+        
+        this.EventosService.eventoId = data.resultado.insertId
+        console.log(this.EventosService.eventoId)
+        
+        
         this.showSuccess()
       }
     })
+    // setTimeout(function() {
+      
+    // },6000);
+    // this.router.navigate(['/event-details'])
   }
 
 

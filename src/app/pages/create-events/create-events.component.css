@@ -104,3 +104,31 @@ hr{
     margin-top: 4%;
     margin-bottom: 4%;
 } */
+
+.modal {
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100vw ;
+    height:fit-content ;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    color: var(--fontColor);
+ }
+
+
+#staticBackdrop{
+width: 100vw;
+}
+
+.firstPart{
+margin-top: 6vh;
+color: var(--fontColor2);
+}
+
+.modal-body{
+    color: var(--fontColor)
+}
