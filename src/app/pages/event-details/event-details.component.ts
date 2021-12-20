@@ -44,6 +44,8 @@ export class EventDetailsComponent implements OnInit {
   public nuevoChat2: Chat
   public mensajeApuntado: Mensaje
 
+  public clicked:boolean = false;
+
 
   constructor(private toastr: ToastrService,public routeLocation: Location, private EventosService: EventosService, private loginService: LoginService, private UsuarioServicio: UsersService, private ApuntadosServicio: ApuntadosService, private ChatServicios: ChatService, private MensajesService: MensajesService) { 
     this.today = Date.now()

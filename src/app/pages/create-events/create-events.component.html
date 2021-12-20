@@ -1,5 +1,5 @@
 <main>
-<form class="myForm"  (ngSubmit)="crearEvento(formCrearEvento)" #formCrearEvento="ngForm">
+<form class="myForm" #formCrearEvento="ngForm" (ngSubmit)="crearEvento(formCrearEvento)" >
     <h1 class="title">Añadir evento</h1>
     <hr>
         
@@ -83,13 +83,13 @@
         <div class="checkInline">
             <div class="form-switch">
                 <!-- <input class="form-check-input" role="switch" type="checkbox" #material id="inlineCheckbox1" class="form-check-input" checked="1" style="width:3.5em; height:1.75em">           -->
-                <input class="form-check-input" role="switch" type="checkbox"  id="inlineCheckbox1" class="form-check-input" checked="1" style="width:3.5em; height:1.75em" [(ngModel)]="evento2.material" #material="ngModel">          
+                <input class="form-check-input" role="switch" type="checkbox"  id="inlineCheckbox1" class="form-check-input" checked="1" style="width:3.5em; height:1.75em" name="material" [(ngModel)]="evento2.material" #material="ngModel">          
             
                 <label class="form-check-label" for="inlineCheckbox1">Material necesario</label>
             </div>
             <div class="form-switch">
                 <!-- <input class="form-check-input" role="switch" type="checkbox" #pago id="inlineCheckbox2" checked="1" style="width:3.5em; height:1.75em"> -->
-                <input class="form-check-input" role="switch" type="checkbox" id="inlineCheckbox2" checked="1" style="width:3.5em; height:1.75em" [(ngModel)]="evento2.pago" #pago="ngModel">
+                <input class="form-check-input" role="switch" type="checkbox" id="inlineCheckbox2" checked="1" style="width:3.5em; height:1.75em" name="pago" [(ngModel)]="evento2.pago" #pago="ngModel">
                 <label class="form-check-label" for="inlineCheckbox2">Pago necesario</label>
             </div>
         </div>
@@ -105,10 +105,36 @@
     <!-- <button type="button" class="btn btn-dark"(click)="createEvent(img.value, titulo.value, deporte.value, fecha.value, hora.value, localidad.value, direccion.value, personas.value, material.checked, pago.checked, descripcion.value)" [routerLink]="['/home']" routerLinkActive="router-link-active" >Crear evento</button> -->
 
     <div class="form-group">
-        <button type="button"  class="button" [disabled]="formCrearEvento.invalid" >
+        <button class="button" [disabled]="formCrearEvento.invalid" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <!-- <button class="button" [disabled]="formCrearEvento.invalid" routerLink="/event-details"> -->
             Crear Evento
         </button>
     </div>
 </form>
+
+<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body">
+                    <h3> ¿A dónde quieres ir ahora?</h3>
+                    <button type="button" class="btn button" data-bs-dismiss="modal"
+                    aria-expanded="false"
+                    aria-controls="collapseExample" routerLink="/home">Home</button>
+
+                    <button type="button" class="btn button" data-bs-dismiss="modal" routerLink="/event-details" >Detalles evento</button>
+                </div>
+                <!-- <div class="modal-footer">
+                    
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
 
 </main>

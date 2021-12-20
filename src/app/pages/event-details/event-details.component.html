@@ -314,11 +314,11 @@
                     <!-- <button type="button" class="button btn"
                         *ngIf="(numPersonasApuntadas < eventSelected.nPersSolicitadas || numPersonasApuntadas == 0) && usuarioApuntado() === false; false habilitarApuntarme"
                         (click)="apuntarme()">Apuntarme</button> -->
-                        <button type="button" class="button btn" *ngIf="usuarioApuntado() === false && personasApuntadas.length < eventSelected.nPersSolicitadas && personasApuntadas.length != eventSelected.nPersSolicitadas" ng-disabled="usuarioApuntado()" (click)="apuntarme()">Apuntarme</button>
+                        <button type="button" class="button btn" *ngIf="usuarioApuntado() === false && personasApuntadas.length < eventSelected.nPersSolicitadas && personasApuntadas.length != eventSelected.nPersSolicitadas" ng-disabled="usuarioApuntado()" [disabled]="clicked" (click)="apuntarme(); clicked=true">Apuntarme</button>
                     <!-- <button type="button" class="button btn"
                         *ngIf="numPersonasApuntadas == eventSelected.nPersSolicitadas && usuarioApuntado() === true"
                         (click)="borrarme()">Borrarme</button> -->
-                        <button type="button" class="button btn" *ngIf="usuarioApuntado() === true && personasApuntadas.length < eventSelected.nPersSolicitadas && personasApuntadas.length != eventSelected.nPersSolicitadas" (click)="borrarme()">Borrarme</button>
+                        <button type="button" class="button btn" *ngIf="usuarioApuntado() === true && personasApuntadas.length < eventSelected.nPersSolicitadas && personasApuntadas.length != eventSelected.nPersSolicitadas" [disabled]="clicked" (click)="borrarme(); clicked=true">Borrarme</button>
                     <!-- <button class="button disabled btn" disabled type="button" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop1" disabled
                         *ngIf="numPersonasApuntadas ===  eventSelected.nPersSolicitadas && usuarioApuntado() === false">Apuntarme</button> -->
@@ -345,7 +345,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="staticBackdropLabel">¡Atecion!</h1>
+                    <h1 class="modal-title" id="staticBackdropLabel">¡Atencion!</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
