@@ -178,10 +178,10 @@ p{
     line-height: -1vh;
 }
 hr{
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 2vh;
-    color:var(--fontColor2)
+   border: solid 1px whitesmoke;
+   width: 96%;
+   margin-left: 2%;
+   margin-right:2%;
 }
 
 .containerSave{
