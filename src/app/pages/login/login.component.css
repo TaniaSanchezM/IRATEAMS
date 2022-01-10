@@ -38,14 +38,23 @@
     border-top-right-radius: 40px 20px;
 }
 .btn-black{
-    background-color:#27241E;
+    background-color:var(--bgColor);
     color:var(--fontColor2);
     width: 50vw;
     border-radius: 50px;
     font-family: Ubuntu;
     font-weight: bolder;
     border: 1px solid white;
+
+    /* background-color: var(--bgColor);
+    color: var(--fontColor2);
+    width: 50vw;
+    border-radius: 13px;
+    font-family: Ubuntu;
+    font-weight: bolder;
+    border: 1px solid white; */
 }
+
 
 .link{
     color:var(--mainColor);

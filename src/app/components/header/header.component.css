@@ -36,11 +36,10 @@ hr{
     
         width: 150px;
         height: 75px;
-        margin-top: 1px;
+        margin-top: 1%;;
         margin-left: -4%;
     
 }
-
-.person-lines-fill{
-    margin-top: -17px;
-}
+ .person-lines-fill{
+    margin-top: -7px;
+} 
