@@ -31,3 +31,16 @@ a{
 hr{
     height: 2px
 }
+
+.navbar-brand{
+    
+        width: 150px;
+        height: 75px;
+        margin-top: 1px;
+        margin-left: -4%;
+    
+}
+
+.person-lines-fill{
+    margin-top: -17px;
+}
