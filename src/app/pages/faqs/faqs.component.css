@@ -4,8 +4,7 @@ main{
     padding:auto ;
     height: 100% ;
     color: white;
-    padding-bottom: 10vh;
-    
+    padding-bottom: 10vh; 
 }
 
 /* Body */
@@ -35,9 +34,11 @@ h2{
 }
 
 /* Titulo */
+.titulo{
+    padding-top: 15vh;
+}
 .Title{
     text-align: center;
-    margin-top: 12vh;
 }
 .hr{
     width: 90%;
