@@ -1,23 +1,26 @@
-
-/* *{
-    background-color: var(--fondoOscuro);
-    color: var(--fontColor2)
-} */
+/* 
+*{
+    /* background-color: var(--fondoOscuro);
+    color: var(--fontColor2) */
+ 
+/* } */ 
 
 
 main {
     /* position: relative; */
     background-color: var(--fondoOscuro); 
-    margin-top: 17%;
-    padding-bottom: 17vh;
+     margin-top: 17%;
+    /*padding-bottom: 17vh; */
     /* height: 100vh; */ 
     display: flex;
     flex-direction: column;
     /* border: 3px solid blue; */  
+    
 }
 body{
     background-color: var(--fondoOscuro); 
     color: var(--fontColor2);
+ 
 }
 
 .row{
@@ -378,6 +381,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .card-body{
@@ -467,7 +471,8 @@ img{
 
 }
 
-.buttons{
+.buttons{      
+
     display: flex;
     flex-direction: column;
    
@@ -476,6 +481,7 @@ img{
     /* padding: 1vh 1vh 0vh; */
     padding-bottom: 40%;
     /* margin-bottom: 30%; */
+    
 }
 .btnsave{
     display: flex;
@@ -500,16 +506,16 @@ img{
 }
 
 .btn{
-    background-color: var(--fontColor);
-    color: var(--fontColor2);
+    /* background-color: var(--fontColor);
+    color: var(--fontColor2); */
     font-weight: bold;
     height: auto;
     border-radius: 0.25rem;
-    border: #fff;
+    /* border: #fff;
     background: black;
-    box-shadow: 0.5px 1px 1px 4px rgba(253, 253, 253, 0.2);
+    box-shadow: 0.5px 1px 1px 4px rgba(253, 253, 253, 0.2); */
     color: var(--fontColor2);
-    
+    box-shadow: 0.1px 0.1px 1vh var(--primaryButton);
     background: linear-gradient(180deg, #000 -2%, #171717 90%);
 }
 
@@ -560,7 +566,7 @@ input, textarea{
  }
 
 .firstPart{
-    margin-top: 12vh;
+    margin-top: 5vh;
     color: var(--fontColor2);
 }
 /* .collapse{

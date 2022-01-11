@@ -238,6 +238,7 @@ main{
     color: var(--fontColor2);
     
     background: linear-gradient(180deg, #000 -2%, #171717 90%);
+   
 }
 
 button{
