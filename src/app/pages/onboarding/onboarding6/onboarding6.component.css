@@ -44,8 +44,8 @@
 }
 .fa {
     /* margin: 55vh auto, auto, 25vh; */
-    /* margin-top: -40vh; */
-    font-size: 5vh;
+    margin-top: 80vh;
+    font-size: 55vh;
     color: var(--secundaryButton);
     position: absolute;
     margin-left: 17.5vh;
@@ -144,16 +144,33 @@ body {
   z-index: 1;
   background-color: transparent;
 } 
-  @keyframes girar {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
   }
-  @media (min-width: 480px){
-    .fa {
-      margin-left: 37vw;
-    }
+  to {
+    transform: rotate(360deg);
   }
+}
+/* TABLETS */
+@media (min-width: 480px){
+  .fa {
+    margin-left: 37vw;
+  }
+}
+/* IPHONE5, SE */
+@media (max-width: 325px){
+  .fa{
+    margin-top: 167%;
+    position: relative;
+    margin-left: 26.5vh;
+  }
+}
+/* IPHONE11 */
+@media (max-width: 420px){
+  .fa{
+    margin-top: 17vh;
+    position: relative;
+    margin-left: 19.5vh;
+  }
+}
