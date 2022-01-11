@@ -164,3 +164,17 @@ body {
     left: 31.7vw;
   }
 }
+
+/* IPHONE5, SE */
+@media (max-width: 325px){
+  .fa {
+    margin-left: 48%;
+  }
+  .focus{
+    bottom: 0.2%;
+    left: 28.5%;
+  }
+  .circle {
+    margin-bottom: 18%;
+   }
+}
