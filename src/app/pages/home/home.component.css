@@ -1,37 +1,54 @@
-
 * {
    background-color: var(--fondoOscuro);
     box-sizing: border-box;
     padding: auto;
 }
-
+ 
+img{
+    width: 140%;
+    height: 80%; 
+    margin-top: 15%; 
+    margin-left: 15%; 
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
 
 .firstPart{
     background-color: var(--fondoOscuro);
     display: flex;
     flex-direction: column;
-    margin-top: 18%;
+    margin-top: 16%;
     text-align: center;
-    /* margin-top: ; */
     margin-bottom: -7%;
     color: white;
     padding: auto;
    
 }
-img{
-    object-fit: cover;
-    
-}
+
+/* Imput Buscador */
 .firstPart2{
     display: flex;
     flex-direction: row;
     width: 99%;
     margin-top: 4vh;
-    /* margin-bottom: -10%; */
   
 }
-   
 
+.input-1 {
+    box-shadow: 0px 0px 1vh var(--primaryButton);
+    text-align: center;
+    width: 132vh;
+    height: 6%;
+    margin-left: 3.5vh;
+    line-height: 4vh;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-bottom: 6vh;
+    margin-top: 3vh;
+}
+
+/* Boto Buscador    */
 .firstPart3{
     width: 4vh;
     height: 4vh;
@@ -51,54 +68,20 @@ img{
     margin-left: 2vh;
    
 }
-dropdown-toggle::after {
-    display: grid;
-    margin-left: .89em;
-    vertical-align: 0.3em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: .3em solid transparent;
-}
-elemento {
-    position: absolute;
-    inset: 0px auto auto 0px;
-    margin: 0px;
-    transform: translate3d(20.5px, 124px, 0px);
-    background-color: white;
-}
-#dropdownMenuButton1{
-    background-color: var(--fondoOscuro);
-    margin-right: 3vh;
-    color: white;
-    margin-top: 3vh;
-    width: 4vh;
-    height: 4vh;
-    border: none;
-    box-shadow: 0px 0px 0.5vh var(--primaryButton);
 
-}
 .hr{
     width:90%;
     margin-left: 5%;
     margin-top: -1%;
 }
-.input-1 {
-    box-shadow: 0px 0px 1vh var(--primaryButton);
-    text-align: center;
-    width: 132vh;
-    height: 6%;
-    margin-left: 3.5vh;
-    line-height: 4vh;
-    border: none;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    margin-bottom: 6vh;
-    margin-top: 3vh;
+
+/* Altura Entre Card e Input */
+.container{
+    padding-bottom: 18vh;  
+    margin-top: -4vh;
 }
 
-
+/* Card */
 .card{
     margin-top: 3vh;
     box-shadow:  0px 0px 1vh var(--primaryButton);
@@ -110,45 +93,83 @@ elemento {
     width: 95%;
 }
 
-#filtrosDropdown{
-    margin-top: 0.5vh;
-    display: flex;
-    flex-direction: row;
-    margin-left: 4%;
-    border: none;
-    text-align: center;
-    outline: none !important;
+.all-card-text{
+    margin-top: -1.5vh; 
+    margin-left: 6vh;
 }
-#filtrosDropdown[_ngcontent-fir-c16] {
-    margin-top: -0.5vh;
-    display: flex;
-    flex-direction: row;
-    margin-left: 3%;
-    border: none;
-    text-align: center;
-    outline: none !important;
-    background-color: transparent;
-}
-.datetime-input-edit-wrapper {
-    overflow: hidden;
-    white-space: nowrap;
-    flex-grow: 1;
+
+/* Boton Guardado */
+.buttonSave{
+    position: absolute;
+    left: 90%;
+    top: 5%;
     width: 3vh;
-    margin-left: 5vh;
-    background: beige;
+    height: 3vh;
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 1.5vh;
 }
 
-.dropdown{
-    display: flex;
-    flex-direction: column;
-}
-/* .dropdown-menu{
-    background-color: var(--primaryButton);
-    box-shadow: 0 0 2vh var(--primaryButton);
+/* Tamaño Img */
+.left{
+    width: 30%;
+} 
 
+/* Tamaño Segunda Parte Card */
+.right{
+    line-height: 0.2vh;
+    margin-left: 15%;
+    margin-top: 2vh;
+    width: 60%;
+}   
+.texto{
+    margin-left: 10%;
+    height: 90%;
+    width: 88%;
+    text-align:left ;
+}
+p{
+    line-height: -1vh;
+    color: white;
+}
+
+/* Color Guardado */
+.green {
+    color: var(--secundaryButton)
+}
+
+/* Color No Guardado */
+.red {
+    color: white;
+}
+
+
+
+ /* BUSCADOR POR FECHA Y LUGAR, Dropdown y Estilos */
+/* dropdown-toggle::after {
+    display: grid;
+    margin-left: .89em;
+    vertical-align: 0.3em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
 } */
+
+/* #dropdownMenuButton1{
+    background-color: var(--fondoOscuro);
+    margin-right: 3vh;
+    color: white;
+    margin-top: 3vh;
+    width: 4vh;
+    height: 4vh;
+    border: none;
+    box-shadow: 0px 0px 0.5vh var(--primaryButton);
+} */
+
+/* 
 .choose-date1,.choose-place1{
-    
     margin: inherit;
     text-align: center;
     border: none;
@@ -161,94 +182,11 @@ elemento {
     border-radius: 00.25rem;
     box-shadow: 0px 0px 1vh var(--primaryButton) ;
     
-} 
-
-
-img{
-    width: 140%;
-    height: 80%; 
-    margin-top: 15%; 
-    margin-left: 15%; 
-    border-radius: 0.25rem;
-}
-#save{
-    width:3vh; 
-    height:3vh;
-    fill:currentColor;
-}
-.all-card-text{
-    margin-top: -1.5vh; 
-    margin-left: 6vh;
-}
-.container{
-    padding-bottom: 18vh;  
-    margin-top: -4vh;
-}
-.col-4{
-    width: 30%;
-}
-.buttonSave{
-    position: absolute;
-    left: 90%;
-    top: 5%;
-    width: 3vh;
-    height: 3vh;
-    background-color: transparent;
-    border-color: transparent;
-    margin-left: 1.5vh;
-}
-.left{
-   
-    width: 30%;
-}
-
-.right{
-    line-height: 0.2vh;
-    margin-left: 15%;
-    margin-top: 2vh;
-    width: 60%;
-    /* border: 1px red solid; */
-}
-
-
-.green {
-    color: var(--secundaryButton)
-}
-
-.red {
-    color: white;
-}
-    
-.texto{
-    margin-left: 10%;
-    /* border: solid 1px red; */
-    height: 90%;
-    width: 88%;
-    text-align:left ;
-}
-p{
-    line-height: -1vh;
-    color: white;
-}
-/* .containerSave{
-    margin-bottom: 19vh;
-} */
-
+}  */
+/* 
 .verticalLine {
     margin-top: 0.75vh;
     height: 3.5vh;
     border-left: thick solid #e7e7e7;
    
-}
-/* .bi{
-    color: black;
-    fill:black;
-}
-.activado{
-    color: var(--secundaryButton);
-    fill: var(--secundaryButton)
-} */
-/* .bi-bookmark{
-   margin-top: -4vh; 
-   margin-left: ;
-} */
+}  */
