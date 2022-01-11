@@ -88,7 +88,9 @@ main{
     align-items: center;
     justify-content: center;
  }
-
+ .collapse,.colapsentero{
+    margin-top: 0.1rem;
+ }
  .btn{
     background-color: var(--fontColor);
     color: var(--fontColor2);
@@ -137,4 +139,16 @@ main{
     outline: 0;
     color: var(--fontColor);
 }
+#staticBackdrop{
+    width: 100vw;
+ }
+ 
+ .modal-body{
+    color: var(--fontColor)
+ }
+ .firstPart{
+ margin-top: 6vh;
+ color: var(--fontColor2);
+ }
+
 
