@@ -68,3 +68,12 @@ a :visited{
     color:var(--mainColor);
     font-weight: bold;
 }
+@media (max-width: 325px){
+    .divLogo{
+        display: none;
+    }
+    .labels{
+        padding-top: 25vh;
+        height: 65vh;
+    }
+  }
