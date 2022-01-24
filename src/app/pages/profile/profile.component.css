@@ -226,19 +226,16 @@ main{
 }
 
 .btn{
-    background-color: var(--fontColor);
-    color: var(--fontColor2);
-    font-weight: bold;
+    font-weight: 500;
     height: auto;
     border-radius: 0.25rem;
     border: #fff;
     background: black;
-    
-    box-shadow: 0.1px 0.1px 1vh var(--primaryButton);
-    color: var(--fontColor2);
-    
-    background: linear-gradient(180deg, #000 -2%, #171717 90%);
-   
+      background-color: black;
+    box-shadow: 2px 2px 1vh var(--secundaryButton);
+    color: var(--fontColor);
+    background-color: var(--fontColor2);
+     
 }
 
 button{
