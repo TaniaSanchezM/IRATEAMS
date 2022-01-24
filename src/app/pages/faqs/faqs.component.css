@@ -1,47 +1,60 @@
-
+/* MAIN */
 main{
     background-color: var(--fondoOscuro);
     padding:auto ;
     height: 100% ;
     color: white;
-    padding-bottom: 10vh;
-    
+    padding-bottom: 10vh; 
 }
+
+/* Body */
 body{
     margin: 0px;
     margin-top: 0px;
     font-family: Roboto, "Helvetica Neue", sans-serif;
- 
 }
+.container{
+    background-color: var(--fondoOscuro);
+    padding-bottom: 15%;
+}
+
+/* h2 */
 h2{
     margin-top: 10vh;
     color: rgb(0, 0, 0);
     text-align: center;
 }
+
+/* Botones */
 .content{
     margin-left: 3vh;
     margin-top: 3vh;
     border: white;
     padding: auto;
-   
+}
+
+/* Titulo */
+.titulo{
+    padding-top: 15vh;
 }
 .Title{
     text-align: center;
-    margin-top: 12vh;
 }
 .hr{
     width: 90%;
     margin-left: 5%;
     margin-top: 0vh;
 }
+
+/* Card Modal */
 .card-body{
-  
     width: 95%;
 }
+
+/* parrafo */
 p{
     color: black;
 }
-.container{
-    background-color: var(--fondoOscuro);
-    padding-bottom: 15%;
-}
+
+
+

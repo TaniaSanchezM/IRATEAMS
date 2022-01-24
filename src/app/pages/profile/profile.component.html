@@ -1,23 +1,8 @@
-<!-- <app-header></app-header> -->
-
-
 <main>
-    <div class="carga" ng-init></div>
-    <!-- <header class="title">
-        <h1>Mi perfil</h1>
-        <hr>
-    </header> -->
-    
     <section class="img-user ">
         <div class="img-content">
-            <img src="{{user.urlFoto}}" id="img2" >
-
-            
-        </div>
-        <!-- <header class="img-user-header">
-             
-        </header> -->
-        
+            <img src="{{user.urlFoto}}" id="img2" >  
+        </div> 
     </section>
 
     <section class="content">
@@ -83,7 +68,7 @@
             
         </article>
 
-        <article>
+        <article class="colapsentero">
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
                     <form #editarPerfilForm = "ngForm" (ngSubmit)="editarPerfilForm">
@@ -139,7 +124,6 @@
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color: white">
-                                <h1 class="modal-title" id="staticBackdropLabel" style="color: black; background-color: white">¡Atencion!</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: black; background-color: transparent;"></button>
                                 </div>
                                 <div class="modal-body" style="background-color: white"><h3 style="color: black; background-color: white">Se van a realizar cambios en los datos de tu perfil. <br> ¿Estás seguro?</h3>
@@ -166,5 +150,4 @@
     </div>
 </main>
 
-<!-- <p>profile works!</p> -->
 
