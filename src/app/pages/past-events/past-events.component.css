@@ -36,6 +36,8 @@
 .etiquetas{
     display: flex;
     flex-direction: row;
+    color:var(--secundaryButton);
+    font-weight: 400;
 }
 
 #linea {

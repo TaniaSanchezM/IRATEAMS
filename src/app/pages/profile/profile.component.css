@@ -90,22 +90,44 @@ main{
  }
  .collapse,.colapsentero{
     margin-top: 0.1rem;
- }
- .btn{
-    background-color: var(--fontColor);
-    color: var(--fontColor2);
-    font-weight: bold;
+}
+
+.edit-data{
+    margin: 0px;
+}
+
+.form-data{
+    margin: 10px;
+}
+
+.btn{
+    font-weight: 500;
     height: auto;
     border-radius: 0.25rem;
     border: #fff;
-    background: black; 
-    box-shadow: 0.1px 0.1px 1vh var(--primaryButton);
-    color: var(--fontColor2);
-    background: linear-gradient(180deg, #000 -2%, #171717 90%);
- }
+    background: black;
+      background-color: black;
+    box-shadow: 2px 2px 1vh var(--secundaryButton);
+    color: var(--fontColor);
+    background-color: var(--fontColor2);
+     
+}
+
+button{
+    border: none;
+}
+
+.card{
+    margin: 10px 5px 30px 5px;
+}
+
+a{
+    color: var(--fontColor);
+    
+}
 
 /* Input */
- input{
+input{
     background-color: white;
  }
 

@@ -159,7 +159,7 @@ body {
   }
 }
 /* IPHONE5, SE */
-@media (max-width: 325px){
+@media (max-width: 335px){
   .fa{
     margin-top: 167%;
     position: relative;
