@@ -25,6 +25,9 @@
     </div>   
    
     <div class="container">
+      <div [ngClass]="events.length === 0 ? 'showError':'hideError'">
+        <h1>No hay eventos disponibles</h1>
+      </div>
       <div class="card" *ngFor="let event of events"> 
         <div class="left">
           <img class="img" src={{event.urlFotoEvento}} alt="" routerLink="/event-details"(click)="getIdEvento(event.id_evento)"> 

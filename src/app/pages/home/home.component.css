@@ -143,7 +143,14 @@ p{
     color: white;
 }
 
+/* Mensaje si no hay eventos */
 
+.hideError{
+    display: none;
+}
+.showError{
+    display: inline;
+}
 
  /* BUSCADOR POR FECHA Y LUGAR, Dropdown y Estilos */
 /* dropdown-toggle::after {
