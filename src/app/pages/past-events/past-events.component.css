@@ -19,7 +19,7 @@
     flex-direction: row;
     align-content: space-between;
     text-align: left;
-    width: 95vw;
+    width: 97%;
     padding: 3vh;
     box-shadow: 0 0 0.5vh var(--primaryButton);
     border-radius: 0.25rem;
@@ -43,5 +43,9 @@
 #linea {
     margin-top: 3vh;
     width: 96%;
+    margin-left: 2%;
+}
+
+.resultados{
     margin-left: 2%;
 }

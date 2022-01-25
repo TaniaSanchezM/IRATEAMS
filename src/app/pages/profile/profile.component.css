@@ -110,7 +110,6 @@ main{
     box-shadow: 2px 2px 1vh var(--secundaryButton);
     color: var(--fontColor);
     background-color: var(--fontColor2);
-     
 }
 
 button{
@@ -133,7 +132,10 @@ input{
 
 /* Boton Guardar Cambios */
 #submit{
+    width: 90%;
     background-color: var(--secundaryButton);
+    box-shadow: none;
+    margin-left: 5%;
 }
 #sub-title{
     text-decoration: none;

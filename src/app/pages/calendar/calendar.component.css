@@ -162,3 +162,23 @@ h2 {
 span{
     color: white;
 }
+
+@media (max-width: 325px){
+    .wrapper-calendar{
+        width: 88vw;
+        height: 50vh;
+        padding: 1vh;
+        border-radius: 0.25rem;
+        box-shadow: 0px 0px 1vh var(--primaryButton);
+        text-align: center;
+        font-size: small;
+        margin-bottom: 4vh;
+    }
+    .calendar{
+        display: flex;
+        justify-content: center;
+        margin-top: 12.5vh;
+        width: 94vw;
+        height: 47vh;
+    }
+}
