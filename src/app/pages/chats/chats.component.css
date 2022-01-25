@@ -92,16 +92,15 @@ header{
 
 
 .card2 {
-    /* text-align: left; */
     
     width: 100%;
     height: 12%;
     padding: 1vh;
-    box-shadow: 0 0 1vh var(--primaryButton);
     border-radius: 2vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
     display: flex;
+    border-bottom: solid 1px;
 }
 .chat-img-container{
     width: 15%;
