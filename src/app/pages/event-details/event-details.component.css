@@ -204,6 +204,8 @@ h3,p{
     color: var(--fontColor2);
     box-shadow: 0.1px 0.1px 1vh var(--primaryButton);
     background: linear-gradient(180deg, #000 -2%, #171717 90%);
+    width: 90%;
+    margin-left: 5%;
 }
 .bi{
   
@@ -213,10 +215,10 @@ h3,p{
 
 /* Boton Modificar */
 .buttons{      
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     padding-bottom: 40%;
 }
 
@@ -229,7 +231,7 @@ h3,p{
 
 .btn{
     font-weight: 500;
-    width: 90%;
+    width: 50%;
     height: auto;
     border-radius: 0.25rem;
     border: #fff;
@@ -238,6 +240,7 @@ h3,p{
     box-shadow: 2px 2px 1vh var(--secundaryButton);
     color: var(--fontColor);
     background-color: var(--fontColor2);
+    margin-left: 25%;
 }
 
 
@@ -256,7 +259,10 @@ h3,p{
     
 }
 #submit{
-    width: 40%;
+    width: 90%;
+    background-color: var(--secundaryButton);
+    box-shadow: none;
+    margin-left: 5%;
 }
 
 input, textarea{

@@ -33,7 +33,7 @@ main{
 header{
     
 
-    height: 15vh;
+    height: 9vh;
     width: 100%;
     padding: 1vh 2vh 1vh 2vh;
     align-items: center;
@@ -81,17 +81,8 @@ header{
 }
 
 .contact-img{
-    /* justify-content: center;
-    align-items: center; */
-
-    /* border: 1px solid black; */
-    /* width: 25%;
-    height: 100%; */
-    
-    /* background-color: transparent; */
-    width: 10vh;
-    height: 10vh;
-    
+    width: 8vh;
+    height: 8vh;    
 }
 
 img{
@@ -115,20 +106,16 @@ p, span{
 
 .contact-title{
 
-    /* border: 1px solid black; */
-    height: 100%;
-    width: 75%;
     
-    padding: 1vh;
-
+    height: 100%;
+    width: 75%;    
+    padding-left: 1vh;
     display:flex;
     flex-direction: column;
-
     line-height: 1rem;
-
-    justify-content: center;
     align-items: flex-start;
     background-color: transparent;
+
     
 }
 

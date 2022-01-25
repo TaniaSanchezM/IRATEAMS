@@ -35,18 +35,14 @@ hr{
 }
 button{
     height: auto;
-    width: 77.5vw;
-    height: 40px;
     border-radius: 0.25rem;
     background-color: var(--fontColor);
-    color: var(--fontColor2);
-    font-weight: bold;
+    color: var(--fontColor);
+    font-weight: 500;
     margin-top: 4px;
     margin-bottom: 4px;
-    margin-left: 2.6vh; 
-    border: #fff;
-    background: black;
-    box-shadow: 0.1px 0.1px 1vh var(--primaryButton);
-    color: var(--fontColor2); 
-    background: linear-gradient(180deg, #000 -2%, #171717 90%);     
+    margin-left: 10%;
+    width: 80%;
+    background-color: var(--secundaryButton);
+    box-shadow: none;  
 }
