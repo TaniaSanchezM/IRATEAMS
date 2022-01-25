@@ -41,8 +41,8 @@ button{
     font-weight: 500;
     margin-top: 4px;
     margin-bottom: 4px;
-    margin-left: 2.6vh; 
-    width: 90%;
+    margin-left: 10%;
+    width: 80%;
     background-color: var(--secundaryButton);
     box-shadow: none;  
 }
