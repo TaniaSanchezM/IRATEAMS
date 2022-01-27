@@ -146,10 +146,10 @@ export class EventDetailsComponent implements OnInit {
     this.toastr.success('', 'Te has unido al evento',{timeOut:2000, positionClass:"toast-top-full-width"})
   }
   public showCorrectEdit():void{
-    this.toastr.error('', 'Evento modificado correctamente',{timeOut:2000, positionClass:"toast-top-full-width"});
+    this.toastr.success('', 'Evento modificado correctamente',{timeOut:2000, positionClass:"toast-top-full-width"});
   }
   public showErrorEdit():void {
-    this.toastr.success('', 'Error al modificar el evento',{timeOut:2000, positionClass:"toast-top-full-width"})
+    this.toastr.error('', 'Error al modificar el evento',{timeOut:2000, positionClass:"toast-top-full-width"})
   }
   public goBack():void{
     this.routeLocation.back()
