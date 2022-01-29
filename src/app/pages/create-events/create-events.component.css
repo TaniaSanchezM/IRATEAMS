@@ -88,6 +88,24 @@ hr{
     background: linear-gradient(180deg, #000 -2%, #171717 90%);     
 }
 
+.btn2{
+    height: auto;
+    width: 77.5vw;
+    height: 40px;
+    border-radius: 0.25rem;
+    background: var(--secundaryButton);
+    color: var(--fontColor);
+    font-weight: 500;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2.6vh; 
+    border: #fff;
+    /* background: black; */
+    box-shadow: none;
+    /* color: var(--fontColor2);  */
+    /* background: linear-gradient(180deg, #000 -2%, #171717 90%);   */
+}
+
 
 /* Modal */
 .modal {
